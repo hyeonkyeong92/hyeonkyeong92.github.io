@@ -1,6 +1,40 @@
+@import "reset";
+@import "interface";
+@import "function";
 
 
+.wrap{
+    background-color: $color-bg;
+}
+.header{
+
+}
 .container{
-    background-color: #eee;
-    .main-visual{ text-align: center;}
+    .main_visual{
+        .inner{
+            width: 1400px; max-width: 1400px; margin: auto; text-align: center;
+            .mv_title{
+                font-size: $font-bigTitle;
+                color: $color-main;
+            }
+            .mv_img{
+                width: 900px; max-width: 900px; margin: auto;
+                img{
+                    width: 100%;
+                }
+            }
+            .mv_txt{
+                font-size: $font-basic;
+            }
+            .font_size_test{
+                .font-bigTitle{ font-size: $font-bigTitle;}
+                .font-title{ font-size: $font-title;}
+                .font-subTilte{ font-size: $font-subTitle;}
+                .font-basic{ font-size: $font-basic;}
+            }
+        }
+    }
+    .section{ /*section 공통스타일*/
+
+    }
 }
