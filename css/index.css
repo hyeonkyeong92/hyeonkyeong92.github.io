@@ -23,10 +23,11 @@
 /*====button components====*/
 .wrap {
   background-color: #FDFBF8;
+  width: 100%;
+  overflow: hidden;
 }
 
 .container .main_visual .inner {
-  width: 1400px;
   max-width: 1400px;
   margin: auto;
   text-align: center;

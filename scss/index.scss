@@ -5,6 +5,8 @@
 
 .wrap{
     background-color: $color-bg;
+    width: 100%;
+    overflow: hidden;
 }
 .header{
 
@@ -12,7 +14,7 @@
 .container{
     .main_visual{
         .inner{
-            width: 1400px; max-width: 1400px; margin: auto; text-align: center;
+            max-width: 1400px; margin: auto; text-align: center;
             .mv_title{
                 font-size: $font-bigTitle;
                 color: $color-main;
