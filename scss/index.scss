@@ -10,18 +10,19 @@
 }
 .header{
     @include flex-between;
-    padding: 0 24px; height: 56px; background-color: #eee;
-    @media screen and(min-width:768px) { padding: 0 40px; height: 70px;}
-    @media screen and(min-width:1200px) { padding: 0 60px; margin-bottom: 160px; height: 110px;}
+    margin-bottom: 2.6rem; padding: 0 24px; height: 4rem;
+    @media screen and(min-width:768px) { margin-bottom: 3.2rem; padding: 0 40px;}
+    @media screen and(min-width:1200px) { margin-bottom: 4rem; padding: 0 60px; height: 5.4rem;}
+    /*할 것! 크기 변환될 때 자연스러운 translate 효과 넣어주기 */
 }
 .container{
     .main_visual{
+        padding: 0 0 8rem 0;
         .inner{
             max-width: 1400px; margin: auto; text-align: center;
             .mv_title{
                 @include font-bigTitle;
-                font-weight: 700;
-                color: $color-main;
+                line-height: 1.2; font-weight: 700; color: $color-main;
             }
             .mv_img{
                 width: 80%; max-width: 900px; margin: 2rem auto 2.5rem auto;
@@ -29,15 +30,46 @@
             .mv_txt{
                 @include font-basic;
             }
-            // .font_size_test{
-            //     .font-bigTitle{ @include font-bigTitle; color: $color-main;}
-            //     .font-title{ @include font-title;}
-            //     .font-subTitle{ @include font-subTitle;}
-            //     .font-basic{ @include font-basic;}
-            // }
         }
     }
-    .section{ /*section 공통스타일*/
+    .section{
+        /*----section 공통스타일----*/
+        padding: 6rem 0;
+        .inner{
+            padding: 0 24px;
+            @media screen and (min-width:768px) { padding: 0 40px;}
+            @media screen and (min-width:1200px) { margin: 0 auto; padding: 0 60px; width: 1400px; max-width: 1400px;}
+            .sc-title-wrap{
+                .title-sub{@include font-subTitle}
+                .title-main{@include font-title}
+                .title-txt{@include font-basic}
+            }
+        }
 
+        /*--------ABOUT 영역--------*/
+        &.section-about-wrap{
+            background-color: $color-main;
+            .inner{
+                @media screen and (min-width:980px) {
+                    @include flex-between;
+                    flex-direction: row-reverse;               
+                }
+                .sc-title-wrap{
+                    &>p{color: $color-white;}
+                }
+                .sc-conts-wrap{
+                    .cont-img-box{
+                        @include flex-center;
+                        background-color: $color-white;
+                        img{width: 70%;}
+                    }
+                }
+            }
+        }
+
+        /*--------ANIMATION 영역--------*/
+        &.section-animation-wrap{
+            .cont-img-box{width: 50%;}
+        }
     }
 }
