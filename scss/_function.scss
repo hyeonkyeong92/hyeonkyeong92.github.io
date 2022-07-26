@@ -5,3 +5,14 @@
 @mixin button-main{
 
 }
+
+
+@mixin flex-between {
+    display: flex; align-items: center; justify-content: space-between;
+}
+@mixin flex{
+    display: flex; align-items: center;
+}
+@mixin flex-column{
+    display: flex; align-items: center; flex-direction: column;
+}

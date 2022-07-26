@@ -8,7 +8,7 @@
 
 [lang=en] {
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
-  letter-spacing: 0;
+  letter-spacing: -0.4px;
 }
 
 * {
@@ -41,7 +41,7 @@ time, mark, audio, video {
   vertical-align: baseline;
   text-decoration: none;
   font-family: "Noto Sans KR", "Montserrat", sans-serif, "맑은 고딕", "Nanum Gothic", "나눔 고딕", "돋움", dotum, sans-serif;
-  letter-spacing: -1px;
+  letter-spacing: -0.8px;
   font-weight: 400;
   line-height: 1.4;
   color: #033F64;
@@ -180,6 +180,7 @@ button {
 /*스타일 묶음*/
 /*----color system----*/
 /*----font system----*/
+/*----공통스타일----*/
 /*FUNCITON*/
 /*컴포넌트 묶음*/
 /*====button components====*/
@@ -189,6 +190,28 @@ button {
   overflow: hidden;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 56px;
+  background-color: #eee;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0 40px;
+    height: 70px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 0 60px;
+    margin-bottom: 160px;
+    height: 110px;
+  }
+}
+
 .container .main_visual .inner {
   max-width: 1400px;
   margin: auto;
@@ -196,53 +219,41 @@ button {
 }
 .container .main_visual .inner .mv_title {
   font-size: 30px;
-  color: #033F64;
-}
-.container .main_visual .inner .mv_img {
-  width: 900px;
-  max-width: 900px;
-  margin: auto;
-}
-.container .main_visual .inner .mv_img img {
-  width: 100%;
-}
-.container .main_visual .inner .mv_txt {
-  font-size: 14px;
-}
-.container .main_visual .inner .font_size_test .font-bigTitle {
-  font-size: 30px;
+  font-weight: 700;
   color: #033F64;
 }
 @media screen and (min-width: 768px) {
-  .container .main_visual .inner .font_size_test .font-bigTitle {
+  .container .main_visual .inner .mv_title {
     font-size: 3.9063vw;
   }
 }
 @media screen and (min-width: 1200px) {
-  .container .main_visual .inner .font_size_test .font-bigTitle {
-    font-size: 47px;
+  .container .main_visual .inner .mv_title {
+    /*font-size: 47px;*/
+    font-size: 68px;
   }
 }
-.container .main_visual .inner .font_size_test .font-title {
-  font-size: 28px;
+.container .main_visual .inner .mv_img {
+  width: 80%;
+  max-width: 900px;
+  margin: 2rem auto 2.5rem auto;
 }
-.container .main_visual .inner .font_size_test .font-subTilte {
-  font-size: 21px;
-}
-.container .main_visual .inner .font_size_test .font-basic {
+.container .main_visual .inner .mv_txt {
   font-size: 14px;
 }
-.container .main_visual .inner .font_size_test .font-test {
-  font-size: 13px;
+@media screen and (max-width: 320px) {
+  .container .main_visual .inner .mv_txt {
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 768px) {
-  .container .main_visual .inner .font_size_test .font-test {
-    font-size: 1.68vw;
+  .container .main_visual .inner .mv_txt {
+    font-size: 1.848vw;
   }
 }
 @media screen and (min-width: 1200px) {
-  .container .main_visual .inner .font_size_test .font-test {
-    font-size: 20px;
+  .container .main_visual .inner .mv_txt {
+    font-size: 18px;
   }
 }
 .container .section { /*section 공통스타일*/ }/*# sourceMappingURL=index.css.map */

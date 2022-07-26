@@ -16,7 +16,7 @@ $color-white: #ffffff;
     @media screen and (min-width:768px){
         font-size: 3.9063vw;}
     @media screen and (min-width:1200px){
-        font-size: 47px;}
+        /*font-size: 47px;*/ font-size: 68px;}
 }
 
 @mixin font-title{
@@ -24,7 +24,7 @@ $color-white: #ffffff;
     @media screen and (min-width:768px){
         font-size: 3.648vw;}
     @media screen and (min-width:1200px){
-        font-size: 42px;}
+        /*font-size: 42px;*/ font-size: 52px;}
 }
 @mixin font-subTitle{
     font-size: 21px;
@@ -35,10 +35,17 @@ $color-white: #ffffff;
 }
 @mixin font-basic{
     font-size: 14px;
+    @media screen and (max-width:320px){
+        font-size: 12px;}
     @media screen and (min-width:768px){
         font-size: 1.848vw;}
     @media screen and (min-width:1200px){
         font-size: 18px;}
-    @media screen and (min-width:320px){
-            font-size: 12px;}
 }
+
+
+/*----공통스타일----*/
+
+// .flex-between{ @include flex-between;}
+// .flex{ @include flex;}
+// .flex-column{ @include flex-column;}

@@ -9,7 +9,10 @@
     overflow: hidden;
 }
 .header{
-
+    @include flex-between;
+    padding: 0 24px; height: 56px; background-color: #eee;
+    @media screen and(min-width:768px) { padding: 0 40px; height: 70px;}
+    @media screen and(min-width:1200px) { padding: 0 60px; margin-bottom: 160px; height: 110px;}
 }
 .container{
     .main_visual{
@@ -17,24 +20,21 @@
             max-width: 1400px; margin: auto; text-align: center;
             .mv_title{
                 @include font-bigTitle;
+                font-weight: 700;
                 color: $color-main;
             }
             .mv_img{
-                width: 900px; max-width: 900px; margin: auto;
-                img{
-                    width: 100%;
-                }
+                width: 80%; max-width: 900px; margin: 2rem auto 2.5rem auto;
             }
             .mv_txt{
                 @include font-basic;
             }
-            .font_size_test{
-
-                .font-tt{ @include font-bigTitle; color: $color-main;}
-                .font-title{ @include font-tilte;}
-                .font-subTilte{ @include font-subTitle}
-                .font-basic{ @include font-basic}
-            }
+            // .font_size_test{
+            //     .font-bigTitle{ @include font-bigTitle; color: $color-main;}
+            //     .font-title{ @include font-title;}
+            //     .font-subTitle{ @include font-subTitle;}
+            //     .font-basic{ @include font-basic;}
+            // }
         }
     }
     .section{ /*section 공통스타일*/
