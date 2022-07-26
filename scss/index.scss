@@ -29,7 +29,8 @@
                 font-size: $font-basic;
             }
             .font_size_test{
-                .font-bigTitle{ font-size: $font-bigTitle;}
+
+                .font-bigTitle{ font-size: $font-bigTitle; color: $color-main;}
                 .font-title{ font-size: $font-title;}
                 .font-subTilte{ font-size: $font-subTitle;}
                 .font-basic{ font-size: $font-basic;}
