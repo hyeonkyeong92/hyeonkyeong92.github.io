@@ -8,34 +8,37 @@ $color-bg: #FDFBF8;
 $color-black: #1d1d1d;
 $color-white: #ffffff;
 
-@mixin font-test{
-    font-size: 13px;
-    @media screen and (min-width:1200px){
-        font-size: 40px;
-    }
-}
 
-.font-test{ @include font-test}
 
 /*----font system----*/
-$font-bigTitle :30px;
-$font-title : 28px;
-$font-subTitle : 21px;
-$font-basic:14px;
+@mixin font-bigTitle{
+    font-size: 30px;
+    @media screen and (min-width:768px){
+        font-size: 3.9063vw;}
+    @media screen and (min-width:1200px){
+        font-size: 47px;}
+}
 
-@media screen and (min-width:768px){
-    // $font-bigTitle :3.9063vw;
-    // $font-title :3.648vw;
-    // $font-subTitle : 2.734vw;
-    // $font-basic: 1.848vw;
-    
+@mixin font-title{
+    font-size: 28px;
+    @media screen and (min-width:768px){
+        font-size: 3.648vw;}
+    @media screen and (min-width:1200px){
+        font-size: 42px;}
 }
-@media screen and(min-width:1200px){
-    $font-bigTitle :70px;
-    $font-title : 52px;
-    $font-subTitle : 36px;
-    $font-basic:16px;
+@mixin font-subTitle{
+    font-size: 21px;
+    @media screen and (min-width:768px){
+        font-size: 2.734vw;}
+    @media screen and (min-width:1200px){
+        font-size: 36px;}
 }
-@media screen and(min-width:320px){
-    $font-basic:12px;
+@mixin font-basic{
+    font-size: 14px;
+    @media screen and (min-width:768px){
+        font-size: 1.848vw;}
+    @media screen and (min-width:1200px){
+        font-size: 18px;}
+    @media screen and (min-width:320px){
+            font-size: 12px;}
 }

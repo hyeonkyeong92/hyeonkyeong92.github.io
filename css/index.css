@@ -179,15 +179,6 @@ button {
 /*INTERFACE*/
 /*스타일 묶음*/
 /*----color system----*/
-.font-test {
-  font-size: 13px;
-}
-@media screen and (min-width: 1200px) {
-  .font-test {
-    font-size: 40px;
-  }
-}
-
 /*----font system----*/
 /*FUNCITON*/
 /*컴포넌트 묶음*/
@@ -222,6 +213,16 @@ button {
   font-size: 30px;
   color: #033F64;
 }
+@media screen and (min-width: 768px) {
+  .container .main_visual .inner .font_size_test .font-bigTitle {
+    font-size: 3.9063vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container .main_visual .inner .font_size_test .font-bigTitle {
+    font-size: 47px;
+  }
+}
 .container .main_visual .inner .font_size_test .font-title {
   font-size: 28px;
 }
@@ -230,5 +231,18 @@ button {
 }
 .container .main_visual .inner .font_size_test .font-basic {
   font-size: 14px;
+}
+.container .main_visual .inner .font_size_test .font-test {
+  font-size: 13px;
+}
+@media screen and (min-width: 768px) {
+  .container .main_visual .inner .font_size_test .font-test {
+    font-size: 1.68vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container .main_visual .inner .font_size_test .font-test {
+    font-size: 20px;
+  }
 }
 .container .section { /*section 공통스타일*/ }/*# sourceMappingURL=index.css.map */
