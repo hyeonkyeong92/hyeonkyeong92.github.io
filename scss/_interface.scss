@@ -8,6 +8,15 @@ $color-bg: #FDFBF8;
 $color-black: #1d1d1d;
 $color-white: #ffffff;
 
+@mixin font-test{
+    font-size: 13px;
+    @media screen and (min-width:1200px){
+        font-size: 40px;
+    }
+}
+
+.font-test{ @include font-test}
+
 /*----font system----*/
 $font-bigTitle :30px;
 $font-title : 28px;
@@ -15,10 +24,11 @@ $font-subTitle : 21px;
 $font-basic:14px;
 
 @media screen and (min-width:768px){
-    $font-bigTitle :3.9063vw;
-    $font-title :3.648vw;
-    $font-subTitle : 2.734vw;
-    $font-basic: 1.848vw;
+    // $font-bigTitle :3.9063vw;
+    // $font-title :3.648vw;
+    // $font-subTitle : 2.734vw;
+    // $font-basic: 1.848vw;
+    
 }
 @media screen and(min-width:1200px){
     $font-bigTitle :70px;

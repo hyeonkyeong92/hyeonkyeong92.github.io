@@ -179,6 +179,15 @@ button {
 /*INTERFACE*/
 /*스타일 묶음*/
 /*----color system----*/
+.font-test {
+  font-size: 13px;
+}
+@media screen and (min-width: 1200px) {
+  .font-test {
+    font-size: 40px;
+  }
+}
+
 /*----font system----*/
 /*FUNCITON*/
 /*컴포넌트 묶음*/
