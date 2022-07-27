@@ -37,31 +37,47 @@
         padding: 6rem 0;
         .inner{
             padding: 0 24px;
-            @media screen and (min-width:768px) { padding: 0 40px;}
-            @media screen and (min-width:1200px) { margin: 0 auto; padding: 0 60px; width: 1400px; max-width: 1400px;}
+            @media screen and (min-width:768px) { padding: 2rem 40px;}
+            @media screen and (min-width:1200px) { margin: 0 auto; padding: 4rem 60px; width: 1200px; max-width: 1200px;}
+            @media screen and (min-width:1400px) { width: 1400px; max-width: 1400px;}
             .sc-title-wrap{
-                .title-sub{@include font-subTitle}
-                .title-main{@include font-title}
-                .title-txt{@include font-basic}
+                margin-bottom: 2rem;
+                @media screen and(min-width:768px) {margin-bottom: 4rem;}
+                @media screen and(min-width:1200px) {margin-bottom: 6rem;}
             }
+            .title-sub{@include font-subTitle; font-weight: 600;}
+            .title-main{@include font-title; font-weight: 600;}
+            .title-txt{@include font-basic; font-weight: 200;}
         }
 
         /*--------ABOUT 영역--------*/
         &.section-about-wrap{
             background-color: $color-main;
             .inner{
+                .pc{ display: none;}
                 @media screen and (min-width:980px) {
-                    @include flex-between;
-                    flex-direction: row-reverse;               
+                    @include flex-between; flex-direction: row-reverse; text-align: left;
+                    .pc{display: block;}
+                    .mobile{display: none;}
                 }
                 .sc-title-wrap{
-                    &>p{color: $color-white;}
+                    p{color: $color-white;}
+                    text-align: center;
+                    @media screen and (min-width:980px){
+                        text-align: left; margin-left: 3rem;
+                    }
+                    @media screen and (min-width:1200px){
+                        margin-left: 0;
+                    }
                 }
                 .sc-conts-wrap{
+                    p{color:$color-white;}
+                    text-align: center;
                     .cont-img-box{
                         @include flex-center;
-                        background-color: $color-white;
-                        img{width: 70%;}
+                        position: relative; box-sizing: border-box; background-color: $color-white;
+                        &:before { content: ""; display: block; padding-top: 98%; /* 1:1 비율 */}
+                        img{width: 80%;}
                     }
                 }
             }
@@ -69,7 +85,90 @@
 
         /*--------ANIMATION 영역--------*/
         &.section-animation-wrap{
-            .cont-img-box{width: 50%;}
+            .inner{
+                @include flex-column;
+                position: relative;
+                @media screen and (min-width: 980px){ flex-direction: row;}
+                .title-floating-wrap{
+                    position: absolute; top: 5rem; left: 20px; transform: rotate(-90deg); transform-origin: left top;
+                    @media screen and (min-width: 768px){ left: 40px;}
+                    @media screen and (min-width: 1200px){ left: 60px;}
+                    span{ margin-left: 0.3rem; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background-color: $color-main;}
+                }
+                .sc-title-wrap{
+                    text-align: center;
+                    @media screen and (min-width:980px) { text-align: left; }
+                }
+                .sc-conts-wrap{
+                    .cont-img-box{
+                        @include flex-center;
+                        img{width: 80%;}
+                    }
+                }
+            }
+        }
+
+        /*-----------SKILL 영역-----------*/
+        &.section-skill-wrap{
+            .inner{
+                .sc-title-wrap{
+                    text-align: center;
+                }
+                .skill-list-wrap{
+                    @media screen and (min-width:980px){
+                        @include flex-between; flex-wrap: wrap; align-items: baseline;
+                        .skill-list{
+                            width: 44%; margin-right: 2%; box-sizing: border-box;
+                            &:nth-child(2n+0){ margin-right: 0}
+                        }
+                    }
+                    .skill-list{
+                        margin-bottom: 1.5rem;
+                        .sk-title{
+                            @include flex-between; align-items: flex-end;
+                            margin-bottom: 1.4rem; padding-bottom: 10px; border-bottom: 2px solid $color-main;
+                            .txt{ @include font-subTitle; font-weight: 600;}
+                            .icon{ width: 54px; height: 54px; background-repeat: no-repeat; background-position: center; background-size: 100% auto;}
+                        }
+                        &:nth-child(1) .icon{ background-image: url(../img/icon_skill_plan.png);}
+                        &:nth-child(2) .icon{ background-image: url(../img/icon_skill_design.png);}
+                        &:nth-child(3) .icon{ background-image: url(../img/icon_skill_publising.png);}
+                        &:nth-child(4) .icon{ background-image: url(../img/icon_skill_drawing.png);}
+                        .sk-info{
+                            .info-list{
+                                margin-bottom: 0.8rem;
+                                li{ font-weight: 600;}
+                            }
+                            .info-menu{
+                                @include font-small;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /*-----------Portfolio 영역-----------*/
+        &.section-portfolio-wrap{
+            background-color: $color-bg-gray;
+            .inner{
+                .sc-title-wrap{
+                    text-align: center;
+                }
+                .sc-conts-wrap{
+                    .portfolio-list-wrap{
+                        .portfolio-list{
+                            position: relative; box-sizing: border-box; 
+                            background-size: 100% auto; background-repeat: no-repeat; background-image: url(../img/img_project_01maipet.png);
+                            &:before { content: ""; display: block; padding-top: 98%; /* 1:1 비율 */}
+                            &:nth-child(2){background-image:url(../img/img_project_02jadoo.png);}
+                            .bg-wrap{
+                                position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

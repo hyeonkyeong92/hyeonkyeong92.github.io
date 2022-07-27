@@ -5,6 +5,7 @@
 $color-main:#033F64;
 $color-point:#E93D00;
 $color-bg: #FDFBF8;
+$color-bg-gray: #F6F6F6;
 $color-black: #1d1d1d;
 $color-white: #ffffff;
 
@@ -16,22 +17,22 @@ $color-white: #ffffff;
     @media screen and (min-width:768px){
         font-size: 5.4688vw;}
     @media screen and (min-width:1200px){
-        /*font-size: 47px;*/ font-size: 68px;}
+        /*font-size: 47px;*/ font-size: 76px;}
 }
 
 @mixin font-title{
-    font-size: 28px;
+    font-size: 30px;
     @media screen and (min-width:768px){
         font-size: 3.648vw;}
     @media screen and (min-width:1200px){
         /*font-size: 42px;*/ font-size: 52px;}
 }
 @mixin font-subTitle{
-    font-size: 21px;
+    font-size: 20px;
     @media screen and (min-width:768px){
         font-size: 2.734vw;}
     @media screen and (min-width:1200px){
-        font-size: 36px;}
+        font-size: 28px;}
 }
 @mixin font-basic{
     font-size: 14px;
@@ -41,6 +42,15 @@ $color-white: #ffffff;
         font-size: 1.848vw;}
     @media screen and (min-width:1200px){
         font-size: 18px;}
+}
+@mixin font-small{
+    font-size: 12px;
+    @media screen and (max-width:320px){
+        font-size: 12px;}
+    @media screen and (min-width:768px){
+        font-size: 1.448vw;}
+    @media screen and (min-width:1200px){
+        font-size: 14px;}
 }
 
 
