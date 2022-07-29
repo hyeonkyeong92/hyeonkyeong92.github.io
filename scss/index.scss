@@ -45,8 +45,9 @@
                 @media screen and(min-width:768px) {margin-bottom: 4rem;}
                 @media screen and(min-width:1200px) {margin-bottom: 6rem;}
             }
-            .title-sub{@include font-subTitle; font-weight: 600;}
             .title-main{@include font-title; font-weight: 600;}
+            .title-sub{@include font-subTitle; font-weight: 600;}
+            .title-deskTxt{@include font-deskBasic; font-weight: 600;}
             .title-txt{@include font-basic; font-weight: 200;}
             .title-small{@include font-small; font-weight: 200;}
         }
@@ -128,7 +129,6 @@
                         .sk-title{
                             @include flex-between; align-items: flex-end;
                             margin-bottom: 1.4rem; padding-bottom: 10px; border-bottom: 2px solid $color-main;
-                            .txt{ @include font-subTitle; font-weight: 600;}
                             .icon{ width: 54px; height: 54px; background-repeat: no-repeat; background-position: center; background-size: 100% auto;}
                         }
                         &:nth-child(1) .icon{ background-image: url(../img/icon_skill_plan.png);}
@@ -138,10 +138,10 @@
                         .sk-info{
                             .info-list{
                                 margin-bottom: 0.8rem;
-                                li{ font-weight: 600;}
+                                li{@include font-basic; font-weight: 600;}
                             }
                             .info-menu{
-                                @include font-small;
+                                @include font-basic;
                                 font-weight: 300;
                             }
                         }
@@ -149,6 +149,7 @@
                 }
             }
         }
+
         /*-----------Portfolio 영역-----------*/
         &.section-portfolio-wrap{
             background-color: $color-bg-gray;
@@ -166,6 +167,65 @@
                             .bg-wrap{
                                 position: absolute; top: 0; bottom: 0; left: 0; right: 0;
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*-----------Work Experience 영역-----------*/
+        &.section-work-wrap{
+            .inner{
+                @media screen and(min-width:980px) {
+                    @include flex-between; align-items: baseline;
+                }
+                .sc-title-wrap{
+                    .sc-title-top{ margin-bottom: 2rem;}
+                    .sc-title-bottom{
+                        @include flex; align-items: flex-end;
+                        .img-wrap{ margin-right: 1rem; width: 4.2rem; height: 4.2rem; background-image: url(../img/icon_work_title.svg); background-repeat: no-repeat; background-size: cover;}
+                        .text-warp{
+                            .title-deskTxt{ font-weight: 600;
+                                span{ margin-left: 6px; margin-bottom: 2px; display: inline-block; width: 0.5rem; height: 0.5rem; border-radius:50%; background-color: $color-main; vertical-align: text-bottom;}
+                            }
+                        }
+                    }
+                    @media screen and(max-width:979px){
+                        margin-bottom:3rem; text-align: center;
+                        .sc-title-bottom{
+                            @include flex-column; align-items: center;
+                            .img-wrap{margin-right: 0; margin-bottom: 1.8rem; width: 3.6rem; height: 3.6rem;}
+                            .text-warp{
+                                .title-deskTxt{ text-align: center; margin-bottom: 0.2rem;}
+                                .title-txt{ text-align: center;}
+                            }
+                        }
+ 
+                    }
+                }
+                .sc-conts-wrap{
+                    @media screen and(min-width:980px) {
+                        width: 50%;
+                    }
+                    .work-list-wrap{
+                        .work-list{
+                            padding-bottom: 1.4rem; border-bottom: 1px solid $color-line;
+                            margin-bottom: 2rem;
+                            .work-title{ margin-bottom: 1.4rem;}
+                            .menu{
+                                .list{ @include flex-between; margin-bottom: 1.4rem; align-items: baseline;
+                                    @media screen and(min-width:980px) { margin-bottom: 0.6rem;}
+                                    .name{
+                                        &>p:nth-child(1){ font-size: 14px; font-weight: 500;}
+                                        &>p:nth-child(2){ font-size: 13px; font-weight: 300;}
+                                        @media screen and(min-width:980px) {
+                                            @include flex;
+                                            &>p:nth-child(2){ margin-left: 0.4rem;}
+                                        }
+                                    }
+                                    .date{ font-size: 13px; font-weight: 500;}
+                                }
+                            }      
                         }
                     }
                 }

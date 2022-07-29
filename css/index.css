@@ -248,15 +248,15 @@ button {
 }
 @media screen and (max-width: 320px) {
   .container .main_visual .inner .mv_txt {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media screen and (min-width: 768px) {
   .container .main_visual .inner .mv_txt {
-    font-size: 1.848vw;
+    font-size: 1.823vw;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 980px) {
   .container .main_visual .inner .mv_txt {
     font-size: 18px;
   }
@@ -268,6 +268,7 @@ button {
   /*--------ANIMATION 영역--------*/
   /*-----------SKILL 영역-----------*/
   /*-----------Portfolio 영역-----------*/
+  /*-----------Work Experience 영역-----------*/
 }
 .container .section .inner {
   padding: 0 24px;
@@ -304,20 +305,6 @@ button {
     margin-bottom: 6rem;
   }
 }
-.container .section .inner .title-sub {
-  font-size: 20px;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  .container .section .inner .title-sub {
-    font-size: 2.734vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container .section .inner .title-sub {
-    font-size: 28px;
-  }
-}
 .container .section .inner .title-main {
   font-size: 30px;
   font-weight: 600;
@@ -333,27 +320,60 @@ button {
     font-size: 52px;
   }
 }
+.container .section .inner .title-sub {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .container .section .inner .title-sub {
+    font-size: 2.734vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container .section .inner .title-sub {
+    font-size: 28px;
+  }
+}
+.container .section .inner .title-deskTxt {
+  font-size: 17px;
+  font-weight: 600;
+}
+@media screen and (max-width: 320px) {
+  .container .section .inner .title-deskTxt {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container .section .inner .title-deskTxt {
+    font-size: 2.2135vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container .section .inner .title-deskTxt {
+    font-size: 22px;
+  }
+}
 .container .section .inner .title-txt {
   font-size: 14px;
   font-weight: 200;
 }
 @media screen and (max-width: 320px) {
   .container .section .inner .title-txt {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media screen and (min-width: 768px) {
   .container .section .inner .title-txt {
-    font-size: 1.848vw;
+    font-size: 1.823vw;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 980px) {
   .container .section .inner .title-txt {
     font-size: 18px;
   }
 }
 .container .section .inner .title-small {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 200;
 }
 @media screen and (max-width: 320px) {
@@ -515,20 +535,6 @@ button {
   padding-bottom: 10px;
   border-bottom: 2px solid #033F64;
 }
-.container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-title .txt {
-  font-size: 20px;
-  font-weight: 600;
-}
-@media screen and (min-width: 768px) {
-  .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-title .txt {
-    font-size: 2.734vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-title .txt {
-    font-size: 28px;
-  }
-}
 .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-title .icon {
   width: 54px;
   height: 54px;
@@ -552,25 +558,41 @@ button {
   margin-bottom: 0.8rem;
 }
 .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-info .info-list li {
+  font-size: 14px;
   font-weight: 600;
 }
+@media screen and (max-width: 320px) {
+  .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-info .info-list li {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-info .info-list li {
+    font-size: 1.823vw;
+  }
+}
+@media screen and (min-width: 980px) {
+  .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-info .info-list li {
+    font-size: 18px;
+  }
+}
 .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-info .info-menu {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
 }
 @media screen and (max-width: 320px) {
   .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-info .info-menu {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media screen and (min-width: 768px) {
   .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-info .info-menu {
-    font-size: 1.448vw;
+    font-size: 1.823vw;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 980px) {
   .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-info .info-menu {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 .container .section.section-portfolio-wrap {
@@ -600,4 +622,112 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
+}
+@media screen and (min-width: 980px) {
+  .container .section.section-work-wrap .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+.container .section.section-work-wrap .inner .sc-title-wrap .sc-title-top {
+  margin-bottom: 2rem;
+}
+.container .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom {
+  display: flex;
+  align-items: center;
+  align-items: flex-end;
+}
+.container .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom .img-wrap {
+  margin-right: 1rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-image: url(../img/icon_work_title.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom .text-warp .title-deskTxt {
+  font-weight: 600;
+}
+.container .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom .text-warp .title-deskTxt span {
+  margin-left: 6px;
+  margin-bottom: 2px;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #033F64;
+  vertical-align: text-bottom;
+}
+@media screen and (max-width: 979px) {
+  .container .section.section-work-wrap .inner .sc-title-wrap {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .container .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom .img-wrap {
+    margin-right: 0;
+    margin-bottom: 1.8rem;
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+  .container .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom .text-warp .title-deskTxt {
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+  .container .section.section-work-wrap .inner .sc-title-wrap .sc-title-bottom .text-warp .title-txt {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 980px) {
+  .container .section.section-work-wrap .inner .sc-conts-wrap {
+    width: 50%;
+  }
+}
+.container .section.section-work-wrap .inner .sc-conts-wrap .work-list-wrap .work-list {
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid #E3E3E3;
+  margin-bottom: 2rem;
+}
+.container .section.section-work-wrap .inner .sc-conts-wrap .work-list-wrap .work-list .work-title {
+  margin-bottom: 1.4rem;
+}
+.container .section.section-work-wrap .inner .sc-conts-wrap .work-list-wrap .work-list .menu .list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+  align-items: baseline;
+}
+@media screen and (min-width: 980px) {
+  .container .section.section-work-wrap .inner .sc-conts-wrap .work-list-wrap .work-list .menu .list {
+    margin-bottom: 0.6rem;
+  }
+}
+.container .section.section-work-wrap .inner .sc-conts-wrap .work-list-wrap .work-list .menu .list .name > p:nth-child(1) {
+  font-size: 14px;
+  font-weight: 500;
+}
+.container .section.section-work-wrap .inner .sc-conts-wrap .work-list-wrap .work-list .menu .list .name > p:nth-child(2) {
+  font-size: 13px;
+  font-weight: 300;
+}
+@media screen and (min-width: 980px) {
+  .container .section.section-work-wrap .inner .sc-conts-wrap .work-list-wrap .work-list .menu .list .name {
+    display: flex;
+    align-items: center;
+  }
+  .container .section.section-work-wrap .inner .sc-conts-wrap .work-list-wrap .work-list .menu .list .name > p:nth-child(2) {
+    margin-left: 0.4rem;
+  }
+}
+.container .section.section-work-wrap .inner .sc-conts-wrap .work-list-wrap .work-list .menu .list .date {
+  font-size: 13px;
+  font-weight: 500;
 }/*# sourceMappingURL=index.css.map */

@@ -6,6 +6,7 @@ $color-main:#033F64;
 $color-point:#E93D00;
 $color-bg: #FDFBF8;
 $color-bg-gray: #F6F6F6;
+$color-line: #E3E3E3;
 $color-black: #1d1d1d;
 $color-white: #ffffff;
 
@@ -34,17 +35,26 @@ $color-white: #ffffff;
     @media screen and (min-width:1200px){
         font-size: 28px;}
 }
+@mixin font-deskBasic{
+    font-size: 17px;
+    @media screen and (max-width:320px){
+        font-size: 16px;}
+    @media screen and (min-width:768px){
+        font-size: 2.2135vw;}
+    @media screen and (min-width:1200px){
+        font-size: 22px;}
+}
 @mixin font-basic{
     font-size: 14px;
     @media screen and (max-width:320px){
-        font-size: 12px;}
+        font-size: 13px;}
     @media screen and (min-width:768px){
-        font-size: 1.848vw;}
-    @media screen and (min-width:1200px){
+        font-size: 1.823vw;}
+    @media screen and (min-width:980px){
         font-size: 18px;}
 }
 @mixin font-small{
-    font-size: 12px;
+    font-size: 13px;
     @media screen and (max-width:320px){
         font-size: 12px;}
     @media screen and (min-width:768px){
