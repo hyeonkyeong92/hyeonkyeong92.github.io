@@ -48,6 +48,7 @@
             .title-sub{@include font-subTitle; font-weight: 600;}
             .title-main{@include font-title; font-weight: 600;}
             .title-txt{@include font-basic; font-weight: 200;}
+            .title-small{@include font-small; font-weight: 200;}
         }
 
         /*--------ABOUT 영역--------*/
