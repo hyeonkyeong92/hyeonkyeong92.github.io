@@ -9,6 +9,7 @@ $color-bg-gray: #F6F6F6;
 $color-line: #E3E3E3;
 $color-black: #1d1d1d;
 $color-white: #ffffff;
+$color-yellow: #FFF2DF;
 
 
 
@@ -40,7 +41,7 @@ $color-white: #ffffff;
     @media screen and (max-width:320px){
         font-size: 16px;}
     @media screen and (min-width:768px){
-        font-size: 2.2135vw;}
+        font-size: 2vw;}
     @media screen and (min-width:1200px){
         font-size: 22px;}
 }
