@@ -8,7 +8,7 @@
 
 [lang=en] {
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.2px;
 }
 
 * {
@@ -198,7 +198,7 @@ button {
   margin-bottom: 2.6rem;
   padding: 0 24px;
   height: 4rem;
-  /*할 것! 크기 변환될 때 자연스러운 translate 효과 넣어주기 */
+  /*to do! 크기 변환될 때 자연스러운 translate 효과 넣어주기 */
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -309,6 +309,11 @@ button {
 .container .main_visual {
   padding: 0 0 8rem 0;
 }
+@media screen and (min-width: 980px) {
+  .container .main_visual {
+    padding-bottom: 10rem;
+  }
+}
 .container .main_visual .inner {
   max-width: 1400px;
   margin: auto;
@@ -373,10 +378,15 @@ button {
     padding: 2rem 40px;
   }
 }
+@media screen and (min-width: 980px) {
+  .container .section .inner {
+    padding: 4rem 40px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .container .section .inner {
     margin: 0 auto;
-    padding: 4rem 60px;
+    padding: 6rem 60px;
     width: 1200px;
     max-width: 1200px;
   }
@@ -388,14 +398,9 @@ button {
   }
 }
 .container .section .inner .sc-title-wrap {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 @media screen and (min-width: 768px) {
-  .container .section .inner .sc-title-wrap {
-    margin-bottom: 4rem;
-  }
-}
-@media screen and (min-width: 1200px) {
   .container .section .inner .sc-title-wrap {
     margin-bottom: 6rem;
   }
@@ -403,40 +408,14 @@ button {
 .container .section.section-about-wrap {
   background-color: #033F64;
 }
-.container .section.section-about-wrap .inner .pc {
+.container .section.section-about-wrap .inner.pc {
   display: none;
-}
-@media screen and (min-width: 980px) {
-  .container .section.section-about-wrap .inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    text-align: left;
-  }
-  .container .section.section-about-wrap .inner .pc {
-    display: block;
-  }
-  .container .section.section-about-wrap .inner .mobile {
-    display: none;
-  }
 }
 .container .section.section-about-wrap .inner .sc-title-wrap {
   text-align: center;
 }
 .container .section.section-about-wrap .inner .sc-title-wrap p {
   color: #ffffff;
-}
-@media screen and (min-width: 980px) {
-  .container .section.section-about-wrap .inner .sc-title-wrap {
-    text-align: left;
-    margin-left: 3rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container .section.section-about-wrap .inner .sc-title-wrap {
-    margin-left: 0;
-  }
 }
 .container .section.section-about-wrap .inner .sc-conts-wrap {
   text-align: center;
@@ -459,6 +438,42 @@ button {
 }
 .container .section.section-about-wrap .inner .sc-conts-wrap .cont-img-box img {
   width: 80%;
+}
+.container .section.section-about-wrap .inner .sc-text-wrap span {
+  margin: 0 0.2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.container .section.section-about-wrap .inner .sc-text-wrap > p:nth-child(1) {
+  margin-top: 2.6rem;
+  margin-bottom: 1.4rem;
+}
+.container .section.section-about-wrap .inner .sc-text-wrap m-380 {
+  display: none;
+}
+@media screen and (min-width: 380px) {
+  .container .section.section-about-wrap .inner .sc-text-wrap .m-320 {
+    display: none;
+  }
+  .container .section.section-about-wrap .inner .sc-text-wrap .m-380 {
+    display: block;
+  }
+}
+@media screen and (min-width: 980px) {
+  .container .section.section-about-wrap .inner.mobile {
+    display: none;
+  }
+  .container .section.section-about-wrap .inner.pc {
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+  }
+  .container .section.section-about-wrap .inner .sc-title-wrap {
+    text-align: left;
+  }
+  .container .section.section-about-wrap .inner .sc-conts-wrap .cont-img-box {
+    width: 80%;
+  }
 }
 .container .section.section-animation-wrap .inner {
   display: flex;
@@ -499,18 +514,18 @@ button {
 .container .section.section-animation-wrap .inner .sc-title-wrap {
   text-align: center;
 }
-@media screen and (min-width: 980px) {
-  .container .section.section-animation-wrap .inner .sc-title-wrap {
-    text-align: left;
-  }
+.container .section.section-animation-wrap .inner .sc-title-wrap > p {
+  white-space: nowrap;
 }
 .container .section.section-animation-wrap .inner .sc-conts-wrap .cont-img-box {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.container .section.section-animation-wrap .inner .sc-conts-wrap .cont-img-box img {
-  width: 80%;
+@media screen and (min-width: 980px) {
+  .container .section.section-animation-wrap .inner .sc-conts-wrap {
+    width: 70%;
+  }
 }
 .container .section.section-skill-wrap .inner .sc-title-wrap {
   text-align: center;
@@ -533,15 +548,16 @@ button {
   }
 }
 .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
+  /* to do! line width - scroll event 넣어주기 : 사이트 쉐프원 참고*/
 }
 .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 1.4rem;
-  padding-bottom: 10px;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.4rem;
   border-bottom: 2px solid #033F64;
 }
 .container .section.section-skill-wrap .inner .skill-list-wrap .skill-list .sk-title .icon {
@@ -781,8 +797,14 @@ button {
 .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
+}
+@media screen and (min-width: 640px) {
+  .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap {
+    justify-content: left;
+  }
 }
 @media screen and (min-width: 768px) {
   .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap {
@@ -791,20 +813,35 @@ button {
   }
 }
 .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list {
-  width: 49%;
-  max-width: 230px;
-  margin-right: 2%;
-  margin-bottom: 4%;
+  width: 46%;
+  margin-right: 4%;
+  margin-bottom: 8%;
 }
 .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list:nth-child(2n+0) {
   margin-right: 0;
 }
+@media screen and (min-width: 640px) {
+  .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list {
+    width: 30%;
+    max-width: 210px;
+  }
+  .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list:nth-child(2n+0) {
+    margin-right: 4%;
+  }
+  .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list:nth-child(3n+0) {
+    margin-right: 0;
+  }
+}
 @media screen and (min-width: 768px) {
   .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list {
     margin-bottom: 0;
+    margin-right: 5%;
   }
   .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list:nth-child(2n+0) {
-    margin-right: 2%;
+    margin-right: 5%;
+  }
+  .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list:nth-child(3n+0) {
+    margin-right: 5%;
   }
 }
 .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list .img-box {
@@ -825,7 +862,7 @@ button {
   padding-top: 98%; /* 1:1 비율 */
 }
 .container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list .img-box .icon {
-  margin-top: 3rem;
+  margin-top: 2.6rem;
   margin-left: -60%;
   z-index: 2;
   width: 16rem;
@@ -836,10 +873,18 @@ button {
   align-items: center;
   justify-content: center;
 }
-.container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list .txt-box .txt-img {
+.container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list .txt-box p {
+  font-weight: 600;
+}
+.container .section.section-extra-wrap .inner .sc-conts-wrap .extra-list-wrap .ex-list .txt-box .txt-icon {
   margin-left: 0.4rem;
+  margin-bottom: -0.1rem;
   width: 1rem;
   height: 1rem;
+  background-image: url(../img/icon_plus.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
 }
 .container .section.section-footer-wrap {
   padding-bottom: 0;
