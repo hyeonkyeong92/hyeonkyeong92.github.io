@@ -11,6 +11,16 @@
   letter-spacing: -0.2px;
 }
 
+body ::-moz-selection {
+  background: #033F64;
+  color: #fff;
+}
+
+body ::selection {
+  background: #033F64;
+  color: #fff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -195,7 +205,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2.6rem;
+  background-color: #FDFBF8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   padding: 0 24px;
   height: 4rem;
   /*to do! 크기 변환될 때 자연스러운 translate 효과 넣어주기 */
@@ -212,6 +227,150 @@ button {
     padding: 0 60px;
     height: 5.4rem;
   }
+}
+.header .h-menu {
+  position: relative;
+  width: 64px;
+  height: 50px;
+  z-index: 200;
+}
+.header .h-menu .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 10;
+  width: 64px;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0;
+}
+.header .h-menu .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.6rem;
+  width: 64px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .h-menu .hamburger > div {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #033F64;
+  height: 2px;
+  width: 60%;
+  transition: all 0.4s ease;
+}
+.header .h-menu .hamburger > div::before, .header .h-menu .hamburger > div::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: #033F64;
+  transition: all 0.4s ease;
+}
+.header .h-menu .hamburger > div::after {
+  top: 10px;
+}
+.header .logo {
+  width: 52px;
+  height: 52px;
+}
+.header .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*header 끝*/
+.nav-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  width: 0%;
+  height: 100vh;
+  transition: all 0.4s ease;
+}
+.nav-wrap > ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 4rem;
+  left: 24px;
+  visibility: hidden;
+}
+@media screen and (min-width: 768px) {
+  .nav-wrap > ul {
+    top: 6rem;
+    padding: 0 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-wrap > ul {
+    top: 10rem;
+    padding: 0 60px;
+  }
+}
+.nav-wrap > ul > li {
+  list-style: none;
+  padding: 0.5rem;
+}
+.nav-wrap > ul > li > a {
+  position: relative;
+  color: #033F64;
+  text-decoration: none;
+}
+.nav-wrap > ul > li > a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #033F64;
+  transition: all 0.4s ease;
+}
+
+/*Nav List Wrap 끝*/
+/*==============TOGGLE ACTIVE==============*/
+.h-menu.active .hamburger > div {
+  background: rgba(0, 0, 0, 0);
+}
+.h-menu.active .hamburger > div::before {
+  top: 0;
+  transform: rotate(45deg);
+  width: 30px;
+}
+.h-menu.active .hamburger > div::after {
+  top: 0;
+  transform: rotate(135deg);
+  width: 30px;
+}
+
+.nav-wrap.active {
+  width: 100%;
+  background-color: #FDFBF8;
+}
+.nav-wrap.active > ul {
+  transition: visibility 0.4s ease;
+  transition-delay: 0.1s;
+  visibility: visible;
+}
+.nav-wrap.active > ul > li > a:hover {
+  color: #FDFBF8;
+  text-shadow: -1.4px 0 #033F64, 0 1.4px #033F64, 1.4px 0 #033F64, 0 -1.4px #033F64;
+}
+.nav-wrap.active > ul > li > a:hover::after {
+  width: 100%;
 }
 
 .title-main {
@@ -307,7 +466,7 @@ button {
 }
 
 .container .main_visual {
-  padding: 0 0 8rem 0;
+  padding: 6.6rem 0 8rem 0;
 }
 @media screen and (min-width: 980px) {
   .container .main_visual {
@@ -417,6 +576,12 @@ button {
 .container .section.section-about-wrap .inner .sc-title-wrap p {
   color: #ffffff;
 }
+.container .section.section-about-wrap .inner .sc-title-wrap .button-view {
+  margin-top: 2rem;
+  width: 200px;
+  height: auto;
+  opacity: 0.9;
+}
 .container .section.section-about-wrap .inner .sc-conts-wrap {
   text-align: center;
 }
@@ -427,6 +592,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 3rem;
   position: relative;
   box-sizing: border-box;
   background-color: #ffffff;
@@ -459,20 +625,25 @@ button {
     display: block;
   }
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 768px) {
   .container .section.section-about-wrap .inner.mobile {
     display: none;
   }
   .container .section.section-about-wrap .inner.pc {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     align-items: flex-start;
   }
-  .container .section.section-about-wrap .inner .sc-title-wrap {
-    text-align: left;
+  .container .section.section-about-wrap .inner .sc-conts-wrap {
+    width: 46%;
   }
   .container .section.section-about-wrap .inner .sc-conts-wrap .cont-img-box {
-    width: 80%;
+    margin-bottom: 0;
+  }
+  .container .section.section-about-wrap .inner .sc-title-wrap {
+    width: 46%;
+    text-align: left;
   }
 }
 .container .section.section-animation-wrap .inner {
@@ -481,7 +652,7 @@ button {
   flex-direction: column;
   position: relative;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 768px) {
   .container .section.section-animation-wrap .inner {
     flex-direction: row;
   }
@@ -530,7 +701,7 @@ button {
 .container .section.section-skill-wrap .inner .sc-title-wrap {
   text-align: center;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 768px) {
   .container .section.section-skill-wrap .inner .skill-list-wrap {
     display: flex;
     align-items: center;
@@ -611,7 +782,7 @@ button {
 .container .section.section-portfolio-wrap .inner .sc-title-wrap {
   text-align: center;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 768px) {
   .container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap {
     display: flex;
     align-items: center;
@@ -623,51 +794,69 @@ button {
   margin-bottom: 2rem;
   position: relative;
   box-sizing: border-box;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-image: url(../img/img_project_01maipet.png);
 }
 .container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list:before {
   content: "";
   display: block;
-  padding-top: 98%; /* 1:1 비율 */
+  padding-top: 100%; /* 1:1 비율 */
 }
-.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list:nth-child(2) {
-  background-image: url(../img/img_project_02jadoo.png);
+@media screen and (min-width: 768px) {
+  .container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list {
+    width: 49%;
+    margin-bottom: 1.2rem;
+  }
 }
-.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list .bg-wrap {
+.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list a .p-bg-wrap {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
-.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list .bg-wrap .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #033F64;
-  opacity: 0.3;
-}
-.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list .bg-wrap .bg-title-wrap {
+.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list a .p-title-wrap {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
 }
-.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list .bg-wrap .bg-title-wrap .label {
+.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list a .p-title-wrap .label {
   color: #ffffff;
 }
-.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list .bg-wrap .bg-title-wrap .project-name {
+.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list a .p-title-wrap .project-name {
   color: #ffffff;
   font-weight: 600;
 }
-@media screen and (min-width: 980px) {
-  .container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list {
-    width: 48%;
-    margin-bottom: 3rem;
-  }
+.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list a .p-detail-wrap {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 64, 100, 0.9);
+}
+.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list a .p-detail-wrap p {
+  color: #ffffff;
+}
+.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list a .p-detail-wrap .button-view {
+  width: 140px;
+  opacity: 0.9;
+}
+.container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list:hover .p-detail-wrap {
+  visibility: visible;
 }
 @media screen and (min-width: 980px) {
   .container .section.section-work-wrap .inner {
@@ -958,6 +1147,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.footer .inner .f-conts .sns-lists li a img {
+  width: 80%;
 }
 @media screen and (min-width: 980px) {
   .footer .inner .f-conts .sns-lists li {

@@ -9,20 +9,91 @@
     overflow: hidden;
 }
 .header{
-    @include flex-between;
-    margin-bottom: 2.6rem; padding: 0 24px; height: 4rem;
+    @include flex-between; background-color: $color-bg;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 24px; height: 4rem;
     @media screen and(min-width:768px) { margin-bottom: 3.2rem; padding: 0 40px;}
     @media screen and(min-width:1200px) { margin-bottom: 4rem; padding: 0 60px; height: 5.4rem;}
+    .h-menu{
+        position: relative; width: 64px; height: 50px; z-index:200;
+        .toggler{
+            position: absolute; top: 0; left: 0;
+            margin: 0; z-index:10; width: 64px; height: 50px;
+            cursor: pointer; opacity: 0;
+        }
+        .hamburger{
+            position: absolute; top: 0; left: 0; padding: 0.6rem; width: 64px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            &>div{
+                position: relative; top: 0; left: 0; background: $color-main; height: 2px;  width: 60%;
+                transition: all  0.4s ease;
+                &::before, &::after{
+                    content: ''; position: absolute; top: -10px; width: 100%;  height: 2px; background: $color-main;
+                    transition: all  0.4s ease;
+                }
+                &::after{ top: 10px; }
+            }
+        }
+    }
+    .logo{
+        width: 52px; height: 52px;
+        a{ display:block; width: 100%; height: 100%;  }
+    }
+
     /*to do! 크기 변환될 때 자연스러운 translate 효과 넣어주기 */
+}/*header 끝*/
+
+.nav-wrap{
+    position: fixed; top: 0; left: 0; z-index: 7; width: 0%; height: 100vh;
+    transition: all 0.4s ease;
+    & > ul{ 
+        @include flex-column; align-items: flex-start;
+        position: fixed; top: 4rem; left: 24px; visibility: hidden;
+        @media screen and(min-width:768px) { top: 6rem; padding: 0 40px;}
+        @media screen and(min-width:1200px) { top: 10rem; padding: 0 60px;}
+        & > li{
+            list-style: none; padding: 0.5rem;
+            & >a{
+                position: relative; color: $color-main; text-decoration: none;
+                &::after{
+                    position: absolute; bottom: 0; left: 0;
+                    content: ""; display: block; width: 0; height: 2px; background-color: $color-main;
+                    transition: all 0.4s ease;
+                }
+            }
+        }
+    }
+}/*Nav List Wrap 끝*/
+
+/*==============TOGGLE ACTIVE==============*/
+.h-menu.active .hamburger > div{
+    background: rgba(0,0,0,0);
+    &::before{ top: 0; transform: rotate(45deg); width: 30px;}
+    &::after{ top: 0; transform: rotate(135deg); width: 30px;}
 }
+.nav-wrap.active{
+    width: 100%; background-color: $color-bg;
+    & > ul{
+        transition: visibility 0.4s ease; transition-delay: 0.1s; visibility: visible;
+        & > li > a:hover{
+            color: $color-bg;
+            text-shadow: -1.4px 0 $color-main, 0 1.4px $color-main, 1.4px 0 $color-main, 0 -1.4px $color-main;
+            &::after{width: 100%;}
+        }
+    }
+}
+
+
+
+
 .title-main{@include font-title; font-weight: 700; line-height: 1.3;}
 .title-sub{@include font-subTitle; font-weight: 600;}
 .title-deskTxt{@include font-deskBasic; font-weight: 600;}
 .title-txt{@include font-basic; font-weight: 200;}
 .title-small{@include font-small; font-weight: 200;}
+
 .container{
     .main_visual{
-        padding: 0 0 8rem 0;
+        padding: 6.6rem 0 8rem 0;
         @media screen and(min-width:980px) { padding-bottom: 10rem;}
         .inner{
             max-width: 1400px; margin: auto; text-align: center;
@@ -51,7 +122,6 @@
                 margin-bottom: 4rem;
                 @media screen and(min-width:768px) {margin-bottom: 6rem;}
             }
-
         }
 
         /*--------ABOUT 영역--------*/
@@ -62,12 +132,13 @@
                 .sc-title-wrap{
                     p{color: $color-white;}
                     text-align: center;
+                    .button-view{ margin-top: 2rem; width: 200px; height: auto; opacity:.9;}
                 }
                 .sc-conts-wrap{
                     p{color:$color-white;}
-                    text-align: center;
+                    text-align: center; 
                     .cont-img-box{
-                        @include flex-center;
+                        @include flex-center; margin-bottom: 3rem;
                         position: relative; box-sizing: border-box; background-color: $color-white;
                         &:before { content: ""; display: block; padding-top: 98%; /* 1:1 비율 */}
                         img{ width: 80%;}
@@ -82,14 +153,14 @@
                         .m-380{ display: block;}
                     }
                 }
-                @media screen and(min-width:980px) {
+                @media screen and(min-width:768px) {
                     &.mobile{ display: none;}
-                    &.pc{ @include flex; align-items: flex-start;}
-                    
-                    .sc-title-wrap{ text-align: left;}
-                    .sc-conts-wrap{
-                        .cont-img-box{width: 80%;}
+                    &.pc{ @include flex-between; align-items: flex-start;}
+                    .sc-conts-wrap{ width: 46%;
+                        .cont-img-box{margin-bottom: 0;}
                     }
+                    .sc-title-wrap{ width: 46%; text-align: left;}
+                    
                 }
             }
         }
@@ -99,7 +170,7 @@
             .inner{
                 @include flex-column;
                 position: relative;
-                @media screen and (min-width: 980px){ flex-direction: row;}
+                @media screen and (min-width: 768px){ flex-direction: row;}
                 .title-floating-wrap{
                     position: absolute; top: 5rem; left: 20px; transform: rotate(-90deg); transform-origin: left top;
                     @media screen and (min-width: 768px){ left: 40px;}
@@ -124,7 +195,7 @@
                     text-align: center;
                 }
                 .skill-list-wrap{
-                    @media screen and (min-width:980px){
+                    @media screen and (min-width:768px){
                         @include flex-between; flex-wrap: wrap; align-items: baseline;
                         .skill-list{
                             width: 44%; margin-right: 2%; box-sizing: border-box;
@@ -157,6 +228,40 @@
         }
 
         /*-----------Portfolio 영역-----------*/
+        // &.section-portfolio-wrap{
+        //     background-color: $color-bg-gray;
+        //     .inner{
+        //         .sc-title-wrap{
+        //             text-align: center;
+        //         }
+        //         .sc-conts-wrap{
+        //             .portfolio-list-wrap{
+        //                 @media screen and(min-width:768px) {
+        //                     @include flex-between; flex-wrap: wrap;
+        //                 }
+        //                 .portfolio-list{
+        //                     margin-bottom: 2rem;
+        //                     position: relative; box-sizing: border-box; 
+        //                     background-size: auto 100%; background-repeat: no-repeat; background-image: url(../img/img_project_01maipet.png);
+        //                     &:before { content: ""; display: block; padding-top: 98%; /* 1:1 비율 */}
+        //                     &:nth-child(2){background-image:url(../img/img_project_02jadoo.png);}
+        //                     .bg-wrap{
+        //                         position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+        //                         .bg{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: $color-main; opacity: .3;}
+        //                         .bg-title-wrap{
+        //                             position: absolute; bottom: 2rem; left: 2rem;
+        //                             .label{color:$color-white;}
+        //                             .project-name{color: $color-white; font-weight: 600;}
+        //                         }
+        //                     }
+        //                     @media screen and(min-width:768px) {
+        //                         width: 48%; margin-bottom: 3rem;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
         &.section-portfolio-wrap{
             background-color: $color-bg-gray;
             .inner{
@@ -165,28 +270,29 @@
                 }
                 .sc-conts-wrap{
                     .portfolio-list-wrap{
-                        @media screen and(min-width:980px) {
-                            @include flex-between;
-                            flex-wrap: wrap;
-                        }
+                        @media screen and(min-width:768px) { @include flex-between; flex-wrap: wrap; }
                         .portfolio-list{
-                            margin-bottom: 2rem;
-                            position: relative; box-sizing: border-box; 
-                            background-size: auto 100%; background-repeat: no-repeat; background-image: url(../img/img_project_01maipet.png);
-                            &:before { content: ""; display: block; padding-top: 98%; /* 1:1 비율 */}
-                            &:nth-child(2){background-image:url(../img/img_project_02jadoo.png);}
-                            .bg-wrap{
-                                position: absolute; top: 0; bottom: 0; left: 0; right: 0;
-                                .bg{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: $color-main; opacity: .3;}
-                                .bg-title-wrap{
+                            margin-bottom: 2rem;  position: relative; box-sizing: border-box; 
+                            &:before { content: ""; display: block; padding-top: 100%; /* 1:1 비율 */}
+                            @media screen and(min-width:768px) {  width: 49%; margin-bottom: 1.2rem; }
+                            a{
+                                position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: block; width: 100%; height: 100%;
+                                .p-bg-wrap{ position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+                                .p-title-wrap{
                                     position: absolute; bottom: 2rem; left: 2rem;
                                     .label{color:$color-white;}
                                     .project-name{color: $color-white; font-weight: 600;}
                                 }
+                                .p-detail-wrap{
+                                    visibility: hidden;
+                                    position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+                                    @include flex-column; justify-content: center;
+                                    background-color: rgba(0,64,100,.9); 
+                                    p{color: $color-white;}
+                                    .button-view{ width: 140px; opacity: .9;}
+                                }
                             }
-                            @media screen and(min-width:980px) {
-                                width: 48%; margin-bottom: 3rem;
-                            }
+                            &:hover .p-detail-wrap{ visibility: visible;}                       
                         }
                     }
                 }
@@ -312,7 +418,7 @@
            padding-bottom: 0;
            .inner{
             padding-top: 6rem; padding-bottom: 0;
-            .footer-img{@include flex-center;}
+            .footer-img{@include flex-center; }
             }
        } 
     }
@@ -336,7 +442,10 @@
                 @include flex; margin-top: 1rem;
                 li{
                     margin-right: 20px; width: 48px; height: 48px; border-radius: 8px; background-color: $color-white;
-                    a{ display: block; width: 100%; height: 100%; @include flex-center; }
+                    a{
+                        display: block; width: 100%; height: 100%; @include flex-center; 
+                        img{width: 80%;}
+                    }
                     @media screen and(min-width:980px) {width: 52px; height: 52px;}
                     @media screen and(min-width:1200px) {width: 56px; height: 56px;}
                 }

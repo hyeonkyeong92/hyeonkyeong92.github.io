@@ -22,3 +22,25 @@ viewport_set();
 window.onresize = function() { 
 	viewport_set(); 
 }
+
+
+//==============Button Click Event
+
+// var nav = document.getElementsByClassName('nav-wrap');
+// function openNav(){
+// 	nav.addClass('openNavAction');
+// }
+
+const html = document.querySelector('html');
+const headerBtn = html.querySelector('.toggler');
+
+const navWrap = document.querySelector('.nav-wrap');
+const headerBtnWrap = document.querySelector('.h-menu');
+
+headerBtn.addEventListener('click',() =>{
+	navWrap.classList.toggle('active');
+	headerBtnWrap.classList.toggle('active');
+});
+
+
+
