@@ -2,10 +2,11 @@
 @import "interface";
 @import "function";
 
+.section{margin-bottom: 4rem;}
 
 .section-bundle{
     background-color: $color-main;
-    p{color:$color-white;}
+    p{ color:$color-white; margin-bottom: 20px;}
 }
 
 .section-test-wrap2{
@@ -36,3 +37,12 @@
         }
     }
 }
+
+
+
+
+//
+
+    #gotop {
+
+    }

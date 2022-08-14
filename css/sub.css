@@ -224,11 +224,16 @@ button {
     top: 5%;
   }
 }
+.section {
+  margin-bottom: 4rem;
+}
+
 .section-bundle {
   background-color: #033F64;
 }
 .section-bundle p {
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .section-test-wrap2 {
