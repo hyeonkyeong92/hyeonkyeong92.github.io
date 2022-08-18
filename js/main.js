@@ -24,12 +24,7 @@ window.onresize = function() {
 }
 
 
-//==============Button Click Event
-
-// var nav = document.getElementsByClassName('nav-wrap');
-// function openNav(){
-// 	nav.addClass('openNavAction');
-// }
+//=====================Nav Button Click Event=====================//
 
 const html = document.querySelector('html');
 const headerBtn = html.querySelector('.toggler');
@@ -37,29 +32,41 @@ const headerBtn = html.querySelector('.toggler');
 const navWrap = document.querySelector('.nav-wrap');
 const headerBtnWrap = document.querySelector('.h-menu');
 
+const navList = document.querySelectorAll('.nav-lists .list');
+
 headerBtn.addEventListener('click',() =>{
+
 	navWrap.classList.toggle('active');
 	headerBtnWrap.classList.toggle('active');
 });
 
 
-//==============Scroll Event
+
+
+
+
+
+
+
+//==========================Scroll Event===========================//
 
 function isElementUnderBottom(elem, triggerDiff) {
     const { top } = elem.getBoundingClientRect();
     const { innerHeight } = window;
     return top > innerHeight + (triggerDiff || 0);
-  } //높이값 확인
+} //높이값 확인
   
   function handleScroll() {
     //공통함수1
     const elems = document.querySelectorAll('.obj-ani');
     const elems2 = document.querySelectorAll('.obj-vertical-ani');
+    const elems3 = document.querySelectorAll('.obj-horizontal-ani');
     
     elems.forEach(elem => {
         if (isElementUnderBottom(elem, -20)) {
             elem.style.opacity = "0";
             elem.style.transform = 'translateY(70px)';
+            elem.style.transitionDuration = '.4s'
   
         } else {
             elem.style.opacity = "1";
@@ -70,32 +77,52 @@ function isElementUnderBottom(elem, triggerDiff) {
     // event1
 
     elems2.forEach(elem => {
-        var topMove = 0;
+        // var topMove = 0;
         if (isElementUnderBottom(elem, -20)) {
-            topMove = topMove + 2;
-            elem.style.transform = 'translate3d(0,70px,0)';
-            // elem.style.transform = 'translate3d(' + -topMove + ' px, 0px,  0px)';
-  
+            // elem.style.transform = `translate3d(${+ -topMove}px,0px, 0px)`;
+            elem.style.transform = `translate3d(200px,0px, 0px)`;
+       
+
         } else {
-            topMove = topMove - 2;
-            elem.style.transform = 'translate3d(0,0px,0)';
+            elem.style.transform = `translate3d(-50px,0px, 0px)`;
             // elem.style.transform = 'translate3d(' + -topMove + ' px, 0px,  0px)';
   
         }
-        console.log(topMove);
+
     })
-  
+    // event2
+
+    elems3.forEach(elem =>{
+        if (isElementUnderBottom(elem, -80)) {
+            elem.style.opacity = "0";
+            elem.style.transform = 'translateX(70px)';
+            elem.style.transitionDuration = '.8s'
+    
+        } else {
+            elem.style.opacity = "1";
+            elem.style.transform = 'translateX(0px)';
+    
+        }
+      })
+      // event3
   }
-  //event2
 
   
   window.addEventListener('scroll', handleScroll);
 
+//Scroll Event 끝
 
 
 
 
-  // =================== text scroll event================== //
+// ===================Mouse Over Event=====================//
+
+
+
+
+
+
+  // =================== JQuery --- Text Scroll Event================== //
   //get in touch button
 
 //on hover text transform scale
@@ -126,42 +153,24 @@ $(document).ready(function(){
 });
 
 
-//left and right move text with scroll
+//left and right and vertical move text with scroll
 var lastScrollTop = 0;
 var leftMove = 0;
-// var rightMove = 0;
 
-// $(window).scroll(function(event){
-//    var st = $(this).scrollTop();
-//    if (st > lastScrollTop){
-//        leftMove = leftMove + 5;
-//        $('.left-side').find('.parallex-title').css({"transform" : "translate3d(" + -leftMove + "px, 0px,  0px)"});
-       
-//        rightMove = rightMove - 5;
-//        $('.right-side').find('.parallex-title').css({"transform": "translate3d(" + -rightMove + "px, 0px,  0px)"});
-//    }
-//    else{
-//         leftMove = leftMove - 5;
-//         $('.left-side').find('.parallex-title').css({"transform": "translate3d(" + -leftMove + "px, 0px,  0px)"});
-
-//         rightMove = rightMove + 5;    
-//        $('.right-side').find('.parallex-title').css({"transform": "translate3d(" + -rightMove + "px, 0px,  0px)"});
-//    }
-//    lastScrollTop = st;
-// });
 
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
    if (st > lastScrollTop){
        leftMove = leftMove + 2;
-       $('.left-side').find('.parallex-title').css({"transform" : "translate3d(" + -leftMove + "px, 0px,  0px)"});
+       $('.section').find('.parallex-title').css({"transform" : "translate3d(" + -leftMove + "px, 0px,  0px)"});
        
    }
    else{
         leftMove = leftMove - 2;
-        $('.left-side').find('.parallex-title').css({"transform": "translate3d(" + -leftMove + "px, 0px,  0px)"});
+        $('.section').find('.parallex-title').css({"transform": "translate3d(" + -leftMove + "px, 0px,  0px)"});
 
    }
    lastScrollTop = st;
+   console.log(st);
 });
 

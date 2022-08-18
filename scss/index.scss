@@ -9,10 +9,11 @@
     overflow: hidden;
 }
 .header{
-    @include flex-between; background-color: $color-bg;
+    @include flex-between; 
+    // background-color: $color-bg;
     position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 24px; height: 4rem;
     @media screen and(min-width:768px) { margin-bottom: 3.2rem; padding: 0 40px;}
-    @media screen and(min-width:1200px) { margin-bottom: 4rem; padding: 0 60px; height: 5.4rem;}
+    @media screen and(min-width:1200px) { margin-bottom: 4rem; height: 5.4rem;}
     .h-menu{
         position: relative; width: 64px; height: 50px; z-index:200;
         .toggler{
@@ -350,6 +351,8 @@
                             .icon{  width: 54px; height: 54px; background-repeat: no-repeat; background-position: center; background-size: 100% auto;}
                         } /* to do! line width - scroll event 넣어주기 : 사이트 쉐프원 참고*/
     
+                        &:nth-child(2n+0){transition-delay: .2s;}
+
                         &:nth-child(1) .icon{ background-image: url(../img/icon_skill_plan.png);}
                         &:nth-child(2) .icon{ background-image: url(../img/icon_skill_design.png);}
                         &:nth-child(3) .icon{ background-image: url(../img/icon_skill_publising.png);}
@@ -381,7 +384,11 @@
                         .portfolio-list{
                             margin-bottom: 2rem;  position: relative; box-sizing: border-box; 
                             &:before { content: ""; display: block; padding-top: 100%; /* 1:1 비율 */}
-                            @media screen and(min-width:768px) {  width: 49%; margin-bottom: 1.2rem; }
+                            
+                            @media screen and(min-width:768px) {
+                                 width: 49%; margin-bottom: 1.2rem;
+                                 &:nth-child(2n+0){transition-delay: .2s;}
+                                }
                             a{
                                 position: absolute; top: 0; bottom: 0; left: 0; right: 0; display: block; width: 100%; height: 100%;
                                 .p-bg-wrap{ position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
@@ -412,6 +419,7 @@
             .inner{
                 @media screen and(min-width:980px) {
                     @include flex-between; align-items: baseline;
+
                 }
                 .sc-title-wrap{
                     .sc-title-top{ margin-bottom: 2rem;}
@@ -440,6 +448,7 @@
                 .sc-conts-wrap{
                     @media screen and(min-width:980px) {
                         width: 50%;
+                        transition-delay: .4s;
                     }
                     .work-list-wrap{
                         .work-list{
@@ -482,7 +491,7 @@
                        @media screen and(min-width:640px) {justify-content: left;}                      
                        @media screen and(min-width:768px) {flex-wrap: nowrap; overflow-x: visible;}
                        .ex-list{
-                           width: 46%;  margin-right: 4%; margin-bottom: 8%;
+                           width: 46%;  margin-right: 4%; margin-bottom: 8%; cursor: pointer;
                            &:nth-child(2n+0){ margin-right: 0}
                            @media screen and(min-width:640px) {
                                width: 30%; max-width: 210px;
@@ -509,10 +518,14 @@
                                 @include flex-center;
                                 p{font-weight: 600;}
                                 .txt-icon{
+                                    transition : .3s ease-in-out; 
                                     margin-left: 0.4rem; margin-bottom: -0.1rem; width: 1rem; height: 1rem;
                                     background-image: url(../img/icon_plus.svg); background-repeat: no-repeat; background-size: 100% auto; background-position: center;
                                 }
                            } 
+                           &:hover .txt-box .txt-icon{
+                               transform: rotate(180deg);
+                           }
                         }
                     }
 
@@ -523,6 +536,7 @@
 
        /*-----------Footer-Image 영역-----------*/
        &.section-footer-wrap{
+           background-color: $color-bg;
            padding-bottom: 0;
            .inner{
             padding-top: 6rem; padding-bottom: 0;
