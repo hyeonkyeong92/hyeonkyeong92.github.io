@@ -428,4 +428,34 @@ button {
 }
 .container .sub-section.section-wireframe-wrap .inner .conts .img-wireframe {
   margin: 0 auto;
+}
+.container .sub-section.section-clientneeds-wrap .inner .title-wrap {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 980px) {
+  .container .sub-section.section-clientneeds-wrap .inner .title-wrap {
+    margin-bottom: 5rem;
+  }
+}
+.container .sub-section.section-clientneeds-wrap .g-test {
+  width: 33%;
+  max-width: 450px;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, rgb(174, 113, 251) 0%, rgb(97, 132, 255) 100%);
+}
+.container .sub-section.section-clientneeds-wrap .g-test:before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* 1:1 비율 */
+}
+.container .sub-section.section-clientneeds-wrap .g-test .test-txt-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=sub.css.map */
