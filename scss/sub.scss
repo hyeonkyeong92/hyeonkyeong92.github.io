@@ -11,17 +11,14 @@
     .title-small{ color: $color-middle-black;}
 
     .sub-visual{
-        position: relative;
-        padding: 6rem 0;
-        min-height: 80vh;
-        height: 80vh;
-        overflow: hidden;
+        position: fixed; top: 0; left: 0; right: 0;
+        padding: 6rem 0; min-height: 80vh; height: 80vh; overflow: hidden;
         .bg{
             position: absolute; top: 0; left: 0;
             padding: 6rem 0;
             min-height: 80vh;
             height: 80vh; width: 100%;
-            background-image: url(../img/sub/sub-visual-maipet.png);
+            background-image: url(../img/sub/maipet/maipet-visual.png);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -42,6 +39,8 @@
     }
 
     .sub-section{
+        position: relative; z-index: 200;
+        background-color: $color-bg;
         /*----section 공통스타일----*/
         padding: 4rem 0;
         .inner{
@@ -51,15 +50,17 @@
             @media screen and (min-width:1200px) { margin: 0 auto; padding: 4rem 60px; width: 1200px; max-width: 1200px;}
             @media screen and (min-width:1400px) { width: 1400px; max-width: 1400px;}
             .sc-title-wrap{
-                margin-bottom: 4rem;
-                @media screen and(min-width:768px) {margin-bottom: 6rem;}
+                margin-bottom: 3rem;
+                @media screen and(min-width:768px) {margin-bottom: 4rem;}
+                @media screen and(min-width:980px) {margin-bottom: 5rem;}
+                & > h2{ margin-bottom: 1rem;}
             }
         }
 
         /*--------INFORMATION 영역--------*/
         &.section-project-info-wrap{
+            margin-top: 80vh;
             .inner{
-                .title-main{ margin-bottom: 2rem;}
                 .project-info{
                     .item{
                         margin-bottom: 1.6rem;
@@ -75,7 +76,6 @@
                     }
                 }
                 @media screen and(min-width:980px) {
-                    .title-main{ margin-bottom: 3.2rem}
                     .project-info{
                         .item{ 
                             @include flex; align-items: flex-start;
@@ -92,7 +92,6 @@
                     }
                 }
                 @media screen and(min-width:1000px){
-                    .title-main{ margin-bottom: 4rem}
                     .project-info{.item{.label{min-width: 180px;}}}
                 }
                 @media screen and(min-width:1100px){
@@ -126,24 +125,134 @@
 
         /*--------clientNeeds 영역--------*/
         &.section-clientneeds-wrap{
+            padding-bottom: 70px;
             .inner{
-                .title-wrap{
-                    margin-bottom: 2rem;
-                    @media screen and (min-width:980px) {
-                        margin-bottom: 5rem;
+                .conts-wrap{
+                    .list-wrap{
+                        @include flex-column;
+                        @media screen and(min-width:768px){
+                            flex-direction: row; justify-content: space-around;
+                        }
+                        .item{
+                            margin-bottom: 2rem;
+                            width: 70%;  border-radius: 50%;
+                            position: relative; box-sizing: border-box; background: $color-gradient-purple ;
+                            &:before { content: ""; display: block; padding-top: 100%; /* 1:1 비율 */}
+                            &:nth-child(2){background:$color-gradient-blue;}
+                            &:nth-child(3){background:$color-gradient-skyblue;}
+                            @media screen and(min-width:768px) {
+                                width: 30%; margin-right: 2%; max-width: 450px;
+                                &:nth-child(3){margin-right: 0;}
+                            }
+                            .txt-wrap{
+                                @include flex-column; width: 70%;
+                                position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+                                p{
+                                    text-align: center; color: $color-white;
+                                    &:nth-child(2){ margin-bottom: 0.6rem; font-weight: 400;}
+                                }
+                             }
+                        } 
                     }
                 }
             }
-               .g-test{
-                   width: 33%; max-width: 450px; border-radius: 50%;
-                   position: relative; box-sizing: border-box; background: $color-gradient-purple ;
-                   &:before { content: ""; display: block; padding-top: 100%; /* 1:1 비율 */}
-                   .test-txt-wrap{
-                       @include flex-column;
-                       position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-                   }
-               } 
         }
 
+        /*--------overview 영역--------*/
+        &.section-overview-wrap{
+            position: relative; 
+            //공통스타일
+            .inner{
+                position: relative; z-index: 2;
+                .conts-wrap{
+                    @include flex-column; align-items: center;
+                   .text-wrap{ 
+                       margin: 3rem 0;
+                       h2{margin-bottom: 0.6rem;}
+                    }
+                    @media screen and(min-width:980px) {
+                        flex-direction: row; margin-bottom: 4rem;
+                        &.reverse{ flex-direction: row-reverse;}
+                        .column-8{
+                            width: 50%;
+                            &.text-wrap{
+                                margin: 0 0 8rem 0; 
+                                h2{ margin-left: 6rem;}
+                                p{ margin-left: 6rem; width: 80%; text-align: left;}
+                            }
+                            &.screen-wrap{ @include flex-column;}
+                            &.margin-top-m24{ margin-top: -24rem;}
+                        }
+                    }
+                }
+
+            }
+            .bg-circle{
+                position: absolute; bottom: 26rem; left: 50%; transform: translateX(-50%); z-index: 1;
+                width: 110%; height: 110%; max-width: 1120px; max-height: 1120px; opacity: .1;
+                background: url(../img/sub/maipet/maipet-object-bg-circle.svg) no-repeat center; background-size: 100% auto;
+                @media screen and(min-width:980px) {
+                    bottom: 8rem;
+                    width: 80%; height: 80%;
+                }
+            }
+        }
+        &.main{
+            position: relative;
+            padding: 4rem 0 0 0; background-color: #63B2FE;
+            .inner{
+                padding: 4rem 40px 0 40px; position: relative; z-index: 2;
+                &::before{
+                    position: absolute; left: 0; top: -8rem; display: block; clear: both; content: ""; width: 24%; max-width: 140px; height: 140px; background-image: url(../img/sub/maipet/maipet-section-icon.svg); background-repeat: no-repeat; background-size: contain;
+                    @media screen and(min-width:1200px) {left: 1.6rem;}
+                }
+                .sc-title-wrap{
+                    margin-bottom: 3rem;
+                    h2, p {color:$color-white;}
+                }
+                .conts-wrap{
+                    @media screen and(min-width:980px) { @include flex; justify-content: space-between; margin-top: -10rem; margin-bottom: 0;}
+                    .text-wrap{
+                        margin-bottom: 2rem;
+                        h2, p{ color: $color-white;}
+                        p{font-weight: 300;}
+                        @media screen and(min-width:980px) { 
+                            margin-top: -10rem;
+                            h2, p{ margin-left: 0rem !important;}
+                            }
+                    }
+                    .screen-wrap{
+                        @include flex-column;
+                        .img-screen{
+                            position: relative;
+                            .elem1{position: absolute; left: 4rem; top: 14rem;}
+                            .elem2{position: absolute; left: -3rem; top: 20rem; transition-delay: .2s;}
+                            .elem3{position: absolute; right: -2rem; top: 20rem; transition-delay: .4s;}
+                            @media screen and (min-width:980px) {
+                                .elem1{ left: -6rem;}
+                                .elem2{ left: -13rem;}
+                                .elem3{ left: -2rem; top: 28rem;}
+                            }
+                        }
+                    }
+                }
+            }
+            .bg{ position: absolute; bottom: 0; left: 0; right: 0; height: 5rem; background-color: $color-bg;}
+        }
+        &.section-mypage-wrap{
+            background-color: #F1F1F1;
+            .inner{
+                .conts-wrap{
+                    .screen-wrap{
+                        @include flex-between;
+                        & >div:nth-child(2){ transition-delay: .2s;}
+                        & >div:nth-child(3){ transition-delay: .4s;}
+                    }
+                }
+            }
+        }
+        &.section-footer-wrap{
+            padding: 0;
+        }
     }
 }
