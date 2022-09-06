@@ -1,0 +1,284 @@
+@import "reset";
+@import "interface";
+@import "function";
+
+/*===================SUBPAGE-APPLICATION-COMMON===================*/
+
+.container{
+    .title-main{ color: $color-middle-black;}
+    .title-sub{ color: $color-middle-black;}
+    .title-deskTxt{ color: $color-middle-black;}
+    .title-txt{ color: $color-middle-black;}
+    .title-small{ color: $color-middle-black;}
+    
+    /*--------(Common)Sub-Visual 공통스타일--------*/
+    .sub-visual{
+        position: fixed; top: 0; left: 0; right: 0; padding: 6rem 0; min-height: 80vh; height: 80vh;  overflow: hidden; 
+        .bg{
+            position: absolute; top: 0; left: 0; padding: 6rem 0; min-height: 80vh; height: 80vh; width: 100%;
+            background-repeat: no-repeat; background-position: center; background-size: cover;
+        }
+        .inner{ 
+            position: absolute; left: 0; top: 50%; padding: 0 24px; transform: translateY(-60%);
+            @media screen and (min-width:768px) { padding: 2rem 40px;}
+            @media screen and (min-width:980px) { padding: 4rem 40px;}
+            @media screen and (min-width:1200px) { margin: 0 auto; padding: 6rem 60px; width: 1200px; max-width: 1200px;}
+            @media screen and (min-width:1400px) { width: 1400px; max-width: 1400px;}
+        }
+        &.maipet-visual{
+            .bg{ background-image: url(../img/sub/maipet/maipet-visual.png);}
+        }
+        &.jadoo-visual{
+            .bg{ 
+                background-color: $color-white; 
+                .image-wrap{ 
+                    position: relative; transform: translateY(-20%); height: 80vh; max-width: 768px; margin: 0 auto; background: url(../img/sub/jadoo/jadoo-visual-bg-mobile.png) no-repeat; background-size: auto 90%; background-position: center;
+                    @media screen and (min-width:980px) {background:url(../img/sub/jadoo/jadoo-visual-bg.png) no-repeat; background-size: 85% auto;}
+                    .character{
+                        width: 150px; height: auto;
+                        &.character-dudu{ position: absolute; left: 2rem; bottom: 2rem; }
+                        &.character-pruny{ position: absolute; right: 2rem; bottom: 1rem; }
+                    }
+                }
+
+                .object-wrap{
+
+                }
+            }
+
+        }
+    }
+    /*--------(Common)Sub-Section 공통스타일--------*/
+    .sub-section{
+        position: relative; z-index: 200; padding: 4rem 0; background-color: $color-bg;
+        .inner{
+            padding: 0 24px;
+            @media screen and (min-width:768px) { padding: 2rem 40px;}
+            @media screen and (min-width:980px) { padding: 4rem 40px;}
+            @media screen and (min-width:1200px) { margin: 0 auto; padding: 4rem 60px; width: 1200px; max-width: 1200px;}
+            @media screen and (min-width:1400px) { width: 1400px; max-width: 1400px;}
+            .sc-title-wrap{
+                margin-bottom: 3rem;
+                @media screen and(min-width:768px) {margin-bottom: 4rem;}
+                @media screen and(min-width:980px) {margin-bottom: 5rem;}
+                & > h2{ margin-bottom: 1rem;}
+            }
+        }
+
+        /*--------(Common)INFORMATION 영역--------*/
+        &.section-project-info-wrap{
+            margin-top: 80vh;
+            .inner{
+                .project-info{
+                    margin-bottom: 4rem;
+                    .item{
+                        margin-bottom: 1.6rem;
+                        .label{ margin-bottom: 0.6rem;}
+                        &.item-info{
+                            .menu{
+                                & > div{
+                                    @include flex; margin-bottom: 0.4rem;
+                                    & > p:nth-child(1){ margin-right: 0.6rem; font-weight: 500;}
+                                }
+                            }
+                        }
+                    }
+                }
+                .ctaButton{ width: 230px; height: 56px; font-weight: 400; border: 1.5px solid $color-middle-black; transition: all .5s ease;
+                    // background:linear-gradient(120deg, rgba(0,207,166,1) 0%, rgba(0,177,179,1) 100%); 
+                } 
+                .ctaButton:hover{background-color: $color-middle-black; color: $color-white; }
+
+                @media screen and(min-width:980px) {
+                    .project-info{
+                        .item{ 
+                            @include flex; align-items: flex-start;
+                            .label{ min-width: 160px; margin-bottom: 0;}
+                            &:nth-child(1), &:nth-child(3){align-items: center;}
+                            &.item-info{
+                                .menu{
+                                    @include flex;
+                                    & > div{margin-bottom: 0;}
+                                    & > div:not(:last-child){ margin-right: 1.4rem;}
+                                }
+                            }
+                        }
+                    }
+                }
+                @media screen and(min-width:1000px){
+                    .project-info{.item{.label{min-width: 180px;}}}
+                }
+                @media screen and(min-width:1100px){
+                    .project-info{.item{.label{min-width: 200px;}}}
+                }
+                @media screen and(min-width:1200px){
+                    .project-info{.item{.label{min-width: 220px;}}}
+                }
+            }
+        }
+
+         /*--------INFORMATION 영역--------*/
+         &.section-wireframe-wrap{
+             .inner{
+                padding-top: 4rem; padding-bottom: 4rem;  margin: 0 auto; width: 90%; max-width: 1000px;  background-color: $color-bg-gray;
+                @media screen and(min-width:1200px) { width: 1000px; }
+                .wf-title {
+                    font-weight: 500; line-height: 1.3;
+                    &::before{
+                        margin-bottom: 0.6rem; content: ""; display: block; clear: both; width: 8px; height: 8px; border-radius: 50%; background-color: $color-middle-black; opacity: 0.7; }
+                    }
+                .conts{
+                    .img-wireframe{
+                        margin: 0 auto;
+                    }
+                }
+             }
+         }
+
+        /*--------clientNeeds 영역--------*/
+        &.section-circleList-wrap{
+            padding-bottom: 70px;
+            .inner{
+                .conts-wrap{
+                    .list-wrap{
+                        @include flex-column;
+                        @media screen and(min-width:768px){
+                            flex-direction: row; justify-content: space-around;
+                        }
+                        .item{
+                            margin-bottom: 2rem; width: 70%;  border-radius: 50%;
+                            position: relative; box-sizing: border-box; 
+                            &:before { content: ""; display: block; padding-top: 100%; /* 1:1 비율 */}
+                            @media screen and(min-width:768px) {
+                                width: 30%; margin-right: 2%; max-width: 450px;
+                                &:nth-child(3){margin-right: 0;}
+                            }
+                            .txt-wrap{
+                                @include flex-column; width: 70%;
+                                position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+                                p{
+                                    text-align: center; color: $color-white;
+                                    &:nth-child(2){ margin-bottom: 0.6rem; font-weight: 400;}
+                                }
+                                span{color: $color-white;}
+                             }
+                        } 
+                    }
+                }
+            }
+            /*마이펫 스타일*/
+            &.maipet{
+                .item{
+                    &:nth-child(1){background:$color-gradient-purple;}
+                    &:nth-child(2){background:$color-gradient-blue;}
+                    &:nth-child(3){background:$color-gradient-skyblue;}
+                }
+            }
+            &.jadoo{
+                .item{
+                    background-size: 100% auto; background-repeat: no-repeat;
+                    &:nth-child(1){background-image: url(../img/sub/jadoo/jadoo-discovery-circle01.svg); }
+                    &:nth-child(2){background-image: url(../img/sub/jadoo/jadoo-discovery-circle02.svg); }
+                    &:nth-child(3){background-image: url(../img/sub/jadoo/jadoo-discovery-circle03.svg); }
+                }
+            }
+        }
+
+        /*--------overview 영역--------*/
+        &.section-overview-wrap{
+            position: relative; 
+            //공통스타일
+            .inner{
+                position: relative; z-index: 2;
+                .conts-wrap{
+                    @include flex-column; align-items: center;
+                   .text-wrap{ 
+                       margin: 3rem 0;
+                       h2{margin-bottom: 0.6rem;}
+                    }
+                    @media screen and(min-width:980px) {
+                        flex-direction: row; margin-bottom: 4rem;
+                        &.reverse{ flex-direction: row-reverse;}
+                        .column-8{
+                            width: 50%;
+                            &.text-wrap{
+                                margin: 0 0 8rem 0; 
+                                h2{ margin-left: 6rem;}
+                                p{ margin-left: 6rem; width: 80%; text-align: left;}
+                            }
+                            &.screen-wrap{ @include flex-column;}
+                            &.margin-top-m24{ margin-top: -24rem;}
+                        }
+                    }
+                }
+
+            }
+            .bg-circle{
+                position: absolute; bottom: 26rem; left: 50%; transform: translateX(-50%); z-index: 1;
+                width: 110%; height: 110%; max-width: 1120px; max-height: 1120px; opacity: .1;
+                background: url(../img/sub/maipet/maipet-object-bg-circle.svg) no-repeat center; background-size: 100% auto;
+                @media screen and(min-width:980px) {
+                    bottom: 8rem;
+                    width: 80%; height: 80%;
+                }
+            }
+        }
+        &.main{
+            position: relative;
+            padding: 4rem 0 0 0; background-color: #63B2FE;
+            .inner{
+                padding: 4rem 40px 0 40px; position: relative; z-index: 2;
+                &::before{
+                    position: absolute; left: 0; top: -8rem; display: block; clear: both; content: ""; width: 24%; max-width: 140px; height: 140px; background-image: url(../img/sub/maipet/maipet-section-icon.svg); background-repeat: no-repeat; background-size: contain;
+                    @media screen and(min-width:1200px) {left: 1.6rem;}
+                }
+                .sc-title-wrap{
+                    margin-bottom: 3rem;
+                    h2, p {color:$color-white;}
+                }
+                .conts-wrap{
+                    @media screen and(min-width:980px) { @include flex; justify-content: space-between; margin-top: -10rem; margin-bottom: 0;}
+                    .text-wrap{
+                        margin-bottom: 2rem;
+                        h2, p{ color: $color-white;}
+                        p{font-weight: 300;}
+                        @media screen and(min-width:980px) { 
+                            margin-top: -10rem;
+                            h2, p{ margin-left: 0rem !important;}
+                            }
+                    }
+                    .screen-wrap{
+                        @include flex-column;
+                        .img-screen{
+                            position: relative;
+                            .elem1{position: absolute; left: 4rem; top: 14rem;}
+                            .elem2{position: absolute; left: -3rem; top: 20rem; transition-delay: .2s;}
+                            .elem3{position: absolute; right: -2rem; top: 20rem; transition-delay: .4s;}
+                            @media screen and (min-width:980px) {
+                                .elem1{ left: -6rem;}
+                                .elem2{ left: -13rem;}
+                                .elem3{ left: -2rem; top: 28rem;}
+                            }
+                        }
+                    }
+                }
+            }
+            .bg{ position: absolute; bottom: 0; left: 0; right: 0; height: 5rem; background-color: $color-bg;}
+        }
+        &.section-mypage-wrap{
+            background-color: #F1F1F1;
+            .inner{
+                .conts-wrap{
+                    .screen-wrap{
+                        @include flex-between;
+                        & >div:nth-child(2){ transition-delay: .2s;}
+                        & >div:nth-child(3){ transition-delay: .4s;}
+                    }
+                }
+            }
+        }
+        &.section-footer-wrap{
+            padding: 0;
+        }
+    }
+}

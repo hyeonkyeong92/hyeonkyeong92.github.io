@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/************************************COMMON********************************/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+[lang="ko"] {font-family: "Noto Sans KR", "Montserrat", sans-serif,"맑은 고딕","Nanum Gothic","나눔 고딕","돋움",dotum,sans-serif;}
+[lang="en"] {font-family: "Lato", "Noto Sans KR", sans-serif; letter-spacing: 0;  font-weight: 400;}
+
+
+
+/********COLOR STYLE********/
+.wc{ color: #fff;}
+
+
+/********BUTTON STYLE********/
+
+
+/********FONT STYLE********/
+
+
+
+
+/************************************WRAP********************************/
+#wrap{ position: relative;}
+
+/************************************HEADER********************************/
+.header{ position: fixed; top: 0; left: 0; right: 0; z-index: 200; width: 100vw; height: 100px;}
+.header .inner{position: relative; display: flex; align-items: center; width: 1200px; height: 100px; margin: 0 auto;}
+.header .logo a{ display: block; width: 126px; height: 32px; text-indent: -9999px; background-image: url(../img/logo.svg); background-repeat: no-repeat; background-position: center; background-size: contain;}
+.header .gnb{ position: absolute; right: 220px; display: flex; align-items: center;}
+.header .gnb li{ margin-left: 60px;}
+.header .gnb li a{ font-size: 18px; color: #fff;}
+.header .utill{ position: absolute; right: 0; display: flex; align-items: center;}
+.header .utill p{margin-left: 12px;}
+.header .utill p:nth-child(2):before{ margin-right: 12px; content: ''; display: inline-block; clear: both; width:1px; height: 12px; background-color: #fff;}
+.header .utill p a{ font-size: 16px; color: #fff;}
+
+
+/*********************************MAIN********************************/
+.main{ position: relative; width: 100vw; height: 100vh; background-image: url(../img/main-img.png); background-repeat: no-repeat; background-position: center; background-size: cover; clip-path: polygon(100% 0, 100% 87%, 36% 100%, 0 92%, 0 0);}
+.main .text-wrap{
+    
+}
+
+
+/************************************FOOTER********************************/
