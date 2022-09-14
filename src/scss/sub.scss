@@ -11,6 +11,8 @@
     .title-txt{ color: $color-middle-black;}
     .title-small{ color: $color-middle-black;}
     
+
+
     /*--------(Common)Sub-Visual 공통스타일--------*/
     .sub-visual{
         position: fixed; top: 0; left: 0; right: 0; padding: 6rem 0; min-height: 80vh; height: 80vh;  overflow: hidden; 
@@ -45,9 +47,13 @@
 
                 }
             }
-
+        }
+        &.lawshow-visual{
+            .bg{background-color: $color-bg-gray;}
         }
     }
+
+
     /*--------(Common)Sub-Section 공통스타일--------*/
     .sub-section{
         position: relative; z-index: 200; padding: 4rem 0; background-color: $color-bg;
@@ -282,3 +288,8 @@
         }
     }
 }
+
+    /*--------Project별--------*/
+    .lawshow{
+        .sub-section{ background-color: $color-white;}
+    }

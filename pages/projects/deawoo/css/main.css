@@ -658,106 +658,150 @@ button {
   display: flex;
   justify-content: center;
 }
-#wrap .section.section-company-info-wrap {
-  /*공통스타일*/
+#wrap .section.section-company-info-wrap .box {
+  padding: 2rem;
+}
+#wrap .section.section-company-info-wrap .recruit-box {
+  background-color: #232C43;
+}
+#wrap .section.section-company-info-wrap .about-box {
+  background-color: cornflowerblue;
+}
+#wrap .section.section-company-info-wrap .view-box {
+  background-color: darkcyan;
+}
+#wrap .section.section-company-info-wrap .video-box {
+  background-color: darkslategrey;
 }
 @media screen and (min-width: 860px) {
   #wrap .section.section-company-info-wrap {
     display: flex;
   }
-  #wrap .section.section-company-info-wrap .left {
-    width: 50%;
+  #wrap .section.section-company-info-wrap .box {
+    padding: 4rem 2rem;
   }
-  #wrap .section.section-company-info-wrap .left > div:nth-child(2) {
+  #wrap .section.section-company-info-wrap .flex {
     display: flex;
   }
-  #wrap .section.section-company-info-wrap .left > div:nth-child(2) .introduce-box {
+  #wrap .section.section-company-info-wrap .col-5 {
     width: 50%;
   }
-  #wrap .section.section-company-info-wrap .left > div:nth-child(2) .f-more-box {
-    width: 50%;
+  #wrap .section.section-company-info-wrap .column-10 {
+    height: 100%;
   }
-  #wrap .section.section-company-info-wrap .right {
-    width: 50%;
+  #wrap .section.section-company-info-wrap .column-5 {
+    height: 50%;
   }
 }
-#wrap .section.section-company-info-wrap .box {
-  height: auto;
-  width: 100%;
+#wrap .section.footer-wrap {
+  background-color: #232C43;
 }
-#wrap .section.section-company-info-wrap .box .f-title-wrap .label {
+#wrap .section.footer-wrap .inner {
+  position: relative;
+}
+@media screen and (min-width: 860px) {
+  #wrap .section.footer-wrap .inner {
+    padding: 6rem 2rem 10rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #wrap .section.footer-wrap .inner {
+    padding: 6rem 2rem 10rem;
+  }
+}
+#wrap .section.footer-wrap .inner .f-logo {
+  margin-bottom: 3rem;
+  display: none;
+  width: 126px;
+  height: 32px;
+  text-indent: -9999px;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.6;
+}
+@media screen and (min-width: 860px) {
+  #wrap .section.footer-wrap .inner .f-logo {
+    display: block;
+  }
+}
+@media screen and (min-width: 860px) {
+  #wrap .section.footer-wrap .inner .f-info {
+    position: absolute;
+    top: 6.4rem;
+    left: 14rem;
+  }
+}
+#wrap .section.footer-wrap .inner .f-info .f-link {
+  margin-bottom: 1.4rem;
+}
+#wrap .section.footer-wrap .inner .f-info .f-link a {
+  color: #ffffff;
+}
+#wrap .section.footer-wrap .inner .f-info .address p {
+  margin-bottom: 0.4rem;
+  color: #ffffff;
   font-weight: 300;
+  opacity: 0.6;
+}
+#wrap .section.footer-wrap .inner .f-info .address span {
   color: #ffffff;
 }
-#wrap .section.section-company-info-wrap .box .f-title-wrap h3 {
-  margin-bottom: 1rem;
-  font-weight: 500;
-  color: #ffffff;
+@media screen and (min-width: 860px) {
+  #wrap .section.footer-wrap .inner .f-info .address {
+    display: flex;
+    align-items: center;
+  }
+  #wrap .section.footer-wrap .inner .f-info .address p {
+    margin-right: 1rem;
+  }
+  #wrap .section.footer-wrap .inner .f-info .address p:nth-child(1)::after {
+    margin-left: 1rem;
+    display: inline-block;
+    clear: both;
+    content: "";
+    width: 0.6px;
+    height: 12px;
+    background-color: #ffffff;
+  }
 }
-#wrap .section.section-company-info-wrap .box .f-title-wrap .menu {
+#wrap .section.footer-wrap .inner .f-info .copyright {
+  margin-top: 3rem;
+  color: #ffffff;
   font-weight: 300;
-  color: #ffffff;
+  opacity: 0.6;
 }
-#wrap .section.section-company-info-wrap .box .button-wrap {
+#wrap .section.footer-wrap .inner .drop-wrap {
   margin-top: 4rem;
+  width: 150px;
+  max-width: 150px;
+}
+@media screen and (min-width: 860px) {
+  #wrap .section.footer-wrap .inner .drop-wrap {
+    position: absolute;
+    top: 5.4rem;
+    right: 0;
+    margin-top: 0;
+    max-width: 170px;
+  }
+}
+#wrap .section.footer-wrap .inner .drop-wrap .family-button {
+  padding: 1rem 0.4rem;
+  width: 100%;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff;
+  text-align: left;
+  font-size: 15px;
   color: #ffffff;
 }
-#wrap .section.section-company-info-wrap .box .arrow {
+#wrap .section.footer-wrap .inner .drop-wrap .family-button .arrow {
   margin: 2px 0 0 5px;
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: url(../img/icon-arrow-next-white.svg) no-repeat;
+  background: url(../img/icon-arrow-down.svg) no-repeat;
   background-size: contain;
-}
-#wrap .section.section-company-info-wrap .left .recruit-box {
-  background: url(../img/img-footer-01-2.png) no-repeat;
-}
-#wrap .section.section-company-info-wrap .left .introduce-box {
-  background: url(../img/img-footer-02-2.png) no-repeat;
-}
-#wrap .section.section-company-info-wrap .left .f-more-box {
-  background-color: #2A3B69;
-}
-#wrap .section.section-company-info-wrap .left .f-more-box li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.6rem 0;
-  border-bottom: 0.4px solid rgba(255, 255, 255, 0.6);
-  font-weight: 300;
-  color: #ffffff;
-  cursor: pointer;
-}
-#wrap .section.section-company-info-wrap .right {
-  background-color: #fcc;
-}
-#wrap .section.section-company-info-wrap .right .video-box {
-  position: relative;
-  background: url(../img/img-footer-03-2.png) no-repeat;
-  box-sizing: border-box;
-}
-#wrap .section.section-company-info-wrap .right .video-box::after {
-  content: "";
-  display: block;
-  padding-top: 50%; /* 1:1 비율 */
-}
-#wrap .section.section-company-info-wrap .right .video-box .button-play-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 4rem;
-  height: 4rem;
-  transform: translate(-50%, -50%);
-  background: url(../img/icon-play.svg) no-repeat;
-  background-size: contain;
-}
-#wrap .section.section-company-info-wrap .right .video-box .button-wrap {
-  position: absolute;
-  bottom: 4rem;
-}
-#wrap .section.footer-wrap {
-  background-color: #2A3B69;
+  background-position: center;
 }/*# sourceMappingURL=main.css.map */

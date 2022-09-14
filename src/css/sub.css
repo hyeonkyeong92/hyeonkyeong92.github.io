@@ -333,6 +333,9 @@ button {
   right: 2rem;
   bottom: 1rem;
 }
+.container .sub-visual.lawshow-visual .bg {
+  background-color: #F6F6F6;
+}
 .container .sub-section {
   position: relative;
   z-index: 200;
@@ -761,4 +764,9 @@ button {
 }
 .container .sub-section.section-footer-wrap {
   padding: 0;
+}
+
+/*--------Project별--------*/
+.lawshow .sub-section {
+  background-color: #ffffff;
 }/*# sourceMappingURL=sub.css.map */
