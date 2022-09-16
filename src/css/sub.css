@@ -335,6 +335,7 @@ button {
 }
 .container .sub-visual.lawshow-visual .bg {
   background-color: #F6F6F6;
+  background-image: url(../img/sub/lawshow/lawshow-visual.png);
 }
 .container .sub-section {
   position: relative;
@@ -388,6 +389,9 @@ button {
 }
 .container .sub-section .inner .sc-title-wrap > h2 {
   margin-bottom: 1rem;
+}
+.container .sub-section .inner .sc-title-wrap > h2 span {
+  font-weight: 700;
 }
 .container .sub-section.section-project-info-wrap {
   margin-top: 80vh;
@@ -766,7 +770,25 @@ button {
   padding: 0;
 }
 
-/*--------Project별--------*/
+/*=====================Project별=====================*/
 .lawshow .sub-section {
   background-color: #ffffff;
+}
+.lawshow .sub-section .inner .sc-title-wrap h2 span {
+  background: linear-gradient(120deg, rgb(174, 113, 251) 0%, rgb(97, 132, 255) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.lawshow .sub-section .inner .conts-wrap .c-title-wrap {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lawshow .sub-section.section-how-make-wrap {
+  background-color: #F8F9FD;
+}
+.lawshow .sub-section.section-how-make-wrap .conts-wrap > div {
+  margin-bottom: 6rem;
 }/*# sourceMappingURL=sub.css.map */

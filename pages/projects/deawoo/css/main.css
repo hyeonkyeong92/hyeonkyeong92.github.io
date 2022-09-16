@@ -391,6 +391,14 @@ button {
   background-size: cover;
   -webkit-clip-path: polygon(100% 0, 100% 87%, 36% 100%, 0 92%, 0 0);
           clip-path: polygon(100% 0, 100% 87%, 36% 100%, 0 92%, 0 0);
+  /*svg*/
+  /* H Animation */
+  /* E Animation */
+  /* L One Animation */
+  /* L Two Animation */
+  /* O Animation */
+  /* Red Dot Animation */
+  /*svg끝*/
 }
 #wrap .main-wrap .text-wrap h1 {
   margin-bottom: 4rem;
@@ -403,6 +411,448 @@ button {
   text-align: center;
   font-weight: 300;
   color: #ffffff;
+}
+#wrap .main-wrap .hello-parent {
+  display: flex;
+}
+#wrap .main-wrap .hello-word {
+  margin: auto;
+}
+#wrap .main-wrap .H-left-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  -webkit-animation: H-left-move 20s ease forwards;
+          animation: H-left-move 20s ease forwards;
+}
+#wrap .main-wrap .H-mid-stroke {
+  stroke-dasharray: 37px;
+  stroke-dashoffset: 37px;
+  -webkit-animation: H-mid-move 9s ease forwards;
+          animation: H-mid-move 9s ease forwards;
+}
+#wrap .main-wrap .H-right-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  -webkit-animation: H-right-move 13s ease forwards;
+          animation: H-right-move 13s ease forwards;
+}
+@-webkit-keyframes H-left-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  5% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes H-left-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  5% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@-webkit-keyframes H-mid-move {
+  0% {
+    stroke-dashoffset: 37px;
+  }
+  5% {
+    stroke-dashoffset: 37px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes H-mid-move {
+  0% {
+    stroke-dashoffset: 37px;
+  }
+  5% {
+    stroke-dashoffset: 37px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@-webkit-keyframes H-right-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  5% {
+    stroke-dashoffset: 124px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes H-right-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  5% {
+    stroke-dashoffset: 124px;
+  }
+  10% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+#wrap .main-wrap .E-left-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  -webkit-animation: E-left-move 20s ease forwards;
+          animation: E-left-move 20s ease forwards;
+}
+#wrap .main-wrap .E-top-stroke {
+  stroke-dasharray: 47px;
+  stroke-dashoffset: 47px;
+  -webkit-animation: E-top-move 10s ease forwards;
+          animation: E-top-move 10s ease forwards;
+}
+#wrap .main-wrap .E-mid-stroke {
+  stroke-dasharray: 42px;
+  stroke-dashoffset: 42px;
+  -webkit-animation: E-mid-move 10s ease forwards;
+          animation: E-mid-move 10s ease forwards;
+}
+#wrap .main-wrap .E-bottom-stroke {
+  stroke-dasharray: 47px;
+  stroke-dashoffset: 47px;
+  -webkit-animation: E-bottom-move 10s ease forwards;
+          animation: E-bottom-move 10s ease forwards;
+}
+@-webkit-keyframes E-left-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  6% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes E-left-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  6% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@-webkit-keyframes E-top-move {
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  6% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes E-top-move {
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  6% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@-webkit-keyframes E-mid-move {
+  0% {
+    stroke-dashoffset: 42px;
+  }
+  8% {
+    stroke-dashoffset: 42px;
+  }
+  13% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes E-mid-move {
+  0% {
+    stroke-dashoffset: 42px;
+  }
+  8% {
+    stroke-dashoffset: 42px;
+  }
+  13% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@-webkit-keyframes E-bottom-move {
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 47px;
+  }
+  16% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes E-bottom-move {
+  0% {
+    stroke-dashoffset: 47px;
+  }
+  11% {
+    stroke-dashoffset: 47px;
+  }
+  16% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+#wrap .main-wrap .L-one-long-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  -webkit-animation: L-one-long-move 20s ease forwards;
+          animation: L-one-long-move 20s ease forwards;
+}
+#wrap .main-wrap .L-one-short-stroke {
+  stroke-dasharray: 44px;
+  stroke-dashoffset: 44px;
+  -webkit-animation: L-one-short-move 10s ease forwards;
+          animation: L-one-short-move 10s ease forwards;
+}
+@-webkit-keyframes L-one-long-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  7% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes L-one-long-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  2% {
+    stroke-dashoffset: 124px;
+  }
+  7% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@-webkit-keyframes L-one-short-move {
+  0% {
+    stroke-dashoffset: 44px;
+  }
+  13% {
+    stroke-dashoffset: 44px;
+  }
+  18% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes L-one-short-move {
+  0% {
+    stroke-dashoffset: 44px;
+  }
+  13% {
+    stroke-dashoffset: 44px;
+  }
+  18% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+#wrap .main-wrap .L-two-long-stroke {
+  stroke-dasharray: 124px;
+  stroke-dashoffset: 124px;
+  -webkit-animation: L-two-long-move 20s ease forwards;
+          animation: L-two-long-move 20s ease forwards;
+}
+#wrap .main-wrap .L-two-short-stroke {
+  stroke-dasharray: 44px;
+  stroke-dashoffset: 44px;
+  -webkit-animation: L-two-short-move 10s ease forwards;
+          animation: L-two-short-move 10s ease forwards;
+}
+@-webkit-keyframes L-two-long-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  3% {
+    stroke-dashoffset: 124px;
+  }
+  8% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes L-two-long-move {
+  0% {
+    stroke-dashoffset: 124px;
+  }
+  3% {
+    stroke-dashoffset: 124px;
+  }
+  8% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@-webkit-keyframes L-two-short-move {
+  0% {
+    stroke-dashoffset: 44px;
+  }
+  15% {
+    stroke-dashoffset: 44px;
+  }
+  20% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes L-two-short-move {
+  0% {
+    stroke-dashoffset: 44px;
+  }
+  15% {
+    stroke-dashoffset: 44px;
+  }
+  20% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+#wrap .main-wrap .O-stroke {
+  stroke-dasharray: 302px;
+  stroke-dashoffset: 302px;
+  -webkit-animation: O-move 20s ease forwards;
+          animation: O-move 20s ease forwards;
+}
+@-webkit-keyframes O-move {
+  0% {
+    stroke-dashoffset: 302px;
+  }
+  4% {
+    stroke-dashoffset: 302px;
+  }
+  9% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes O-move {
+  0% {
+    stroke-dashoffset: 302px;
+  }
+  4% {
+    stroke-dashoffset: 302px;
+  }
+  9% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+#wrap .main-wrap .red-dot {
+  stroke-width: 44px;
+  stroke-linecap: round;
+  -webkit-animation: red-dot-grow 8s ease-out forwards;
+          animation: red-dot-grow 8s ease-out forwards;
+}
+@-webkit-keyframes red-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 44px;
+  }
+  100% {
+    stroke-width: 44px;
+  }
+}
+@keyframes red-dot-grow {
+  0% {
+    stroke-width: 0px;
+  }
+  15% {
+    stroke-width: 0px;
+  }
+  20% {
+    stroke-width: 44px;
+  }
+  100% {
+    stroke-width: 44px;
+  }
 }
 #wrap .section {
   position: relative;

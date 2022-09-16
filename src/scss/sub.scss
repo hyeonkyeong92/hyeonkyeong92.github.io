@@ -42,14 +42,10 @@
                         &.character-pruny{ position: absolute; right: 2rem; bottom: 1rem; }
                     }
                 }
-
-                .object-wrap{
-
-                }
             }
         }
         &.lawshow-visual{
-            .bg{background-color: $color-bg-gray;}
+            .bg{ background-color: $color-bg-gray; background-image: url(../img/sub/lawshow/lawshow-visual.png);}
         }
     }
 
@@ -67,7 +63,10 @@
                 margin-bottom: 3rem;
                 @media screen and(min-width:768px) {margin-bottom: 4rem;}
                 @media screen and(min-width:980px) {margin-bottom: 5rem;}
-                & > h2{ margin-bottom: 1rem;}
+                & > h2{ 
+                    margin-bottom: 1rem;
+                    span{font-weight: 700;}
+                }
             }
         }
 
@@ -289,7 +288,27 @@
     }
 }
 
-    /*--------Project별--------*/
+    /*=====================Project별=====================*/
     .lawshow{
-        .sub-section{ background-color: $color-white;}
+        .sub-section{ 
+            background-color: $color-white;
+            .inner{
+                .sc-title-wrap{
+                    h2{
+                        span{ background: $color-gradient-purple; background-clip: text; color: transparent;}
+                    }
+                }
+                .conts-wrap{
+                    .c-title-wrap{
+                        margin-bottom: 2rem; display: flex; flex-direction: column; align-items: center;
+                    }
+                }
+            }
+            &.section-how-make-wrap{
+                background-color: #F8F9FD;
+                .conts-wrap{
+                    & > div{ margin-bottom: 6rem;}
+                }
+            }
+        }
     }
