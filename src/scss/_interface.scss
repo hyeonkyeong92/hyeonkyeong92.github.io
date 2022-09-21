@@ -74,3 +74,31 @@ $color-gradient-skyblue: linear-gradient(120deg, rgba(94,241,215,1) 0%, rgba(62,
 // .flex-between{ @include flex-between;}
 // .flex{ @include flex;}
 // .flex-column{ @include flex-column;}
+
+
+/*----Media Query----*/
+
+/*max-width:320px*/
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+      @content;
+    }
+}
+/*min-width:768px*/
+@mixin tablet-mini {
+    @media (min-width: #{$breakpoint-tablet-mini}) {
+      @content;
+    }
+}
+/*min-width:980px*/
+@mixin tablet {
+    @media (min-width: #{$breakpoint-tablet}) {
+      @content;
+    }
+}
+/*min-width:1200px*/
+@mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) {
+      @content;
+    }
+}

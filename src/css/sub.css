@@ -191,6 +191,11 @@ button {
 /*----color system----*/
 /*----font system----*/
 /*----공통스타일----*/
+/*----Media Query----*/
+/*max-width:320px*/
+/*min-width:768px*/
+/*min-width:980px*/
+/*min-width:1200px*/
 /*FUNCITON*/
 /*컴포넌트 묶음*/
 /*====button components====*/
@@ -224,6 +229,7 @@ button {
     top: 5%;
   }
 }
+/*Media Query*/
 /*===================SUBPAGE-APPLICATION-COMMON===================*/
 .container {
   /*--------(Common)Sub-Visual 공통스타일--------*/
@@ -350,17 +356,17 @@ button {
 .container .sub-section .inner {
   padding: 0 24px;
 }
-@media screen and (min-width: 768px) {
+@media (max-width: 320px) {
   .container .sub-section .inner {
     padding: 2rem 40px;
   }
 }
-@media screen and (min-width: 980px) {
+@media (min-width: 768px) {
   .container .sub-section .inner {
     padding: 4rem 40px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .container .sub-section .inner {
     margin: 0 auto;
     padding: 4rem 60px;
@@ -377,12 +383,12 @@ button {
 .container .sub-section .inner .sc-title-wrap {
   margin-bottom: 3rem;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 980px) {
   .container .sub-section .inner .sc-title-wrap {
     margin-bottom: 4rem;
   }
 }
-@media screen and (min-width: 980px) {
+@media (min-width: 768px) {
   .container .sub-section .inner .sc-title-wrap {
     margin-bottom: 5rem;
   }
@@ -425,7 +431,7 @@ button {
   background-color: #484848;
   color: #ffffff;
 }
-@media screen and (min-width: 980px) {
+@media (min-width: 980px) {
   .container .sub-section.section-project-info-wrap .inner .project-info .item {
     display: flex;
     align-items: center;
@@ -459,7 +465,7 @@ button {
     min-width: 200px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .container .sub-section.section-project-info-wrap .inner .project-info .item .label {
     min-width: 220px;
   }
@@ -472,7 +478,7 @@ button {
   max-width: 1000px;
   background-color: #F6F6F6;
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .container .sub-section.section-wireframe-wrap .inner {
     width: 1000px;
   }
@@ -504,7 +510,7 @@ button {
   align-items: center;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .container .sub-section.section-circleList-wrap .inner .conts-wrap .list-wrap {
     flex-direction: row;
     justify-content: space-around;
@@ -522,7 +528,7 @@ button {
   display: block;
   padding-top: 100%; /* 1:1 비율 */
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .container .sub-section.section-circleList-wrap .inner .conts-wrap .list-wrap .item {
     width: 30%;
     margin-right: 2%;
@@ -594,7 +600,7 @@ button {
 .container .sub-section.section-overview-wrap .inner .conts-wrap .text-wrap h2 {
   margin-bottom: 0.6rem;
 }
-@media screen and (min-width: 980px) {
+@media (min-width: 980px) {
   .container .sub-section.section-overview-wrap .inner .conts-wrap {
     flex-direction: row;
     margin-bottom: 4rem;
@@ -639,7 +645,7 @@ button {
   background: url(../img/sub/maipet/maipet-object-bg-circle.svg) no-repeat center;
   background-size: 100% auto;
 }
-@media screen and (min-width: 980px) {
+@media (min-width: 980px) {
   .container .sub-section.section-overview-wrap .bg-circle {
     bottom: 8rem;
     width: 80%;
@@ -670,7 +676,7 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .container .sub-section.main .inner::before {
     left: 1.6rem;
   }
@@ -681,7 +687,7 @@ button {
 .container .sub-section.main .inner .sc-title-wrap h2, .container .sub-section.main .inner .sc-title-wrap p {
   color: #ffffff;
 }
-@media screen and (min-width: 980px) {
+@media (min-width: 980px) {
   .container .sub-section.main .inner .conts-wrap {
     display: flex;
     align-items: center;
@@ -699,7 +705,7 @@ button {
 .container .sub-section.main .inner .conts-wrap .text-wrap p {
   font-weight: 300;
 }
-@media screen and (min-width: 980px) {
+@media (min-width: 980px) {
   .container .sub-section.main .inner .conts-wrap .text-wrap {
     margin-top: -10rem;
   }
@@ -732,7 +738,7 @@ button {
   top: 20rem;
   transition-delay: 0.4s;
 }
-@media screen and (min-width: 980px) {
+@media (min-width: 980px) {
   .container .sub-section.main .inner .conts-wrap .screen-wrap .img-screen .elem1 {
     left: -6rem;
   }
@@ -785,6 +791,64 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item {
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 2.4rem 2rem;
+  border-radius: 3rem;
+  background-color: #F7F8F9;
+}
+@media (min-width: 768px) {
+  .lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item {
+    width: 32%;
+  }
+}
+.lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item h3 {
+  margin-bottom: 2rem;
+}
+.lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item .icon-wrap {
+  margin: auto;
+  width: 90%;
+  padding: 2rem 0;
+}
+@-webkit-keyframes ani-card-skew {
+  to {
+    transform: rotate(10deg);
+  }
+}
+@keyframes ani-card-skew {
+  to {
+    transform: rotate(10deg);
+  }
+}
+.lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item.item-nine .icon-wrap ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item.item-nine .icon-wrap ul li {
+  width: 31%;
+}
+.lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item.item-nine .icon-wrap ul li svg {
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1));
+}
+.lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item.item-nine .icon-wrap ul li:hover {
+  -webkit-animation: ani-card-skew 0.4s forwards;
+          animation: ani-card-skew 0.4s forwards;
+}
+.lawshow .sub-section.section-about-wrap .inner .conts-wrap {
+  padding: 2.4rem 2rem;
+  border-radius: 3rem;
+  background-color: #F7F8F9;
 }
 .lawshow .sub-section.section-how-make-wrap {
   background-color: #F8F9FD;

@@ -191,6 +191,11 @@ button {
 /*----color system----*/
 /*----font system----*/
 /*----공통스타일----*/
+/*----Media Query----*/
+/*max-width:320px*/
+/*min-width:768px*/
+/*min-width:980px*/
+/*min-width:1200px*/
 /*FUNCITON*/
 /*컴포넌트 묶음*/
 /*====button components====*/
@@ -224,6 +229,7 @@ button {
     top: 5%;
   }
 }
+/*Media Query*/
 .wrap {
   background-color: #FDFBF8;
   width: 100%;
@@ -493,7 +499,7 @@ button {
 }
 
 .container .main_visual {
-  padding: 6.6rem 0 8rem 0;
+  padding: 5rem 0 8rem 0;
 }
 @media screen and (min-width: 980px) {
   .container .main_visual {
@@ -507,6 +513,7 @@ button {
 }
 .container .main_visual .inner .mv_title {
   font-size: 42px;
+  margin-bottom: 1.6rem;
   line-height: 1.2;
   font-weight: 700;
   color: #033F64;
@@ -521,11 +528,6 @@ button {
     /*font-size: 47px;*/
     font-size: 76px;
   }
-}
-.container .main_visual .inner .mv_img {
-  width: 80%;
-  max-width: 900px;
-  margin: 2rem auto 2.5rem auto;
 }
 .container .main_visual .inner .mv_txt {
   font-size: 14px;
@@ -543,6 +545,15 @@ button {
 @media screen and (min-width: 980px) {
   .container .main_visual .inner .mv_txt {
     font-size: 18px;
+  }
+}
+.container .main_visual .inner .visual-svg-wrap {
+  width: 80%;
+  margin: 2rem auto 2.5rem auto;
+}
+@media screen and (min-width: 860px) {
+  .container .main_visual .inner .visual-svg-wrap {
+    margin-top: -4rem;
   }
 }
 .container .section {

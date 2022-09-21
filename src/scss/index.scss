@@ -94,19 +94,21 @@
 
 .container{
     .main_visual{
-        padding: 6.6rem 0 8rem 0;
+        padding: 5rem 0 8rem 0;
         @media screen and(min-width:980px) { padding-bottom: 10rem;}
         .inner{
             max-width: 1400px; margin: auto; text-align: center;
             .mv_title{
                 @include font-bigTitle;
+                margin-bottom: 1.6rem; 
                 line-height: 1.2; font-weight: 700; color: $color-main;
             }
-            .mv_img{
-                width: 80%; max-width: 900px; margin: 2rem auto 2.5rem auto;
-            }
-            .mv_txt{
-                @include font-basic;
+            .mv_txt{ @include font-basic; }
+            .visual-svg-wrap{
+                width: 80%;
+                //  max-width: 1100px;
+                margin: 2rem auto 2.5rem auto;
+                @media screen and(min-width:860px){ margin-top: -4rem;}
             }
         }
     }

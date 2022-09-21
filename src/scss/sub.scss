@@ -55,14 +55,14 @@
         position: relative; z-index: 200; padding: 4rem 0; background-color: $color-bg;
         .inner{
             padding: 0 24px;
-            @media screen and (min-width:768px) { padding: 2rem 40px;}
-            @media screen and (min-width:980px) { padding: 4rem 40px;}
-            @media screen and (min-width:1200px) { margin: 0 auto; padding: 4rem 60px; width: 1200px; max-width: 1200px;}
+            @include mobile { padding: 2rem 40px;}
+            @include tablet-mini { padding: 4rem 40px;}
+            @include desktop { margin: 0 auto; padding: 4rem 60px; width: 1200px; max-width: 1200px;}
             @media screen and (min-width:1400px) { width: 1400px; max-width: 1400px;}
             .sc-title-wrap{
                 margin-bottom: 3rem;
-                @media screen and(min-width:768px) {margin-bottom: 4rem;}
-                @media screen and(min-width:980px) {margin-bottom: 5rem;}
+                @include tablet {margin-bottom: 4rem;}
+                @include tablet-mini {margin-bottom: 5rem;}
                 & > h2{ 
                     margin-bottom: 1rem;
                     span{font-weight: 700;}
@@ -94,7 +94,7 @@
                 } 
                 .ctaButton:hover{background-color: $color-middle-black; color: $color-white; }
 
-                @media screen and(min-width:980px) {
+                @include tablet {
                     .project-info{
                         .item{ 
                             @include flex; align-items: flex-start;
@@ -116,7 +116,7 @@
                 @media screen and(min-width:1100px){
                     .project-info{.item{.label{min-width: 200px;}}}
                 }
-                @media screen and(min-width:1200px){
+                @include desktop{
                     .project-info{.item{.label{min-width: 220px;}}}
                 }
             }
@@ -126,7 +126,7 @@
          &.section-wireframe-wrap{
              .inner{
                 padding-top: 4rem; padding-bottom: 4rem;  margin: 0 auto; width: 90%; max-width: 1000px;  background-color: $color-bg-gray;
-                @media screen and(min-width:1200px) { width: 1000px; }
+                @include desktop{ width: 1000px; }
                 .wf-title {
                     font-weight: 500; line-height: 1.3;
                     &::before{
@@ -147,14 +147,14 @@
                 .conts-wrap{
                     .list-wrap{
                         @include flex-column;
-                        @media screen and(min-width:768px){
+                        @include tablet-mini{
                             flex-direction: row; justify-content: space-around;
                         }
                         .item{
                             margin-bottom: 2rem; width: 70%;  border-radius: 50%;
                             position: relative; box-sizing: border-box; 
                             &:before { content: ""; display: block; padding-top: 100%; /* 1:1 비율 */}
-                            @media screen and(min-width:768px) {
+                            @include tablet-mini {
                                 width: 30%; margin-right: 2%; max-width: 450px;
                                 &:nth-child(3){margin-right: 0;}
                             }
@@ -201,7 +201,7 @@
                        margin: 3rem 0;
                        h2{margin-bottom: 0.6rem;}
                     }
-                    @media screen and(min-width:980px) {
+                    @include tablet {
                         flex-direction: row; margin-bottom: 4rem;
                         &.reverse{ flex-direction: row-reverse;}
                         .column-8{
@@ -222,7 +222,7 @@
                 position: absolute; bottom: 26rem; left: 50%; transform: translateX(-50%); z-index: 1;
                 width: 110%; height: 110%; max-width: 1120px; max-height: 1120px; opacity: .1;
                 background: url(../img/sub/maipet/maipet-object-bg-circle.svg) no-repeat center; background-size: 100% auto;
-                @media screen and(min-width:980px) {
+                @include tablet {
                     bottom: 8rem;
                     width: 80%; height: 80%;
                 }
@@ -235,19 +235,19 @@
                 padding: 4rem 40px 0 40px; position: relative; z-index: 2;
                 &::before{
                     position: absolute; left: 0; top: -8rem; display: block; clear: both; content: ""; width: 24%; max-width: 140px; height: 140px; background-image: url(../img/sub/maipet/maipet-section-icon.svg); background-repeat: no-repeat; background-size: contain;
-                    @media screen and(min-width:1200px) {left: 1.6rem;}
+                    @include desktop {left: 1.6rem;}
                 }
                 .sc-title-wrap{
                     margin-bottom: 3rem;
                     h2, p {color:$color-white;}
                 }
                 .conts-wrap{
-                    @media screen and(min-width:980px) { @include flex; justify-content: space-between; margin-top: -10rem; margin-bottom: 0;}
+                    @include tablet { @include flex; justify-content: space-between; margin-top: -10rem; margin-bottom: 0;}
                     .text-wrap{
                         margin-bottom: 2rem;
                         h2, p{ color: $color-white;}
                         p{font-weight: 300;}
-                        @media screen and(min-width:980px) { 
+                        @include tablet { 
                             margin-top: -10rem;
                             h2, p{ margin-left: 0rem !important;}
                             }
@@ -259,7 +259,7 @@
                             .elem1{position: absolute; left: 4rem; top: 14rem;}
                             .elem2{position: absolute; left: -3rem; top: 20rem; transition-delay: .2s;}
                             .elem3{position: absolute; right: -2rem; top: 20rem; transition-delay: .4s;}
-                            @media screen and (min-width:980px) {
+                            @include tablet {
                                 .elem1{ left: -6rem;}
                                 .elem2{ left: -13rem;}
                                 .elem3{ left: -2rem; top: 28rem;}
@@ -301,6 +301,49 @@
                 .conts-wrap{
                     .c-title-wrap{
                         margin-bottom: 2rem; display: flex; flex-direction: column; align-items: center;
+                    }
+                }
+            }
+            &.section-benefit-wrap{
+                .conts-wrap{
+                    .cont-list-wrap{
+                        @include tablet-mini{ @include flex-between;}
+                        .item{ 
+                            margin-bottom: 2rem; width: 100%; padding: 2.4rem 2rem; border-radius: 3rem; background-color: #F7F8F9;
+                            @include tablet-mini{width: 32%;}
+                            h3{ margin-bottom: 2rem;}
+                            .icon-wrap{ 
+                                margin: auto; width: 90%; padding: 2rem 0;
+                            }
+                            &.item-nine{
+                                @keyframes ani-card-skew{
+                                    to{transform: rotate(10deg);}
+                                }
+                                .icon-wrap{
+                                    ul{
+                                        @include flex-between; flex-wrap: wrap;
+                                        li{
+                                            width: 31%;
+                                            svg{  filter: drop-shadow(0 4px 4px rgb(0 0 0 / 0.1));}
+                                        }
+                                        li:hover{
+                                            animation: ani-card-skew 0.4s forwards;
+                                        } 
+                                    }
+                                }
+                            }
+                            &.item-elect{
+                                .icon-wrap{
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section-about-wrap{
+                .inner{
+                    .conts-wrap{
+                        padding: 2.4rem 2rem; border-radius: 3rem; background-color: #F7F8F9;
                     }
                 }
             }
