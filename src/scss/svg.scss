@@ -145,10 +145,8 @@
 @keyframes ani-rotate{
     to{transform: rotate(360deg);}
 }
-.svg-pin{
-    animation: ani-pin 0.5s alternate infinite cubic-bezier(0.25, 0.1, 0.46, 1.36);
-}
-.svg-circle{
-    animation: ani-rotate 8s infinite linear;
-    transform-origin: 150px 100px;
+@keyframes ani-right-left{
+    0%{transform: translate(0,0);}
+    40%{transform: translate(1em,-0.2em);}
+    100%{transform: translate(-1em,0);}
 }

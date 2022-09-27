@@ -316,24 +316,71 @@
                                 margin: auto; width: 90%; padding: 2rem 0;
                             }
                             &.item-nine{
-                                @keyframes ani-card-skew{
-                                    to{transform: rotate(10deg);}
+                                @keyframes ani-card-flip{
+                                    to{transform: rotateY(180deg);}
                                 }
                                 .icon-wrap{
-                                    ul{
-                                        @include flex-between; flex-wrap: wrap;
-                                        li{
-                                            width: 31%;
-                                            svg{  filter: drop-shadow(0 4px 4px rgb(0 0 0 / 0.1));}
+                                    .perspective-box{
+                                        @include flex-between; flex-wrap: wrap; perspective: 800px;
+                                        .card{
+                                            margin-bottom: 0.6rem; width: 31%; position: relative; box-sizing: border-box; 
+                                            transform: rotateY(0deg);  transition: all 0.5s; transform-style: preserve-3d;
+                                            &:before { content: ""; display: block; padding-top: 98%; /* 1:1 비율 */}
+                                            .card-side{
+                                                position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+                                                width: 100%; height: 100%; border-radius: 1em; box-shadow: 0 4px 6px rgba(0,0,0,.1);
+                                                backface-visibility: hidden;
+                                                display: flex; justify-content: center; align-items: center; 
+                                                &.card-side-front{ z-index: 4;  background-repeat:no-repeat; background-size: 80%; background-position: center; background-color: $color-white;}
+                                                &.card-side-back{ transform: rotateY(180deg); background-color: $color-white;}
+                                            }
+                                            &:nth-child(1){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-01변호사.png);}}
+                                            &:nth-child(2){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-02법무사.png);}}
+                                            &:nth-child(3){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-03세무사.png);}}
+                                            &:nth-child(4){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-04행정사.png);}}
+                                            &:nth-child(5){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-05노무사.png);}}
+                                            &:nth-child(6){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-06변리사.png);}}
+                                            &:nth-child(7){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-07속기사.png);}}
+                                            &:nth-child(8){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-08감정평가사.png);}}
+                                            &:nth-child(9){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-09회계사.png);}}
+                                            &:hover{transform: rotateY(180deg);}
                                         }
-                                        li:hover{
-                                            animation: ani-card-skew 0.4s forwards;
-                                        } 
+                                        
                                     }
                                 }
+                            }//9가지 직군
+                            
+                            &.item-place .icon-wrap, &.item-elect .icon-wrap{
+                                width: 95%; position: relative; box-sizing: border-box;
+                                &:before { content: ""; display: block; padding-top: 98%; /* 1:1 비율 */}
+                                background-repeat: no-repeat; background-size: 94% auto; background-position: center;
+                                .icon-ob{
+                                    position: absolute; display: block; background-repeat: no-repeat; background-size: 100% auto;
+                                    
+                                }
+                            }
+                            &.item-place{
+                                .icon-wrap{
+                                    background-image: url(../img/sub/lawshow/icon-benefit-02-bg.png);
+                                    .icon-ob-pin{ 
+                                        z-index: 1; bottom: 20%; left: 10%; width: 35%; height: 40%; background-image: url(../img/sub/lawshow/icon-benefit-02-ob-pin.png); 
+                                        animation:ani-pin .7s alternate infinite ease-in-out;
+                                    }
+                                    .icon-ob-circle{ 
+                                        bottom: 20%; right: 10%; width: 58%; height: 50%; background-image: url(../img/sub/lawshow/icon-benefit-02-ob-circle.png);
+                                        animation: ani-rotate 8s infinite linear;
+                                        transform-origin: center;
+                                    }
+                                }
+
                             }
                             &.item-elect{
-                                .icon-wrap{
+                               .icon-wrap{
+                                   background-image: url(../img/sub/lawshow/icon-benefit-03-bg.png);
+                                    .icon-ob-pen{
+                                        top: 6%; right: 10%; width: 30%; height: 80%; background-image: url(../img/sub/lawshow/icon-benefit-03-ob-pen.png);
+                                        animation: ani-right-left 2s alternate infinite;
+                                    }
                                 }
                             }
                         }
@@ -341,16 +388,71 @@
                 }
             }
             &.section-about-wrap{
+                padding: 0 0 4rem 0;
                 .inner{
+                    @include tablet-mini { padding: 2rem 40px;}
+                    @include desktop { margin: 0 auto; padding: 0 60px 60px 4rem;}
                     .conts-wrap{
-                        padding: 2.4rem 2rem; border-radius: 3rem; background-color: #F7F8F9;
+                        padding: 2.4rem 2rem; height: 32rem; overflow: hidden; border-radius: 3rem; background-color: #F7F8F9;
+                        @include tablet-mini{display: flex;}
+                        @include tablet{ padding: 3.6rem 2rem;}
+                        .sc-title-wrap{
+                            @include tablet-mini{ width: 50%; padding-right: 2rem;}
+                            h3{ margin-bottom: 1.2rem;}
+                        }
+                        .sc-mockup-wrap{
+                            display: flex;
+                            p{
+                                max-width: 360px;
+                                &:nth-child(2){margin: 4rem 0 0 -8rem;}
+                            }
+                        }
+                        &:nth-child(2){ margin-top: 6rem; flex-direction: row-reverse;
+                            .sc-title-wrap{
+                                @include tablet-mini{padding-right: 0; padding-left: 2rem;}
+                            }
+                        }
                     }
                 }
             }
             &.section-how-make-wrap{
                 background-color: #F8F9FD;
+                .sc-title-wrap{
+                    h2{text-align: center;}
+                }
                 .conts-wrap{
-                    & > div{ margin-bottom: 6rem;}
+                    & > div{ 
+                        margin-bottom: 6rem;
+                        @include tablet{ margin-bottom: 8rem;}
+                        @include desktop{ margin-bottom: 10rem;}
+                        .c-title-wrap{
+                            margin-bottom: 2rem;
+                            h4, p {text-align: center;}
+                            @include tablet{ margin-bottom: 3rem;}
+                            @include desktop{ margin-bottom: 4rem;}
+                        }
+                        .c-img-wrap{
+                            display: flex; flex-direction: column; align-items: center;
+                            margin: 0 auto; 
+                            img{width: 100%;}
+                        }
+                    }
+                    .style-guide{
+                        .c-img-wrap{
+                            @include tablet-mini{ padding: 0 2rem;}
+                            @include tablet{padding: 0 5rem;}
+                            @include desktop{padding: 0 7rem;}
+                        }
+                    }
+                    .component{}
+                    .iconSet{
+                        .c-img-wrap{
+                            h6{margin-bottom: 1rem;}
+                            img:nth-of-type(1){max-width:380px; margin-bottom: 2rem;}
+                            img:nth-of-type(2){max-width:610px;}
+                        }
+                    }
+                   
                 }
             }
         }
