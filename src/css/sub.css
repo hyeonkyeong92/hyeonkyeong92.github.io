@@ -811,6 +811,12 @@ button {
     width: 32%;
   }
 }
+.lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item:nth-child(3) {
+  transition-delay: 0.4s;
+}
 .lawshow .sub-section.section-benefit-wrap .conts-wrap .cont-list-wrap .item h3 {
   margin-bottom: 2rem;
 }
@@ -1006,9 +1012,11 @@ button {
 }
 .lawshow .sub-section.section-about-wrap .inner .conts-wrap .sc-mockup-wrap p {
   max-width: 360px;
+  transition-delay: 0.2s;
 }
 .lawshow .sub-section.section-about-wrap .inner .conts-wrap .sc-mockup-wrap p:nth-child(2) {
   margin: 4rem 0 0 -8rem;
+  transition-delay: 0.2s;
 }
 .lawshow .sub-section.section-about-wrap .inner .conts-wrap:nth-child(2) {
   margin-top: 6rem;

@@ -311,10 +311,10 @@
                         .item{ 
                             margin-bottom: 2rem; width: 100%; padding: 2.4rem 2rem; border-radius: 3rem; background-color: #F7F8F9;
                             @include tablet-mini{width: 32%;}
+                            &:nth-child(2){transition-delay: .2s;}
+                            &:nth-child(3){transition-delay: .4s;}
                             h3{ margin-bottom: 2rem;}
-                            .icon-wrap{ 
-                                margin: auto; width: 90%; padding: 2rem 0;
-                            }
+                            .icon-wrap{ margin: auto; width: 90%; padding: 2rem 0; }
                             &.item-nine{
                                 @keyframes ani-card-flip{
                                     to{transform: rotateY(180deg);}
@@ -403,8 +403,8 @@
                         .sc-mockup-wrap{
                             display: flex;
                             p{
-                                max-width: 360px;
-                                &:nth-child(2){margin: 4rem 0 0 -8rem;}
+                                max-width: 360px; transition-delay: .2s;
+                                &:nth-child(2){margin: 4rem 0 0 -8rem; transition-delay: .2s;}
                             }
                         }
                         &:nth-child(2){ margin-top: 6rem; flex-direction: row-reverse;
