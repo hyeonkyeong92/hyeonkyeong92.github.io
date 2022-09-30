@@ -132,7 +132,7 @@
 
 
 
-//=====================Sub Page======================//
+//=====================Sub Page-Lawshow======================//
 
 @keyframes ani-flip{ 
     to{transform: rotate3d( 0, 2, 0, 360deg);}
@@ -149,4 +149,14 @@
     0%{transform: translate(0,0);}
     40%{transform: translate(1em,-0.2em);}
     100%{transform: translate(-1em,0);}
+}
+
+
+@keyframes lawshow-main-dash-ani{
+    from{ stroke-dashoffset: 1361;}
+    to{ stroke-dashoffset: 0;}
+}
+.main-illust{
+    stroke-dasharray: 1361;
+    animation: lawshow-main-dash-ani 5s linear;
 }

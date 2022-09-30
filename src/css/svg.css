@@ -416,4 +416,25 @@
   100% {
     transform: translate(-1em, 0);
   }
+}
+@-webkit-keyframes lawshow-main-dash-ani {
+  from {
+    stroke-dashoffset: 1361;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes lawshow-main-dash-ani {
+  from {
+    stroke-dashoffset: 1361;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.main-illust {
+  stroke-dasharray: 1361;
+  -webkit-animation: lawshow-main-dash-ani 5s linear;
+          animation: lawshow-main-dash-ani 5s linear;
 }/*# sourceMappingURL=svg.css.map */

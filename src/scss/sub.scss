@@ -45,7 +45,8 @@
             }
         }
         &.lawshow-visual{
-            .bg{ background-color: $color-bg-gray; background-image: url(../img/sub/lawshow/lawshow-visual.png);}
+     
+            .bg{ background-image: url(../img/sub/lawshow/lawshow-visual.png);}
         }
     }
 
@@ -140,7 +141,7 @@
              }
          }
 
-        /*--------clientNeeds 영역--------*/
+        /*--------CircleList 영역--------*/
         &.section-circleList-wrap{
             padding-bottom: 70px;
             .inner{
@@ -163,7 +164,7 @@
                                 position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
                                 p{
                                     text-align: center; color: $color-white;
-                                    &:nth-child(2){ margin-bottom: 0.6rem; font-weight: 400;}
+                                    &:nth-child(2){ margin-bottom: 0.6rem;}
                                 }
                                 span{color: $color-white;}
                              }
@@ -177,6 +178,9 @@
                     &:nth-child(1){background:$color-gradient-purple;}
                     &:nth-child(2){background:$color-gradient-blue;}
                     &:nth-child(3){background:$color-gradient-skyblue;}
+                    .txt-wrap{
+                        p:nth-child(2){font-weight: 400;}
+                    }
                 }
             }
             &.jadoo{
@@ -233,10 +237,10 @@
             padding: 4rem 0 0 0; background-color: #63B2FE;
             .inner{
                 padding: 4rem 40px 0 40px; position: relative; z-index: 2;
-                &::before{
-                    position: absolute; left: 0; top: -8rem; display: block; clear: both; content: ""; width: 24%; max-width: 140px; height: 140px; background-image: url(../img/sub/maipet/maipet-section-icon.svg); background-repeat: no-repeat; background-size: contain;
-                    @include desktop {left: 1.6rem;}
-                }
+                // &::before{
+                //     position: absolute; left: 0; top: -8rem; display: block; clear: both; content: ""; width: 24%; max-width: 140px; height: 140px; background-image: url(../img/sub/maipet/maipet-section-icon.svg); background-repeat: no-repeat; background-size: contain;
+                //     @include desktop {left: 1.6rem;}
+                // }
                 .sc-title-wrap{
                     margin-bottom: 3rem;
                     h2, p {color:$color-white;}
@@ -275,20 +279,30 @@
             .inner{
                 .conts-wrap{
                     .screen-wrap{
-                        @include flex-between;
-                        & >div:nth-child(2){ transition-delay: .2s;}
-                        & >div:nth-child(3){ transition-delay: .4s;}
+                        @include flex-column;
+                        @include tablet-mini{                       
+                             @include flex-between; flex-direction: row;
+                             & >div:nth-child(2){ transition-delay: .2s;}
+                             & >div:nth-child(3){ transition-delay: .4s;}
+                        }
                     }
                 }
             }
         }
         &.section-footer-wrap{
             padding: 0;
+            .pc{display: none;}
+            @include tablet-mini{
+                .m{display: none;}
+                .pc{display: block;}
+            }
         }
     }
 }
 
     /*=====================Project별=====================*/
+
+    /*-----Lawhow-----*/
     .lawshow{
         .sub-section{ 
             background-color: $color-white;
@@ -387,6 +401,7 @@
                     }
                 }
             }
+
             &.section-about-wrap{
                 padding: 0 0 4rem 0;
                 .inner{
@@ -415,6 +430,32 @@
                     }
                 }
             }
+
+            &.section-screen-main-wrap{
+                .inner{
+                    @include tablet-mini{@include flex-between;}
+                    .sc-title-wrap{
+                        @include tablet-mini{ width: 50%; padding-right: 2rem;}
+                        h3{ margin-bottom: 1.2rem;}
+                    }
+                    .conts-wrap{
+                        position: relative;
+                        .bg{
+                            position: absolute; width: 100%; top: 0; left: 0; background:$color-gradient-lawshow; box-sizing: border-box; border-radius: 50%;
+                            &:before { content: ""; display: block; padding-top: 98%; /* 1:1 비율 */}
+                        }
+                        .sc-mockup-wrap{
+                            @include flex; 
+                            p{
+                                width: 50%; max-width: 360px;
+                                &:nth-child(1){margin-bottom: 6rem;}
+                                &:nth-child(2){margin-top: 6rem;}
+                            }
+                        }      
+                    }
+                }
+            }
+
             &.section-how-make-wrap{
                 background-color: #F8F9FD;
                 .sc-title-wrap{
@@ -453,6 +494,56 @@
                         }
                     }
                    
+                }
+            }
+        }
+    }
+
+    /*-----Lawhow 끝-----*/
+
+
+
+    /*-------Jadoo-------*/
+    .jadoo{
+        .sub-section{
+            /*공통영역*/
+            .inner{
+                .sc-title-wrap.center{
+                    h2, p{text-align: center;}
+                    p{ margin-bottom: 0.4rem; color: #01B9B0;}
+                }
+            }
+            .deco-wrap{
+                .deco{position: absolute; z-index: 900;}
+            }
+            &.section-circleList-wrap{
+                .inner{
+                    .conts-wrap{
+                        .txt-wrap{
+                            p, span{color: #4a4a4a !important;}
+                            .title-main, .title-main span{font-weight: 600;}
+                        }
+                    }
+                }
+                .deco-wrap{
+                    .deco{top: 0; right: -14px;}
+                }
+            }
+            &.section-campaign-wrap{
+                .inner{
+                    padding: 2rem 24px;
+                    @include tablet-mini { padding: 5rem 40px;}
+                    max-width: 1000px; border: 1px solid #f6f6f6; background-color:$color-white; border-radius: 3rem;
+                    .sc-title-wrap{
+                        margin-bottom: 2rem;
+                    }
+                    .conts-wrap{
+                        p{text-align: center;}
+                    }
+                }
+                .deco-wrap{
+                    .deco:nth-child(1){top: -10px; left: -14px;}
+                    .deco:nth-child(2){top: 40%; right: 0;}
                 }
             }
         }
