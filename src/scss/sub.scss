@@ -531,19 +531,52 @@
             }
             &.section-campaign-wrap{
                 .inner{
-                    padding: 2rem 24px;
-                    @include tablet-mini { padding: 5rem 40px;}
-                    max-width: 1000px; border: 1px solid #f6f6f6; background-color:$color-white; border-radius: 3rem;
-                    .sc-title-wrap{
-                        margin-bottom: 2rem;
-                    }
-                    .conts-wrap{
-                        p{text-align: center;}
+                    @include flex-column;
+                    .box-wrap{
+                        padding: 2rem 24px; margin: 0 24px;
+                        width: 100%; max-width: 860px; box-shadow: 0 8px 16px rgba(0,0,0,.15); background-color:$color-white; border-radius: 2rem;
+                        @include tablet-mini { padding: 5rem 40px;}
+                        .sc-title-wrap{
+                            margin-bottom: 2rem;
+                        }
+                        .conts-wrap{
+                            p{text-align: center;}
+                        }
                     }
                 }
                 .deco-wrap{
                     .deco:nth-child(1){top: -10px; left: -14px;}
                     .deco:nth-child(2){top: 40%; right: 0;}
+                }
+            }
+            &.section-how-wrap{
+                .inner{
+                    .conts-wrap{
+                        ul{
+                            @include tablet { @include flex-between;}
+                            .item{
+                                margin-bottom: 0.6rem; padding: 1.4rem; background-color: $color-white; border-radius: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,.15);
+                                @include tablet { margin: 0; width: 30%; padding: 2rem;}
+                                .title-wrap{
+                                    margin-bottom: 0.4rem;
+                                    .txt-point{ font-weight: 600; color:#01B9B0;}
+                                }
+                                .menu{
+                                    @include tablet{height: 3.2rem;}
+                                }
+                            }
+
+                            .dot-wrap{
+                                @include flex-column; margin-bottom: 0.6rem;
+                                @include tablet{ flex-direction: row; margin: 0;}
+                                span{
+                                    margin: 2px; display: block; width: 5px; height: 5px; border-radius: 50%; background-color: #01B9B0;
+                                    &:nth-child(1){ opacity: 0.4;}
+                                    &:nth-child(2){opacity: 0.6;}
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
