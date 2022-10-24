@@ -1366,6 +1366,7 @@ button {
   margin-bottom: 1.2rem;
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .c-title-wrap.screen-title .sc-title span {
+  margin-left: 1rem;
   display: block;
   width: 1.4px;
   height: 42px;
@@ -1379,33 +1380,40 @@ button {
   }
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .sceen-wrap .screen-image {
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
 }
-.jadoo .sub-section.section-screen-overview .inner .deco-wrap .deco {
-  z-index: 1 !important;
+.jadoo .sub-section.section-screen-overview .deco-wrap .deco {
+  z-index: 0 !important;
   max-width: 656px;
   width: 80%;
   top: -10rem;
   right: -10rem;
 }
-.jadoo .sub-section.section-screen-sign {
+.jadoo .sub-section.section-screen-reverseFlex {
   background-color: #01B9B0;
 }
 @media (min-width: 768px) {
-  .jadoo .sub-section.section-screen-sign .inner .conts-wrap {
+  .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
+    align-items: flex-start;
   }
 }
 @media (min-width: 768px) {
-  .jadoo .sub-section.section-screen-sign .inner .conts-wrap .sceen-wrap {
+  .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .c-title-wrap {
     width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .sceen-wrap {
+    width: 45%;
     flex-wrap: wrap;
   }
 }
 @media (min-width: 768px) {
-  .jadoo .sub-section.section-screen-sign .inner .conts-wrap .sceen-wrap .screen-image {
+  .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .sceen-wrap .screen-image {
     width: 30%;
   }
 }/*# sourceMappingURL=sub.css.map */

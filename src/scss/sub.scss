@@ -612,32 +612,34 @@
                             @include desktop{margin-bottom: 6rem;}
                             .sc-title{
                                 margin-bottom: 1.2rem; 
-                                span{ display: block; width: 1.4px; height: 42px; background-color: $color-middle-black; transform:rotate(45deg);}
-                                p{}
+                                span{ margin-left: 1rem; display: block; width: 1.4px; height: 42px; background-color: $color-middle-black; transform:rotate(45deg);}
                             }
                         }
                         .sceen-wrap{
                             @include tablet-mini{  @include flex;}
-                            .screen-image{ max-width: 80%; margin: 0 auto;}
+                            .screen-image{ max-width: 70%; margin: 0 auto;}
                         }
                     }
                 }
             }
             &.section-screen-overview{
-                .inner{
-                    .deco-wrap{
-                        .deco{ z-index: 1 !important; max-width: 656px; width: 80%; top: -10rem; right: -10rem;}
-                    }
+                .deco-wrap{
+                    .deco{ z-index: 0 !important; max-width: 656px; width: 80%; top: -10rem; right: -10rem;}
                 }
             }
-            &.section-screen-sign{
+            &.section-screen-reverseFlex{
                 background-color: #01B9B0;
                 .inner{
                     .conts-wrap{
-                        @include tablet-mini{ @include flex;}
+                        @include tablet-mini{ @include flex; flex-direction: row-reverse; align-items: flex-start;}
+                        .c-title-wrap{
+                            @include tablet-mini{
+                                width: 50%;
+                            }
+                        }
                         .sceen-wrap{
                             @include tablet-mini{
-                                width: 50%; flex-wrap: wrap;
+                                width: 45%; flex-wrap: wrap;
                             }
                             .screen-image{
                                 @include tablet-mini{ width: 30%;}
