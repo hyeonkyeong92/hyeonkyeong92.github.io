@@ -1,0 +1,404 @@
+@charset "UTF-8";
+/*SVG애니메이션*/
+@-webkit-keyframes ani-bird {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-0.3rem, 0.3rem);
+  }
+  60% {
+    transform: translate(0, 0);
+  }
+  70% {
+    transform: traslate(0, 0.3rem);
+  }
+  100% {
+    transform: traslate(0, 0);
+  }
+}
+@keyframes ani-bird {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-0.3rem, 0.3rem);
+  }
+  60% {
+    transform: translate(0, 0);
+  }
+  70% {
+    transform: traslate(0, 0.3rem);
+  }
+  100% {
+    transform: traslate(0, 0);
+  }
+}
+@-webkit-keyframes ani-leaf1 {
+  from {
+    transform: rotate(0) translate(0, 0);
+  }
+  to {
+    transform: rotate(30deg) translate(1rem, 2rem);
+  }
+}
+@keyframes ani-leaf1 {
+  from {
+    transform: rotate(0) translate(0, 0);
+  }
+  to {
+    transform: rotate(30deg) translate(1rem, 2rem);
+  }
+}
+@-webkit-keyframes ani-leaf2 {
+  from {
+    transform: rotate(0) translate(0, 0);
+  }
+  to {
+    transform: rotate(-30deg) translate(1rem, 4rem);
+  }
+}
+@keyframes ani-leaf2 {
+  from {
+    transform: rotate(0) translate(0, 0);
+  }
+  to {
+    transform: rotate(-30deg) translate(1rem, 4rem);
+  }
+}
+@-webkit-keyframes ani-dash-line1 {
+  from {
+    stroke-dashoffset: 1222;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-dash-line1 {
+  from {
+    stroke-dashoffset: 1222;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes ani-dash-line2 {
+  from {
+    stroke-dashoffset: 359;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-dash-line2 {
+  from {
+    stroke-dashoffset: 359;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes ani-dash-line3 {
+  from {
+    stroke-dashoffset: 1652;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-dash-line3 {
+  from {
+    stroke-dashoffset: 1652;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes ani-dash-line4 {
+  from {
+    stroke-dashoffset: 602;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-dash-line4 {
+  from {
+    stroke-dashoffset: 602;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes ani-dash-line5 {
+  from {
+    stroke-dashoffset: 91;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-dash-line5 {
+  from {
+    stroke-dashoffset: 91;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes ani-dash-line6 {
+  from {
+    stroke-dashoffset: 733;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-dash-line6 {
+  from {
+    stroke-dashoffset: 733;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes ani-dash-line7 {
+  from {
+    stroke-dashoffset: 483;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-dash-line7 {
+  from {
+    stroke-dashoffset: 483;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes ani-dash-line8 {
+  from {
+    stroke-dashoffset: 1055;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-dash-line8 {
+  from {
+    stroke-dashoffset: 1055;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes ani-dash-line9 {
+  from {
+    stroke-dashoffset: 695;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-dash-line9 {
+  from {
+    stroke-dashoffset: 695;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes ani-dash-what {
+  from {
+    stroke-dashoffset: 634;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ani-dash-what {
+  from {
+    stroke-dashoffset: 634;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes ani-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes ani-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.st0 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.st1 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.st2 {
+  fill: none;
+  stroke: #004067;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.st3 {
+  fill: #004067;
+}
+
+.st9 {
+  fill: #FCFAF7;
+}
+
+.st10 {
+  fill: #FCFAF7;
+  stroke: #004067;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.person {
+  opacity: 0;
+  -webkit-animation: ani-appear 1.4s 0.6s cubic-bezier(0.2, 0.38, 0.26, 1.39) forwards;
+          animation: ani-appear 1.4s 0.6s cubic-bezier(0.2, 0.38, 0.26, 1.39) forwards;
+}
+
+.dash-line {
+  fill: none;
+  stroke: #004067;
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.dash-line1 {
+  stroke-dasharray: 1222;
+  -webkit-animation: ani-dash-line1 4s ease-in-out;
+          animation: ani-dash-line1 4s ease-in-out;
+}
+
+.dash-line2 {
+  stroke-dasharray: 359;
+  -webkit-animation: ani-dash-line2 4s ease-in-out;
+          animation: ani-dash-line2 4s ease-in-out;
+}
+
+.dash-line3 {
+  stroke-dasharray: 1652;
+  -webkit-animation: ani-dash-line3 4s ease-in-out;
+          animation: ani-dash-line3 4s ease-in-out;
+}
+
+.dash-line4 {
+  stroke-dasharray: 602;
+  -webkit-animation: ani-dash-line4 4s ease-in-out;
+          animation: ani-dash-line4 4s ease-in-out;
+}
+
+.dash-line5 {
+  stroke-dasharray: 91;
+  -webkit-animation: ani-dash-line5 2s ease-in-out;
+          animation: ani-dash-line5 2s ease-in-out;
+}
+
+.dash-line6 {
+  stroke-dasharray: 733;
+  -webkit-animation: ani-dash-line6 4s ease-in-out;
+          animation: ani-dash-line6 4s ease-in-out;
+}
+
+.dash-line7 {
+  stroke-dasharray: 483;
+  -webkit-animation: ani-dash-line7 4s ease-in-out;
+          animation: ani-dash-line7 4s ease-in-out;
+}
+
+.dash-line8 {
+  stroke-dasharray: 1055;
+  -webkit-animation: ani-dash-line8 4s ease-in-out;
+          animation: ani-dash-line8 4s ease-in-out;
+}
+
+.dash-line9 {
+  stroke-dasharray: 695;
+  -webkit-animation: ani-dash-line9 4s ease-in-out;
+          animation: ani-dash-line9 4s ease-in-out;
+}
+
+.dash-line-what {
+  stroke-dasharray: 634;
+  -webkit-animation: ani-dash-what 4s ease-in-out;
+          animation: ani-dash-what 4s ease-in-out;
+}
+
+.bird {
+  -webkit-animation: ani-bird 1s alternate infinite ease;
+          animation: ani-bird 1s alternate infinite ease;
+}
+
+.leaf1 {
+  -webkit-animation: ani-leaf1 1s alternate infinite ease-in-out;
+          animation: ani-leaf1 1s alternate infinite ease-in-out;
+  transform-origin: 969.57px 516.22px;
+}
+
+.leaf2 {
+  -webkit-animation: ani-leaf2 1s alternate infinite ease-in-out;
+          animation: ani-leaf2 1s alternate infinite ease-in-out;
+  transform-origin: 29.92px 833.9px;
+}
+
+@-webkit-keyframes lawshow-main-dash-ani {
+  from {
+    stroke-dashoffset: 1361;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes lawshow-main-dash-ani {
+  from {
+    stroke-dashoffset: 1361;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.main-illust {
+  stroke-dasharray: 1361;
+  -webkit-animation: lawshow-main-dash-ani 5s linear;
+          animation: lawshow-main-dash-ani 5s linear;
+}/*# sourceMappingURL=svg.css.map */
