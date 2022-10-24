@@ -1,0 +1,47 @@
+
+/********COLOR STYLE********/
+$color-white: #ffffff;
+$color-black:#222222;
+$color-middle-black:#555555;
+$color-dim-black:#999999;
+$color-gray:#F8F8F8;
+$color-point:#254CAF;
+$color-blue-black:#232C43;
+
+
+
+/********BUTTON STYLE********/
+.buttonMore{
+    transition: all .2s ease;
+    padding: 0.6rem 1rem; border: 1px solid $color-middle-black; font-size: 14px;
+    @media screen and(min-width:860px) {padding: 0.8rem 1.4rem; font-size: 16px;}
+}
+.buttonMore:hover{
+    background-color: $color-black; color:$color-white;
+}
+
+
+/********FONT STYLE********/
+.font-big-title{font-size: 34px;}
+.font-title{font-size: 26px;}
+.font-sub-title{font-size: 22px;}
+.font-desk{font-size: 18px;}
+.font-basic{font-size: 14px;}
+.font-small{font-size: 12px;}
+
+@media screen and (min-width:768px){
+.font-big-title{font-size: 4.427vw;}
+.font-title{font-size: 3.385vw;}
+.font-sub-title{font-size: 2.864vw;}
+.font-desk{font-size: 2vw;}
+.font-basic{font-size: 1.5vw;}
+.font-small{font-size: 1.3vw;}
+}
+@media screen and (min-width:1200px){
+    .font-big-title{font-size: 72px;}
+    .font-title{ font-size: 42px;}
+    .font-sub-title{ font-size: 30px;}
+    .font-desk{ font-size: 22px;}
+    .font-basic{font-size: 16px;}
+    .font-small{font-size: 14px;}
+}
