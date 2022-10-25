@@ -602,9 +602,7 @@
             &.section-screen-wrap{
                 //공통영역
                 .inner{
-                    .sc-title-wrap{
-                        h2{text-align: right;}
-                    }
+                    .sc-title-wrap{ h2{text-align: right;} }
                     .conts-wrap{
                         .c-title-wrap.screen-title{
                             margin-bottom: 2rem;
@@ -617,7 +615,7 @@
                         }
                         .sceen-wrap{
                             @include tablet-mini{  @include flex;}
-                            .screen-image{ max-width: 70%; margin: 0 auto;}
+                            .screen-image{ width: 70%; max-width: 352px; margin: 0 auto;}
                         }
                     }
                 }
@@ -631,19 +629,15 @@
                 background-color: #01B9B0;
                 .inner{
                     .conts-wrap{
-                        @include tablet-mini{ @include flex; flex-direction: row-reverse; align-items: flex-start;}
+                        @include tablet-mini{ @include flex; flex-direction: row-reverse; justify-content: space-between; align-items: flex-start;}
                         .c-title-wrap{
-                            @include tablet-mini{
-                                width: 50%;
-                            }
+                            @include tablet-mini{ width: 45%;}
+                            span{background-color: $color-white !important;}
+                            p{ color: $color-white;}
                         }
                         .sceen-wrap{
-                            @include tablet-mini{
-                                width: 45%; flex-wrap: wrap;
-                            }
-                            .screen-image{
-                                @include tablet-mini{ width: 30%;}
-                            }
+                            @include tablet-mini{  width: 50%; flex-wrap: wrap;  }
+                            .screen-image{  @include tablet-mini{ width: 33%;} }
                         }
                     }
                 }

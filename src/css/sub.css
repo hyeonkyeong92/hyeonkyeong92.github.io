@@ -1380,7 +1380,8 @@ button {
   }
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .sceen-wrap .screen-image {
-  max-width: 70%;
+  width: 70%;
+  max-width: 352px;
   margin: 0 auto;
 }
 .jadoo .sub-section.section-screen-overview .deco-wrap .deco {
@@ -1398,22 +1399,29 @@ button {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: flex-start;
   }
 }
 @media (min-width: 768px) {
   .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .c-title-wrap {
-    width: 50%;
+    width: 45%;
   }
+}
+.jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .c-title-wrap span {
+  background-color: #ffffff !important;
+}
+.jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .c-title-wrap p {
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .sceen-wrap {
-    width: 45%;
+    width: 50%;
     flex-wrap: wrap;
   }
 }
 @media (min-width: 768px) {
   .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .sceen-wrap .screen-image {
-    width: 30%;
+    width: 33%;
   }
 }/*# sourceMappingURL=sub.css.map */
