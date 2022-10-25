@@ -48,10 +48,10 @@
             .bg{ 
                 background-color: $color-white; 
                 .image-wrap{ 
-                    position: relative; transform: translateY(-20%); height: 80vh; max-width: 768px; margin: 0 auto; background: url(../img/sub/jadoo/jadoo-visual-bg-mobile.png) no-repeat; background-size: auto 90%; background-position: center;
+                    position: relative; transform: translateY(-16%); height: 80vh; max-width: 768px; margin: 0 auto; background: url(../img/sub/jadoo/jadoo-visual-bg-mobile.png) no-repeat; background-size: auto 90%; background-position: center;
                     @media screen and (min-width:980px) {background:url(../img/sub/jadoo/jadoo-visual-bg.png) no-repeat; background-size: 85% auto;}
                     .character{
-                        width: 150px; height: auto;
+                        width: 200px; height: auto;
                         &.character-dudu{ position: absolute; left: 2rem; bottom: 2rem; }
                         &.character-pruny{ position: absolute; right: 2rem; bottom: 1rem; }
                     }
@@ -59,7 +59,6 @@
             }
         }
         &.lawshow-visual{
-     
             .bg{ background-image: url(../img/sub/lawshow/lawshow-visual.png);}
         }
     }
@@ -515,7 +514,7 @@
 
 
 
-    /*-------Jadoo-------*/
+    /*====================Jadoo====================*/
     .jadoo{
         .sub-section{
             /*공통영역*/
@@ -610,12 +609,52 @@
                             @include desktop{margin-bottom: 6rem;}
                             .sc-title{
                                 margin-bottom: 1.2rem; 
-                                span{ margin-left: 1rem; display: block; width: 1.4px; height: 42px; background-color: $color-middle-black; transform:rotate(45deg);}
+                                span{//타이틀 데코요소
+                                    margin-left: 0.7rem; display: block; width: 1.4px; height: 28px; background-color: $color-middle-black; transform:rotate(45deg);
+                                    @include tablet-mini{ margin-left: 0.9rem; height: 34px;}
+                                    @include desktop{ margin-left: 1rem; margin-bottom: 0.2rem; height: 40px;}
+                                }
                             }
                         }
-                        .sceen-wrap{
+                        .screen-wrap{
                             @include tablet-mini{  @include flex;}
                             .screen-image{ width: 70%; max-width: 352px; margin: 0 auto;}
+                            
+                            &.screen-sign{ //로그인페이지 영역
+                                position: relative;
+                                @include flex; flex-wrap: wrap;
+                                .screen-image{  
+                                    width: 48%; z-index: 2;
+                                    &:nth-child(even){ transform: translateY(4rem);}
+                                    @include tablet-mini{
+                                        width: 33%;
+                                        &:nth-child(even){ transform: translateY(0);}
+                                        &:nth-child(2), &:nth-child(5){ transform: translateY(-3rem);}
+                                        &:nth-child(1), &:nth-child(4){ transform: translateY(2rem);}
+                                    }
+                                }
+                                .deco-wrap{
+                                    display: none;
+                                    @include tablet-mini{ display: block; width: 120%; box-sizing: border-box; z-index: 0; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+                                }
+                            }
+                            &.screen-main{
+                                position: relative;
+                                .explain-txt{
+                                    display: none; @include tablet-mini{ display: block;}
+                                    position: absolute; max-width: 30%; width: 26%;
+                                    &::before{ position: absolute; top: 7px; content: ""; clear: both; display: inline-block; width: 100%; height: 1px; border-bottom: 2px dotted #ccc;}
+                                    &::after{ position: absolute; top: 3px; content: ""; clear: both; display: block; width: 12px; height: 12px; border-radius: 50%; background-color: #ccc; box-shadow: 0 0 12px 0 rgba(0,0,0,.3);}
+                                    &.txt-01{
+                                        top: 32.5%; right: 0; text-align: right;
+                                        &::before{right: 100%;}
+                                    }
+                                    &.txt-02{top: 49%; left: 0;}
+                                }
+                            }
+                            &.screen-campaign{ //포인트 재배 영역
+
+                            }
                         }
                     }
                 }
@@ -635,9 +674,8 @@
                             span{background-color: $color-white !important;}
                             p{ color: $color-white;}
                         }
-                        .sceen-wrap{
-                            @include tablet-mini{  width: 50%; flex-wrap: wrap;  }
-                            .screen-image{  @include tablet-mini{ width: 33%;} }
+                        .screen-wrap{
+                            @include tablet-mini{  width: 50%;}
                         }
                     }
                 }

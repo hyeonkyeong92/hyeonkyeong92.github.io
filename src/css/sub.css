@@ -398,7 +398,7 @@ button {
 }
 .container .sub-visual.jadoo-visual .bg .image-wrap {
   position: relative;
-  transform: translateY(-20%);
+  transform: translateY(-16%);
   height: 80vh;
   max-width: 768px;
   margin: 0 auto;
@@ -413,7 +413,7 @@ button {
   }
 }
 .container .sub-visual.jadoo-visual .bg .image-wrap .character {
-  width: 150px;
+  width: 200px;
   height: auto;
 }
 .container .sub-visual.jadoo-visual .bg .image-wrap .character.character-dudu {
@@ -1225,7 +1225,7 @@ button {
 }
 
 /*-----Lawhow 끝-----*/
-/*-------Jadoo-------*/
+/*====================Jadoo====================*/
 .jadoo .sub-section {
   /*공통영역*/
   /*---- circleList 끝 ----*/
@@ -1366,23 +1366,126 @@ button {
   margin-bottom: 1.2rem;
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .c-title-wrap.screen-title .sc-title span {
-  margin-left: 1rem;
+  margin-left: 0.7rem;
   display: block;
   width: 1.4px;
-  height: 42px;
+  height: 28px;
   background-color: #484848;
   transform: rotate(45deg);
 }
 @media (min-width: 768px) {
-  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .sceen-wrap {
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .c-title-wrap.screen-title .sc-title span {
+    margin-left: 0.9rem;
+    height: 34px;
+  }
+}
+@media (min-width: 1200px) {
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .c-title-wrap.screen-title .sc-title span {
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+    height: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap {
     display: flex;
     align-items: center;
   }
 }
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .sceen-wrap .screen-image {
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .screen-image {
   width: 70%;
   max-width: 352px;
   margin: 0 auto;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign .screen-image {
+  width: 48%;
+  z-index: 2;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign .screen-image:nth-child(even) {
+  transform: translateY(4rem);
+}
+@media (min-width: 768px) {
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign .screen-image {
+    width: 33%;
+  }
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign .screen-image:nth-child(even) {
+    transform: translateY(0);
+  }
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign .screen-image:nth-child(2), .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign .screen-image:nth-child(5) {
+    transform: translateY(-3rem);
+  }
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign .screen-image:nth-child(1), .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign .screen-image:nth-child(4) {
+    transform: translateY(2rem);
+  }
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign .deco-wrap {
+  display: none;
+}
+@media (min-width: 768px) {
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign .deco-wrap {
+    display: block;
+    width: 120%;
+    box-sizing: border-box;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main {
+  position: relative;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .explain-txt {
+  display: none;
+  position: absolute;
+  max-width: 30%;
+  width: 26%;
+}
+@media (min-width: 768px) {
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .explain-txt {
+    display: block;
+  }
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .explain-txt::before {
+  position: absolute;
+  top: 7px;
+  content: "";
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  border-bottom: 2px dotted #ccc;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .explain-txt::after {
+  position: absolute;
+  top: 3px;
+  content: "";
+  clear: both;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3);
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .explain-txt.txt-01 {
+  top: 32.5%;
+  right: 0;
+  text-align: right;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .explain-txt.txt-01::before {
+  right: 100%;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .explain-txt.txt-02 {
+  top: 49%;
+  left: 0;
 }
 .jadoo .sub-section.section-screen-overview .deco-wrap .deco {
   z-index: 0 !important;
@@ -1415,13 +1518,7 @@ button {
   color: #ffffff;
 }
 @media (min-width: 768px) {
-  .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .sceen-wrap {
+  .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .screen-wrap {
     width: 50%;
-    flex-wrap: wrap;
-  }
-}
-@media (min-width: 768px) {
-  .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .sceen-wrap .screen-image {
-    width: 33%;
   }
 }/*# sourceMappingURL=sub.css.map */
