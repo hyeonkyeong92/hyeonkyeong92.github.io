@@ -620,18 +620,23 @@
                             @include tablet-mini{  @include flex;}
                             .screen-image{ width: 70%; max-width: 352px; margin: 0 auto;}
                             .explain-txt{
+
                                 display: none; @include tablet-mini{ display: block;}
-                                position: absolute; max-width: 30%; width: 26%;
-                                &::before{ position: absolute; top: 7px; content: ""; clear: both; display: inline-block; width: 60%; height: 1px; border-bottom: 2px dotted #ccc;}
-                                &::after{ position: absolute; top: 3px; content: ""; clear: both; display: block; width: 12px; height: 12px; border-radius: 50%; background-color: #ccc; box-shadow: 0 0 12px 0 rgba(0,0,0,.3);}
+                                position: absolute; max-width: 30%; width: 26%; 
+                                &::before{ position: absolute; top: 7px; content: ""; clear: both; display: inline-block; width: 0; height: 1px; border-bottom: 2px dotted #ccc; transition: all 1s ease;}
+                                &::after{ position: absolute; top: -8px;  content: ""; clear: both; display: block; width: 36px; height: 36px; transition: all 1s 0.4s ease; background-image:url(../img/sub/jadoo/explain-dot.svg); background-repeat: no-repeat; background-position: center; background-size: 100% auto; opacity: 0;}
                                 &.ex-txt-right{
-                                     right: 0; text-align: right;
-                                    &::before{right: 100%;}
+                                    padding-left: 4px; right: 0; text-align: right;
+                                    &::before{right: 90%;}
                                 }
                                 &.ex-txt-left{
-                                    left: 0;
-                                    &::before{left: 100%;}
-                                    &::after{left: 100%;}
+                                    left: 0; padding-right: 4px;
+                                    &::before{left: 90%;}
+                                    &::after{left: 80%;}
+                                }
+                                &.scroll-ani{
+                                    &::before{width: 60%;}
+                                    &::after{ opacity: 1;}
                                 }
                             }
                             &.screen-sign{ //로그인페이지 영역

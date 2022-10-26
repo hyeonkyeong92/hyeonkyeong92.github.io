@@ -8,10 +8,18 @@ function isElementUnderBottom(elem, triggerDiff) {
     return top > innerHeight + (triggerDiff || 0);
 } //높이값 확인
   
-  function handleScroll() {
+function handleScroll() {
     //공통함수1
     const elems = document.querySelectorAll('.obj-ani');
     const sectionElems = document.querySelectorAll('.section-ani');
+    const aniElem = document.querySelectorAll('.obj-ani2');
+
+    aniElem.forEach((elem, index) => {
+        if(isElementUnderBottom(elem, -20)){
+            aniElem[index].classList.add('scroll-ani');
+        }
+        
+    });
 
     elems.forEach(elem => {
         if (isElementUnderBottom(elem, -20)) {
@@ -39,11 +47,16 @@ function isElementUnderBottom(elem, triggerDiff) {
     })
     // event2
 
-  }
+}
 
+// function animationHandler(){
+
+//     yOffset = window.pageYOffset;
+//     console.log(yOffset);
+// }
   
   window.addEventListener('scroll', handleScroll);
-
+//   window.addEventListener('scroll', animationHandler);
 //Scroll Event 끝
 
 
