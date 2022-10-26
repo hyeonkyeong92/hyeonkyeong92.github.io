@@ -12,14 +12,7 @@ function handleScroll() {
     //공통함수1
     const elems = document.querySelectorAll('.obj-ani');
     const sectionElems = document.querySelectorAll('.section-ani');
-    const aniElem = document.querySelectorAll('.obj-ani2');
-
-    aniElem.forEach((elem, index) => {
-        if(isElementUnderBottom(elem, -20)){
-            aniElem[index].classList.add('scroll-ani');
-        }
-        
-    });
+    const elems2 = document.querySelectorAll('.obj-ani2');
 
     elems.forEach(elem => {
         if (isElementUnderBottom(elem, -20)) {
@@ -47,18 +40,25 @@ function handleScroll() {
     })
     // event2
 
+    elems2.forEach((elem, index) => {
+        if(isElementUnderBottom(elem, -40)){
+            elem.classList.remove('scroll-ani');
+            
+        }else{
+            elem.classList.add('scroll-ani');
+        }
+    });
+    // event3
+
 }
 
-// function animationHandler(){
-
-//     yOffset = window.pageYOffset;
-//     console.log(yOffset);
-// }
   
   window.addEventListener('scroll', handleScroll);
-//   window.addEventListener('scroll', animationHandler);
+
 //Scroll Event 끝
 
+
+console.log(document.querySelector('.explain-txt:before').getTotalLength())
 
 //=========================Page Back=========================//
 const iconBackElem = document.querySelector('.h-menu');

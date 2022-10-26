@@ -619,25 +619,37 @@
                         .screen-wrap{
                             @include tablet-mini{  @include flex;}
                             .screen-image{ width: 70%; max-width: 352px; margin: 0 auto;}
-                            .explain-txt{
-
-                                display: none; @include tablet-mini{ display: block;}
-                                position: absolute; max-width: 30%; width: 26%; 
-                                &::before{ position: absolute; top: 7px; content: ""; clear: both; display: inline-block; width: 0; height: 1px; border-bottom: 2px dotted #ccc; transition: all 1s ease;}
-                                &::after{ position: absolute; top: -8px;  content: ""; clear: both; display: block; width: 36px; height: 36px; transition: all 1s 0.4s ease; background-image:url(../img/sub/jadoo/explain-dot.svg); background-repeat: no-repeat; background-position: center; background-size: 100% auto; opacity: 0;}
-                                &.ex-txt-right{
-                                    padding-left: 4px; right: 0; text-align: right;
-                                    &::before{right: 90%;}
+                            // .explain-txt{
+                            //     display: none; @include tablet-mini{ display: block;}
+                            //     position: absolute; max-width: 30%; width: 26%; 
+                            //     &::before{ position: absolute; top: 7px; content: ""; clear: both; display: inline-block; transition: all 1s ease;}
+                            //     &::after{ position: absolute; top: -8px;  content: ""; clear: both; display: block; width: 30px; height: 30px; transition: all 1s 0.4s ease; background-image:url(../img/sub/jadoo/explain-dot.svg); background-repeat: no-repeat; background-position: center; background-size: 100% auto; opacity: 0;}
+                            //     &.ex-txt-right{
+                            //         padding-left: 4px; right: 0; text-align: right;
+                            //         &::before{right: 90%;}
+                            //     }
+                            //     &.ex-txt-left{
+                            //         left: 0; padding-right: 4px;
+                            //         &::before{left: 90%;}
+                            //         &::after{left: 80%;}
+                            //     }
+                            //     &.ex-txt-bottom{left: 50%; text-align: center; transform: translateX(-50%);}
+                            //     &.scroll-ani{
+                            //         &::before{width: 60%;}
+                            //         &::after{ opacity: 1;}
+                            //     }
+                            // }
+                            .explain-txt-wrap{
+                                background-color: #fcc;
+                                display: none; @include tablet-mini{ display: flex; align-items:flex-start;}
+                                position: absolute;
+                                &.ex-txt-right{justify-content: right; right: 0; padding-left: 4px; text-align: right;}
+                                &.ex-txt-left{justify-content: left; left: 0; padding-right: 4px; }
+                                &.ex-txt-bottom{ left: 50%; text-align: center; transform: translateX(-50%); }
+                                .ex-deco{ 
+                                    .deco-line{margin-top: -4px;}
                                 }
-                                &.ex-txt-left{
-                                    left: 0; padding-right: 4px;
-                                    &::before{left: 90%;}
-                                    &::after{left: 80%;}
-                                }
-                                &.scroll-ani{
-                                    &::before{width: 60%;}
-                                    &::after{ opacity: 1;}
-                                }
+                                .ex-txt{ max-width: 30%; width: 30%; }
                             }
                             &.screen-sign{ //로그인페이지 영역
                                 position: relative;
@@ -661,6 +673,7 @@
                                 position: relative;
                                 .txt-01{top: 32.5%; }
                                 .txt-02{top: 49%;}
+                                .txt-03{top: 100%;}
                             }
                             &.screen-campaign{ //포인트 재배 영역
 

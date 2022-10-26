@@ -1397,66 +1397,39 @@ button {
   max-width: 352px;
   margin: 0 auto;
 }
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt {
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap {
+  background-color: #fcc;
   display: none;
   position: absolute;
-  max-width: 30%;
-  width: 26%;
 }
 @media (min-width: 768px) {
-  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt {
-    display: block;
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap {
+    display: flex;
+    align-items: flex-start;
   }
 }
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt::before {
-  position: absolute;
-  top: 7px;
-  content: "";
-  clear: both;
-  display: inline-block;
-  width: 0;
-  height: 1px;
-  border-bottom: 2px dotted #ccc;
-  transition: all 1s ease;
-}
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt::after {
-  position: absolute;
-  top: -8px;
-  content: "";
-  clear: both;
-  display: block;
-  width: 36px;
-  height: 36px;
-  transition: all 1s 0.4s ease;
-  background-image: url(../img/sub/jadoo/explain-dot.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% auto;
-  opacity: 0;
-}
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt.ex-txt-right {
-  padding-left: 4px;
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap.ex-txt-right {
+  justify-content: right;
   right: 0;
+  padding-left: 4px;
   text-align: right;
 }
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt.ex-txt-right::before {
-  right: 90%;
-}
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt.ex-txt-left {
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap.ex-txt-left {
+  justify-content: left;
   left: 0;
   padding-right: 4px;
 }
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt.ex-txt-left::before {
-  left: 90%;
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap.ex-txt-bottom {
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
 }
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt.ex-txt-left::after {
-  left: 80%;
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap .ex-deco .deco-line {
+  margin-top: -4px;
 }
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt.scroll-ani::before {
-  width: 60%;
-}
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt.scroll-ani::after {
-  opacity: 1;
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap .ex-txt {
+  max-width: 30%;
+  width: 30%;
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-sign {
   position: relative;
@@ -1508,6 +1481,9 @@ button {
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .txt-02 {
   top: 49%;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .txt-03 {
+  top: 100%;
 }
 .jadoo .sub-section.section-screen-overview .deco-wrap .deco {
   z-index: 0 !important;
