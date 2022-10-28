@@ -1,11 +1,19 @@
 /*FUNCITON*/
 /*컴포넌트 묶음*/
 
-/*====button components====*/
-@mixin button-main{
 
-}
+/*Media Query*/
+$breakpoint-mobile: 320px;
+$breakpoint-tablet-mini: 768px;
+$breakpoint-tablet: 980px;
+$breakpoint-desktop: 1200px;
 
+
+/*button components*/
+@mixin button-main{}
+
+
+/*Flex*/
 @mixin flex{
     display: flex; align-items: center;
 }
@@ -20,7 +28,7 @@
 }
 
 
-/*====애니메이션====*/
+/*========= 애니메이션 =========*/
 .obj-ani { transition: transform 0.8s ease 0s, opacity 1s ease-in 0s;  }
 .obj-vertical-ani{transition: transform 3s ease 0s; }
 
@@ -28,7 +36,7 @@
     from { left: -10%; top:0;}
     to   { left: 0; top:5%;}
 }
-
+//Sub-Lawshow
 @keyframes ani-card-flip{
     to{transform: rotateY(180deg);}
 }
@@ -52,9 +60,7 @@
     100%{transform: translate(-1em,0);}
 }
 
+//Sub-Jadoo
 
-/*Media Query*/
-$breakpoint-mobile: 320px;
-$breakpoint-tablet-mini: 768px;
-$breakpoint-tablet: 980px;
-$breakpoint-desktop: 1200px;
+
+

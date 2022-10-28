@@ -198,8 +198,10 @@ button {
 /*min-width:1200px*/
 /*FUNCITON*/
 /*컴포넌트 묶음*/
-/*====button components====*/
-/*====애니메이션====*/
+/*Media Query*/
+/*button components*/
+/*Flex*/
+/*========= 애니메이션 =========*/
 .obj-ani {
   transition: transform 0.8s ease 0s, opacity 1s ease-in 0s;
 }
@@ -297,7 +299,6 @@ button {
     transform: translate(-1em, 0);
   }
 }
-/*Media Query*/
 .wrap {
   background-color: #FDFBF8;
   width: 100%;

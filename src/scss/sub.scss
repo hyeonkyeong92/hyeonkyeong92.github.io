@@ -618,7 +618,7 @@
                         }
                         .screen-wrap{
                             @include tablet-mini{  @include flex;}
-                            .screen-image{ width: 70%; max-width: 352px; margin: 0 auto;}
+                            .screen-image{ width: 70%; max-width: 352px; margin: 0 auto; z-index: 5;}
                             // .explain-txt{
                             //     display: none; @include tablet-mini{ display: block;}
                             //     position: absolute; max-width: 30%; width: 26%; 
@@ -640,16 +640,20 @@
                             //     }
                             // }
                             .explain-txt-wrap{
-                                background-color: #fcc;
                                 display: none; @include tablet-mini{ display: flex; align-items:flex-start;}
                                 position: absolute;
                                 &.ex-txt-right{justify-content: right; right: 0; padding-left: 4px; text-align: right;}
                                 &.ex-txt-left{justify-content: left; left: 0; padding-right: 4px; }
-                                &.ex-txt-bottom{ left: 50%; text-align: center; transform: translateX(-50%); }
-                                .ex-deco{ 
-                                    .deco-line{margin-top: -4px;}
+                                &.ex-txt-bottom{
+                                    margin-top: -1.4rem; left: 50%; text-align: center; transform: translateX(-50%); flex-direction: column; align-items: center;
+                                    .ex-deco{flex-direction: column;}
+                                    .ex-txt{max-width: 60%; width: 60%;}
                                 }
+                                .ex-deco{ @include flex; align-items: center;}
                                 .ex-txt{ max-width: 30%; width: 30%; }
+                                // .deco-line{           
+                                //     stroke-dasharray: 240;
+                                //     animation: jadoo-decoLine-dash-ani 2s ease;}
                             }
                             &.screen-sign{ //로그인페이지 영역
                                 position: relative;
@@ -671,6 +675,7 @@
                             }
                             &.screen-main{
                                 position: relative;
+                                @include tablet-mini{margin-bottom: 6rem;}
                                 .txt-01{top: 32.5%; }
                                 .txt-02{top: 49%;}
                                 .txt-03{top: 100%;}

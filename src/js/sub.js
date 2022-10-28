@@ -57,9 +57,6 @@ function handleScroll() {
 
 //Scroll Event 끝
 
-
-console.log(document.querySelector('.explain-txt:before').getTotalLength())
-
 //=========================Page Back=========================//
 const iconBackElem = document.querySelector('.h-menu');
 

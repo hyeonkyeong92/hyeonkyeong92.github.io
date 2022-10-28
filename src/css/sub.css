@@ -198,8 +198,10 @@ button {
 /*min-width:1200px*/
 /*FUNCITON*/
 /*컴포넌트 묶음*/
-/*====button components====*/
-/*====애니메이션====*/
+/*Media Query*/
+/*button components*/
+/*Flex*/
+/*========= 애니메이션 =========*/
 .obj-ani {
   transition: transform 0.8s ease 0s, opacity 1s ease-in 0s;
 }
@@ -297,7 +299,6 @@ button {
     transform: translate(-1em, 0);
   }
 }
-/*Media Query*/
 /*===================SUBPAGE-APPLICATION-COMMON===================*/
 .header {
   z-index: 300;
@@ -1396,9 +1397,9 @@ button {
   width: 70%;
   max-width: 352px;
   margin: 0 auto;
+  z-index: 5;
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap {
-  background-color: #fcc;
   display: none;
   position: absolute;
 }
@@ -1420,12 +1421,24 @@ button {
   padding-right: 4px;
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap.ex-txt-bottom {
+  margin-top: -1.4rem;
   left: 50%;
   text-align: center;
   transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center;
 }
-.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap .ex-deco .deco-line {
-  margin-top: -4px;
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap.ex-txt-bottom .ex-deco {
+  flex-direction: column;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap.ex-txt-bottom .ex-txt {
+  max-width: 60%;
+  width: 60%;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap .ex-deco {
+  display: flex;
+  align-items: center;
+  align-items: center;
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap .explain-txt-wrap .ex-txt {
   max-width: 30%;
@@ -1475,6 +1488,11 @@ button {
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main {
   position: relative;
+}
+@media (min-width: 768px) {
+  .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main {
+    margin-bottom: 6rem;
+  }
 }
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .txt-01 {
   top: 32.5%;
