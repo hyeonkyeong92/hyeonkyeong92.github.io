@@ -299,6 +299,26 @@ button {
     transform: translate(-1em, 0);
   }
 }
+@-webkit-keyframes left-appear-ani {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes left-appear-ani {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .wrap {
   background-color: #FDFBF8;
   width: 100%;

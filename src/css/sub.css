@@ -299,6 +299,26 @@ button {
     transform: translate(-1em, 0);
   }
 }
+@-webkit-keyframes left-appear-ani {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes left-appear-ani {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /*===================SUBPAGE-APPLICATION-COMMON===================*/
 .header {
   z-index: 300;
@@ -1503,6 +1523,25 @@ button {
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-main .txt-03 {
   top: 100%;
 }
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-mall .screen-image:nth-child(1) {
+  opacity: 0;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-mall .screen-image:nth-child(1).scroll-ani {
+  -webkit-animation: left-appear-ani 1s cubic-bezier(0.25, 0.43, 0.48, 0.8) forwards;
+          animation: left-appear-ani 1s cubic-bezier(0.25, 0.43, 0.48, 0.8) forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-campaign .screen-image:nth-child(1), .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-campaign .screen-image:nth-child(3) {
+  max-width: 312px;
+  opacity: 0;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-campaign .screen-image:nth-child(1).scroll-ani {
+  -webkit-animation: left-appear-ani 1s cubic-bezier(0.25, 0.43, 0.48, 0.8) forwards;
+          animation: left-appear-ani 1s cubic-bezier(0.25, 0.43, 0.48, 0.8) forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
 .jadoo .sub-section.section-screen-overview .deco-wrap .deco {
   z-index: 0 !important;
   max-width: 656px;
@@ -1537,4 +1576,7 @@ button {
   .jadoo .sub-section.section-screen-reverseFlex .inner .conts-wrap .screen-wrap {
     width: 50%;
   }
+}
+.jadoo .sub-section.section-logo-wrap {
+  background-color: #F2F3F3;
 }/*# sourceMappingURL=sub.css.map */
