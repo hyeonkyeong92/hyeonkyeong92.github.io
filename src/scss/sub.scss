@@ -49,11 +49,21 @@
                 background-color: $color-white; 
                 .image-wrap{ 
                     position: relative; transform: translateY(-16%); height: 80vh; max-width: 768px; margin: 0 auto; background: url(../img/sub/jadoo/jadoo-visual-bg-mobile.png) no-repeat; background-size: auto 90%; background-position: center;
-                    @media screen and (min-width:980px) {background:url(../img/sub/jadoo/jadoo-visual-bg.png) no-repeat; background-size: 85% auto;}
+                    @include tablet {background:url(../img/sub/jadoo/jadoo-visual-bg.png) no-repeat; background-size: 85% auto; transform: translateY(-16%) translateX(10%);}
                     .character{
-                        width: 200px; height: auto;
-                        &.character-dudu{ position: absolute; left: 2rem; bottom: 2rem; }
-                        &.character-pruny{ position: absolute; right: 2rem; bottom: 1rem; }
+                        position: absolute; width: 170px; height: auto;
+                        &.character-dudu{z-index: 3;  left: 0; bottom: 1rem; }
+                        &.character-pruny{z-index: 2; right: 0; bottom: 1rem; }
+                        &.character-ven{  left: 8rem; bottom: 4rem; }
+                        &.character-neta{  right: 6rem; bottom: 4rem; }
+                        @include tablet{
+                            width: 200px; height: auto;
+                            &.character-dudu{ left: -7rem; bottom: 2rem; }
+                            &.character-pruny{ right: 2rem; bottom: 1rem; }
+                            &.character-ven{ left: 2rem; bottom: 6rem; }
+                            &.character-neta{right: 12rem; bottom: 4rem;}
+                        }
+
                     }
                 }
             }
@@ -685,10 +695,13 @@
                                 .screen-image:nth-child(1){
                                     opacity: 0;
                                 }
-                                .screen-image:nth-child(1).scroll-ani{   
-                                    animation: left-appear-ani 1s cubic-bezier(0.25, 0.43, 0.48, 0.8) forwards;
-                                    animation-delay: 0.5s;
+                                @include tablet-mini{
+                                    .screen-image:nth-child(1).scroll-ani{   
+                                        animation: left-appear-ani 1s cubic-bezier(0.25, 0.43, 0.48, 0.8) forwards;
+                                        animation-delay: 0.5s;
+                                    }
                                 }
+                                
                             }
                             &.screen-campaign{ //포인트 재배 영역
                                 .screen-image:nth-child(1), .screen-image:nth-child(3){
@@ -712,7 +725,9 @@
                 background-color: #01B9B0;
                 .inner{
                     .conts-wrap{
-                        @include tablet-mini{ @include flex; flex-direction: row-reverse; justify-content: space-between; align-items: flex-start;}
+                        @include tablet-mini{
+                            @include flex; flex-direction: row-reverse; justify-content: space-between; align-items: flex-start;
+                        }
                         .c-title-wrap{
                             @include tablet-mini{ width: 45%;}
                             span{background-color: $color-white !important;}
@@ -726,6 +741,57 @@
             }
             &.section-logo-wrap{
                 background-color: #F2F3F3;
+            }
+            &.section-character-wrap{
+                .inner{
+                    .sc-title-wrap{
+                        @include tablet-mini{ @include flex-between; align-items: flex-end;}
+                        h2{color: #01B9B0;}
+                        p{ margin-bottom: 1.6rem;}
+                    }
+                    .conts-wrap{
+                        .character-list-wrap{
+                            @include tablet-mini{ @include flex-between; flex-wrap: wrap; }
+                            .list{
+                                @include flex-column; margin-bottom: 4rem;
+                                @include tablet-mini{ width: 48%; margin-bottom: 8rem;}
+                                .character-wrap{
+                                    width: 60%; max-width: 350px; margin: 0 auto 32px auto;
+                                }
+                                .info-wrap{
+                                    position: relative;
+                                    padding: 2rem; background-color: $color-white; border-radius: 1.6rem; box-shadow: 0 4px 8px rgba(0,0,0,.2);
+                                    @include tablet-mini{ padding: 3rem;}
+                                    .info-title-wrap{
+                                        margin-bottom: 2rem;
+                                        .label{
+                                            position: absolute; top: -1rem; left: 2rem; display: flex; align-items: center; justify-content: center;
+                                            width: 2rem; height: 2rem; background-color: #666; border-radius: 50%; color: $color-white;
+                                            @include tablet-mini{ left: 3rem;}
+                                        }
+                                        .name-wrap{
+                                            @include flex; margin-bottom: 0.4rem;
+                                            p:nth-child(1){ margin-right: 0.4rem;}
+                                        }
+                                        &::after{ margin-top: 1.6rem; content: ""; clear: both; display: block; width: 3rem; height: 1px; background-color: #989898;}
+                                    }
+                                    .info-menu{}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.section-illust-wrap{
+                .inner{
+                    .sc-title-wrap{
+                        margin-bottom: 4rem;
+                        @include tablet{margin-bottom: 6rem;}
+                    }
+                }
+            }
+            &.section-illust2-wrap{
+                .conts-wrap{margin: 0 auto; max-width: 2100px;}
             }
         }
     }
