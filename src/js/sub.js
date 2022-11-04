@@ -23,7 +23,6 @@ function handleScroll() {
         } else {
             elem.style.opacity = "1";
             elem.style.transform = 'translateY(0px)';
-  
         }
     })
     // event1
