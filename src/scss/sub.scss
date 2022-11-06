@@ -43,6 +43,7 @@
         }
         &.jadoo-visual{
             .bg{
+                animation: opa-appear-ani 2s forwards;
                 background-color: $color-white; padding:2rem 0;
                 .image-wrap{ 
                     z-index:4; position: relative; height: 100%; max-width: 768px; margin: 0 auto; background: url(../img/sub/jadoo/jadoo-visual-bg-mobile.png) no-repeat; background-size: contain; background-position: center;
@@ -81,6 +82,7 @@
                 }           
             }
             .inner{
+                animation: opa-appear-ani 2s forwards;
                 position: absolute; left: 0; top: 40%; padding: 0 24px;
                 @media screen and (min-width:768px) { padding: 2rem 40px;}
                 @media screen and (min-width:980px) { padding: 4rem 40px;}
@@ -737,8 +739,13 @@
                                     animation-delay: 0.5s;
                                     align-self: flex-end;
                                 }
+                                .screen-image.scroll-ani .explain-txt-wrap{
+                                    animation: opa-appear-ani 1.4s linear forwards;
+                                    animation-delay: 1.4s;
+                                }
                                 .explain-txt-wrap{
-                                    .ex-txt{width: 100%; max-width: 100%;}
+                                    opacity: 0;
+                                    .ex-txt{width: 100%; max-width: 100%; }
                                 }
                             }
                         }
@@ -768,8 +775,15 @@
                     }
                 }
             }
+            &.section-screen-mall{
+                background-image: url(../../src/img/sub/jadoo/illust-mall-icon.png); background-repeat: no-repeat; background-size: 240px auto; background-position: bottom 6rem right;
+                @include tablet{background-size: 280px auto;}
+            }
             &.section-screen-campaign{
+                background-image: url(../../src/img/sub/jadoo/illust-campaign-icon.png);  background-repeat: no-repeat; background-size: 240px auto;  background-position: bottom 6rem left;
                 @include tablet-mini{padding-bottom: 8rem;}
+                @include tablet{background-size: 280px auto;}
+
             }
             &.section-logo-wrap{
                 background-color: #F2F3F3;
@@ -779,8 +793,7 @@
                     }
                     .conts-wrap{
                         .logo-wrap{
-                            @include flex; justify-content: center; align-items: center;
-
+                            max-width: 640px; margin: 0 auto;
                         }
 
                     }
@@ -840,13 +853,13 @@
                 .conts-wrap{margin: 0 auto; max-width: 2100px;}
             }
             &.section-footer{
-                padding: 6rem 0; min-height: 80vh; height: 80vh;  overflow: hidden;
+                padding: 6rem 0; min-height: 100vh; height: 100vh;  overflow: hidden;
                 .bg{
-                    position: absolute; top: 0; left: 0; padding: 6rem 0; min-height: 80vh; height: 80vh; width: 100%;
+                    position: absolute; top: 0; left: 0; padding: 6rem 0; min-height: 100%; height: 100%; width: 100%;
                     background-repeat: no-repeat; background-position: center; background-size: cover;
                     .image-wrap{ 
                         z-index:4; position: relative; height: 100%; max-width: 768px; margin: 0 auto; background: url(../img/sub/jadoo/jadoo-visual-bg-mobile.png) no-repeat; background-size: contain; background-position: center;
-                        @include tablet { max-width: 880px; background:url(../img/sub/jadoo/jadoo-visual-bg.png) no-repeat; background-size: contain; transform: translateX(10%); background-position: 4rem center;}
+                        @include tablet { max-width: 880px; background:url(../img/sub/jadoo/jadoo-visual-bg2.png) no-repeat; background-size: contain; transform: translateX(10%); background-position: 4rem center;}
                         .character{
                             z-index: 6;
                             position: absolute; width: 150px; height: auto;
@@ -867,18 +880,7 @@
                             }
                         }
                     }
-                    .object-wrap{
-                        display: none;  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-                        @include tablet{display: block;}
-                        p{
-                            z-index:5; position: absolute;
-                            &.ob01{width: 90px; top: 30%; left: 5%;}
-                            &.ob02{width:80px; top: 40%; left: 40%;}
-                            &.ob03{width: 80px; top:5%; left: 30%;}
-                            &.ob04{width: 70px; top:25%; right: 10%;}
-                            &.ob05{width: 80px; bottom: 8%; left: 55%;}
-                        }
-                    }
+                 
                 }
             }
         }

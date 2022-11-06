@@ -339,6 +339,22 @@ button {
     transform: translateX(0);
   }
 }
+@-webkit-keyframes opa-appear-ani {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opa-appear-ani {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .wrap {
   background-color: #FDFBF8;
   width: 100%;
@@ -972,6 +988,7 @@ button {
   margin-bottom: 2rem;
   position: relative;
   box-sizing: border-box;
+  border: 1px solid rgb(244, 244, 244);
 }
 .container .section.section-portfolio-wrap .inner .sc-conts-wrap .portfolio-list-wrap .portfolio-list:before {
   content: "";

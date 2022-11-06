@@ -339,6 +339,22 @@ button {
     transform: translateX(0);
   }
 }
+@-webkit-keyframes opa-appear-ani {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opa-appear-ani {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*===================SUBPAGE-APPLICATION-COMMON===================*/
 .header {
   z-index: 300;
@@ -435,6 +451,8 @@ button {
   background-image: url(../img/sub/maipet/maipet-visual.png);
 }
 .container .sub-visual.jadoo-visual .bg {
+  -webkit-animation: opa-appear-ani 2s forwards;
+          animation: opa-appear-ani 2s forwards;
   background-color: #ffffff;
   padding: 2rem 0;
 }
@@ -559,6 +577,8 @@ button {
   left: 55%;
 }
 .container .sub-visual.jadoo-visual .inner {
+  -webkit-animation: opa-appear-ani 2s forwards;
+          animation: opa-appear-ani 2s forwards;
   position: absolute;
   left: 0;
   top: 40%;
@@ -1693,6 +1713,15 @@ button {
           animation-delay: 0.5s;
   align-self: flex-end;
 }
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-campaign .screen-image.scroll-ani .explain-txt-wrap {
+  -webkit-animation: opa-appear-ani 1.4s linear forwards;
+          animation: opa-appear-ani 1.4s linear forwards;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+.jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-campaign .explain-txt-wrap {
+  opacity: 0;
+}
 .jadoo .sub-section.section-screen-wrap .inner .conts-wrap .screen-wrap.screen-campaign .explain-txt-wrap .ex-txt {
   width: 100%;
   max-width: 100%;
@@ -1732,9 +1761,31 @@ button {
     width: 50%;
   }
 }
+.jadoo .sub-section.section-screen-mall {
+  background-image: url(../../src/img/sub/jadoo/illust-mall-icon.png);
+  background-repeat: no-repeat;
+  background-size: 240px auto;
+  background-position: bottom 6rem right;
+}
+@media (min-width: 980px) {
+  .jadoo .sub-section.section-screen-mall {
+    background-size: 280px auto;
+  }
+}
+.jadoo .sub-section.section-screen-campaign {
+  background-image: url(../../src/img/sub/jadoo/illust-campaign-icon.png);
+  background-repeat: no-repeat;
+  background-size: 240px auto;
+  background-position: bottom 6rem left;
+}
 @media (min-width: 768px) {
   .jadoo .sub-section.section-screen-campaign {
     padding-bottom: 8rem;
+  }
+}
+@media (min-width: 980px) {
+  .jadoo .sub-section.section-screen-campaign {
+    background-size: 280px auto;
   }
 }
 .jadoo .sub-section.section-logo-wrap {
@@ -1744,10 +1795,8 @@ button {
   color: #484848;
 }
 .jadoo .sub-section.section-logo-wrap .inner .conts-wrap .logo-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
+  max-width: 640px;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .jadoo .sub-section.section-character-wrap .inner .sc-title-wrap {
@@ -1852,8 +1901,8 @@ button {
 }
 .jadoo .sub-section.section-footer {
   padding: 6rem 0;
-  min-height: 80vh;
-  height: 80vh;
+  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 }
 .jadoo .sub-section.section-footer .bg {
@@ -1861,8 +1910,8 @@ button {
   top: 0;
   left: 0;
   padding: 6rem 0;
-  min-height: 80vh;
-  height: 80vh;
+  min-height: 100%;
+  height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -1881,7 +1930,7 @@ button {
 @media (min-width: 980px) {
   .jadoo .sub-section.section-footer .bg .image-wrap {
     max-width: 880px;
-    background: url(../img/sub/jadoo/jadoo-visual-bg.png) no-repeat;
+    background: url(../img/sub/jadoo/jadoo-visual-bg2.png) no-repeat;
     background-size: contain;
     transform: translateX(10%);
     background-position: 4rem center;
@@ -1945,46 +1994,4 @@ button {
     right: 12rem;
     bottom: 1rem;
   }
-}
-.jadoo .sub-section.section-footer .bg .object-wrap {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-@media (min-width: 980px) {
-  .jadoo .sub-section.section-footer .bg .object-wrap {
-    display: block;
-  }
-}
-.jadoo .sub-section.section-footer .bg .object-wrap p {
-  z-index: 5;
-  position: absolute;
-}
-.jadoo .sub-section.section-footer .bg .object-wrap p.ob01 {
-  width: 90px;
-  top: 30%;
-  left: 5%;
-}
-.jadoo .sub-section.section-footer .bg .object-wrap p.ob02 {
-  width: 80px;
-  top: 40%;
-  left: 40%;
-}
-.jadoo .sub-section.section-footer .bg .object-wrap p.ob03 {
-  width: 80px;
-  top: 5%;
-  left: 30%;
-}
-.jadoo .sub-section.section-footer .bg .object-wrap p.ob04 {
-  width: 70px;
-  top: 25%;
-  right: 10%;
-}
-.jadoo .sub-section.section-footer .bg .object-wrap p.ob05 {
-  width: 80px;
-  bottom: 8%;
-  left: 55%;
 }/*# sourceMappingURL=sub.css.map */

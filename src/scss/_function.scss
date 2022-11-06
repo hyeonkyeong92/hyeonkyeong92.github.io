@@ -82,5 +82,9 @@ $breakpoint-desktop: 1200px;
         transform: translateX(0);
     }
 }
+@keyframes opa-appear-ani{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
 
 

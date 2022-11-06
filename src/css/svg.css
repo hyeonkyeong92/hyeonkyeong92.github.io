@@ -246,49 +246,6 @@
     transform: translateY(0);
   }
 }
-.st0 {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-miterlimit: 10;
-}
-
-.st1 {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
-
-.st2 {
-  fill: none;
-  stroke: #004067;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
-
-.st3 {
-  fill: #004067;
-}
-
-.st9 {
-  fill: #FCFAF7;
-}
-
-.st10 {
-  fill: #FCFAF7;
-  stroke: #004067;
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
-
 .person {
   opacity: 0;
   -webkit-animation: ani-appear 1.4s 0.6s cubic-bezier(0.2, 0.38, 0.26, 1.39) forwards;
@@ -419,4 +376,171 @@
   to {
     stroke-dashoffset: 0;
   }
+}
+@-webkit-keyframes jadoo-logo-guide-ani1 {
+  from {
+    stroke-dashoffset: 393;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+}
+@keyframes jadoo-logo-guide-ani1 {
+  from {
+    stroke-dashoffset: 393;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes jadoo-logo-guide-ani2 {
+  from {
+    stroke-dashoffset: 245;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+}
+@keyframes jadoo-logo-guide-ani2 {
+  from {
+    stroke-dashoffset: 245;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes jadoo-logo-guide-ani3 {
+  from {
+    stroke-dashoffset: 149;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+}
+@keyframes jadoo-logo-guide-ani3 {
+  from {
+    stroke-dashoffset: 149;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes jadoo-logo-guide-ani4 {
+  from {
+    stroke-dashoffset: 535;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+}
+@keyframes jadoo-logo-guide-ani4 {
+  from {
+    stroke-dashoffset: 535;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 0.8;
+  }
+}
+.guide-01.scroll-ani {
+  stroke-dasharray: 393;
+  -webkit-animation: jadoo-logo-guide-ani1 0.8s linear forwards;
+          animation: jadoo-logo-guide-ani1 0.8s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  opacity: 0;
+}
+
+.guide-02.scroll-ani {
+  stroke-dasharray: 393;
+  -webkit-animation: jadoo-logo-guide-ani1 0.8s linear forwards;
+          animation: jadoo-logo-guide-ani1 0.8s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  opacity: 0;
+}
+
+.guide-03.scroll-ani {
+  stroke-dasharray: 245;
+  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  opacity: 0;
+}
+
+.guide-04.scroll-ani {
+  stroke-dasharray: 245;
+  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  opacity: 0;
+}
+
+.guide-05.scroll-ani {
+  stroke-dasharray: 245;
+  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  opacity: 0;
+}
+
+.guide-06.scroll-ani {
+  stroke-dasharray: 245;
+  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  opacity: 0;
+}
+
+.guide-07.scroll-ani {
+  stroke-dasharray: 245;
+  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  opacity: 0;
+}
+
+.guide-08.scroll-ani {
+  stroke-dasharray: 245;
+  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  opacity: 0;
+}
+
+.guide-09.scroll-ani {
+  stroke-dasharray: 149;
+  -webkit-animation: jadoo-logo-guide-ani3 0.8s linear forwards;
+          animation: jadoo-logo-guide-ani3 0.8s linear forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  opacity: 0;
+}
+
+.guide-10.scroll-ani {
+  stroke-dasharray: 535;
+  -webkit-animation: jadoo-logo-guide-ani4 0.8s linear forwards;
+          animation: jadoo-logo-guide-ani4 0.8s linear forwards;
+  opacity: 0;
 }/*# sourceMappingURL=svg.css.map */

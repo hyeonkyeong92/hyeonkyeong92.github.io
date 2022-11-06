@@ -390,7 +390,7 @@
                     .portfolio-list-wrap{
                         @media screen and(min-width:768px) { @include flex-between; flex-wrap: wrap; }
                         .portfolio-list{
-                            margin-bottom: 2rem;  position: relative; box-sizing: border-box; 
+                            margin-bottom: 2rem;  position: relative; box-sizing: border-box; border: 1px solid rgb(244, 244, 244);
                             &:before { content: ""; display: block; padding-top: 100%; /* 1:1 비율 */}
                             
                             @media screen and(min-width:768px) {
