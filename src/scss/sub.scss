@@ -93,6 +93,17 @@
         &.lawshow-visual{
             .bg{ background-image: url(../img/sub/lawshow/lawshow-visual.png);}
         }
+        &.nowweather-visual{
+            padding: 0; height: 100vh; min-height: 100vh;
+            .bg{
+                padding: 0; height: 100vh; min-height: 100vh;
+                .img-wrap{}
+                .phone-wrap{
+                    position: fixed; top: 0; right: 0; z-index: 300; max-width: 500px;
+                }
+            }
+
+        }
     }
 
 
@@ -883,5 +894,13 @@
                  
                 }
             }
+        }
+    }
+
+
+    /*=========NowWeather========*/
+    .nowweather{
+        .section-project-info-wrap{
+            margin-top: 100vh !important;
         }
     }

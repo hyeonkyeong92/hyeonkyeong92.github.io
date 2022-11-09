@@ -611,6 +611,23 @@ button {
 .container .sub-visual.lawshow-visual .bg {
   background-image: url(../img/sub/lawshow/lawshow-visual.png);
 }
+.container .sub-visual.nowweather-visual {
+  padding: 0;
+  height: 100vh;
+  min-height: 100vh;
+}
+.container .sub-visual.nowweather-visual .bg {
+  padding: 0;
+  height: 100vh;
+  min-height: 100vh;
+}
+.container .sub-visual.nowweather-visual .bg .phone-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 300;
+  max-width: 500px;
+}
 .container .sub-section {
   position: relative;
   z-index: 200;
@@ -1994,4 +2011,9 @@ button {
     right: 12rem;
     bottom: 1rem;
   }
+}
+
+/*=========NowWeather========*/
+.nowweather .section-project-info-wrap {
+  margin-top: 100vh !important;
 }/*# sourceMappingURL=sub.css.map */
