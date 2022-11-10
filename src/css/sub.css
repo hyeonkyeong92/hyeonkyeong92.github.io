@@ -621,7 +621,18 @@ button {
   height: 100vh;
   min-height: 100vh;
 }
-.container .sub-visual.nowweather-visual .bg .phone-wrap {
+.container .sub-visual.nowweather-visual .bg .img-wrap .pc {
+  display: none;
+}
+@media (min-width: 768px) {
+  .container .sub-visual.nowweather-visual .bg .img-wrap .mobile {
+    display: none;
+  }
+  .container .sub-visual.nowweather-visual .bg .img-wrap .pc {
+    display: block;
+  }
+}
+.container .sub-visual.nowweather-visual .inner .phone-wrap {
   position: fixed;
   top: 0;
   right: 0;
@@ -1064,7 +1075,7 @@ button {
 }
 
 /*=====================Project별=====================*/
-/*-----Lawhow-----*/
+/*==============Lawhow==============*/
 .lawshow .sub-section {
   background-color: #ffffff;
 }
@@ -2013,6 +2024,7 @@ button {
   }
 }
 
+/*-------Jadoo끝------*/
 /*=========NowWeather========*/
 .nowweather .section-project-info-wrap {
   margin-top: 100vh !important;

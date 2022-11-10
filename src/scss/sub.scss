@@ -97,12 +97,21 @@
             padding: 0; height: 100vh; min-height: 100vh;
             .bg{
                 padding: 0; height: 100vh; min-height: 100vh;
-                .img-wrap{}
+                .img-wrap{
+                    .mobile{}
+                    .pc{display: none;}
+                    @include tablet-mini{
+                        .mobile{display: none;}
+                        .pc{display: block;}
+                    }
+                }
+                
+            }
+            .inner{
                 .phone-wrap{
                     position: fixed; top: 0; right: 0; z-index: 300; max-width: 500px;
                 }
             }
-
         }
     }
 
@@ -358,7 +367,7 @@
 
     /*=====================Project별=====================*/
 
-    /*-----Lawhow-----*/
+    /*==============Lawhow==============*/
     .lawshow{
         .sub-section{ 
             background-color: $color-white;
@@ -896,6 +905,7 @@
             }
         }
     }
+    /*-------Jadoo끝------*/
 
 
     /*=========NowWeather========*/
