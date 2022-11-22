@@ -543,4 +543,68 @@
   -webkit-animation: jadoo-logo-guide-ani4 0.8s linear forwards;
           animation: jadoo-logo-guide-ani4 0.8s linear forwards;
   opacity: 0;
+}
+
+/*NowWeather*/
+@-webkit-keyframes cloud-ani {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(3rem);
+  }
+}
+@keyframes cloud-ani {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(3rem);
+  }
+}
+@-webkit-keyframes cloud-ani2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(5rem);
+  }
+}
+@keyframes cloud-ani2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(5rem);
+  }
+}
+@-webkit-keyframes tree-ani {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+@keyframes tree-ani {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+.cloud {
+  -webkit-animation: cloud-ani 2s alternate infinite linear;
+          animation: cloud-ani 2s alternate infinite linear;
+}
+
+.cloud2 {
+  -webkit-animation: cloud-ani2 4s alternate infinite linear;
+          animation: cloud-ani2 4s alternate infinite linear;
+}
+
+.cloud3 {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }/*# sourceMappingURL=svg.css.map */

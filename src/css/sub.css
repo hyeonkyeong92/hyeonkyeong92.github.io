@@ -418,6 +418,7 @@ button {
 }
 .container .sub-visual .inner {
   position: absolute;
+  right: 0;
   left: 0;
   top: 50%;
   padding: 0 24px;
@@ -621,23 +622,69 @@ button {
   height: 100vh;
   min-height: 100vh;
 }
-.container .sub-visual.nowweather-visual .bg .img-wrap .pc {
+.container .sub-visual.nowweather-visual .bg .img-wrap {
+  position: relative;
+}
+.container .sub-visual.nowweather-visual .bg .img-wrap .img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container .sub-visual.nowweather-visual .bg .img-wrap .svg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.container .sub-visual.nowweather-visual .bg .img-wrap.pc {
   display: none;
 }
 @media (min-width: 768px) {
-  .container .sub-visual.nowweather-visual .bg .img-wrap .mobile {
+  .container .sub-visual.nowweather-visual .bg .img-wrap.mobile {
     display: none;
   }
-  .container .sub-visual.nowweather-visual .bg .img-wrap .pc {
+  .container .sub-visual.nowweather-visual .bg .img-wrap.pc {
     display: block;
   }
 }
+.container .sub-visual.nowweather-visual .inner {
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 10%;
+  transform: translateY(0);
+}
+@media (min-width: 768px) {
+  .container .sub-visual.nowweather-visual .inner {
+    top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 768px) {
+  .container .sub-visual.nowweather-visual .inner .sub-title-wrap {
+    width: 50%;
+    margin-top: 10rem;
+  }
+}
+.container .sub-visual.nowweather-visual .inner .sub-title-wrap p {
+  text-align: center;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .container .sub-visual.nowweather-visual .inner .sub-title-wrap p {
+    text-align: left;
+  }
+}
 .container .sub-visual.nowweather-visual .inner .phone-wrap {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 300;
   max-width: 500px;
+}
+@media (min-width: 768px) {
+  .container .sub-visual.nowweather-visual .inner .phone-wrap {
+    width: 50%;
+  }
 }
 .container .sub-section {
   position: relative;

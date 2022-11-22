@@ -261,3 +261,27 @@
     animation: jadoo-logo-guide-ani4 0.8s linear forwards;
     opacity: 0;
 }
+
+/*NowWeather*/
+@keyframes cloud-ani {
+    from{transform: translateX(0);}
+    to{transform: translateX(3rem);}
+}
+@keyframes cloud-ani2 {
+    from{transform: translateX(0);}
+    to{transform: translateX(5rem);}
+}
+@keyframes tree-ani{
+    from{transform: rotate(0);}
+    to{transform: rotate(15deg);}
+}
+.cloud{
+    animation: cloud-ani 2s alternate infinite linear;
+}
+.cloud2{
+    animation: cloud-ani2 4s alternate infinite linear;
+   
+}
+.cloud3{
+    animation-duration: 3s;
+}

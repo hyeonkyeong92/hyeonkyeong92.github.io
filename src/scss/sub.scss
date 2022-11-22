@@ -32,7 +32,7 @@
             background-repeat: no-repeat; background-position: center; background-size: cover;
         }
         .inner{
-            position: absolute; left: 0; top: 50%; padding: 0 24px; transform: translateY(-60%);
+            position: absolute; right: 0; left: 0; top: 50%; padding: 0 24px; transform: translateY(-60%);
             @media screen and (min-width:768px) { padding: 2rem 40px;}
             @media screen and (min-width:980px) { padding: 4rem 40px;}
             @media screen and (min-width:1200px) { margin: 0 auto; padding: 6rem 60px; width: 1200px; max-width: 1200px;}
@@ -98,18 +98,32 @@
             .bg{
                 padding: 0; height: 100vh; min-height: 100vh;
                 .img-wrap{
-                    .mobile{}
-                    .pc{display: none;}
+                    position: relative;
+                    .img-bg{position: absolute; top: 0; left: 0;}
+                    .svg-wrap{position: absolute; top: 0; left: 0; z-index:3;}
+                    &.pc{display: none;}
                     @include tablet-mini{
-                        .mobile{display: none;}
-                        .pc{display: block;}
+                        &.mobile{display: none;}
+                        &.pc{display: block;}
                     }
                 }
                 
             }
             .inner{
+                z-index: 4;
+                @include flex-column; top: 10%; transform: translateY(0);
+                @include tablet-mini{  top: 0; flex-direction: row; justify-content: space-between; align-items: flex-start;}
+                .sub-title-wrap{
+                    @include tablet-mini{ width: 50%; margin-top: 10rem;}
+                    p{
+                        text-align: center; color: $color-white;
+                        @include tablet-mini{text-align: left;}
+                    }
+
+                }
                 .phone-wrap{
-                    position: fixed; top: 0; right: 0; z-index: 300; max-width: 500px;
+                 max-width: 500px;
+                 @include tablet-mini{width: 50%;}
                 }
             }
         }
