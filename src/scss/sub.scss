@@ -147,6 +147,7 @@
                     margin-bottom: 1rem;
                     span{font-weight: 700;}
                 }
+                .center{text-align: center;}
             }
         }
 
@@ -926,5 +927,35 @@
     .nowweather{
         .section-project-info-wrap{
             margin-top: 100vh !important;
+        }
+        .sub-section{
+            /*공통영역*/
+            .inner{}
+
+
+            &.section-main{
+                .sc-title-wrap{
+                    .title-main{
+                        span{ margin-right: 0.4rem; margin-left: 0.4rem; margin-bottom: 0.8rem; color:#333; opacity: .3;}
+                        em{
+                            position: relative;
+                            font-weight: bold; color: #484848;
+                            &::after{ z-index: -1; position: absolute; bottom: 2px; left: 0; content: ""; clear: both; display: block; width: 100%; height: 1.2rem; background-color: #1AB1E4; opacity: .8;}
+                        }
+                    }
+                    .title-txt{max-width: 900px; margin: 0 auto;}
+                }
+                .conts-wrap{
+                    ul{
+                        .item{
+                            .label-wrap{}
+                            .img-wrap{
+                                margin: 0 auto; width: 100%; max-width:760px;
+                                img{}
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
