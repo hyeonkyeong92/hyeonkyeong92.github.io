@@ -930,7 +930,17 @@
         }
         .sub-section{
             /*공통영역*/
-            .inner{}
+            .inner{
+                .sc-title-label-wrap{
+                    @include tablet-mini{
+                        @include flex-between;
+                        .title-wrap{ width: 20%;}
+                        .explain-wrap{ width: 75%;}
+                    }
+                    .title-wrap{}
+                    .explain-wrap{}
+                }
+            }
 
             /*main*/
             &.section-main{

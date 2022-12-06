@@ -2083,6 +2083,19 @@ button {
   /*공통영역*/
   /*main*/
 }
+@media (min-width: 768px) {
+  .nowweather .sub-section .inner .sc-title-label-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nowweather .sub-section .inner .sc-title-label-wrap .title-wrap {
+    width: 20%;
+  }
+  .nowweather .sub-section .inner .sc-title-label-wrap .explain-wrap {
+    width: 75%;
+  }
+}
 .nowweather .sub-section.section-main {
   position: relative;
 }
