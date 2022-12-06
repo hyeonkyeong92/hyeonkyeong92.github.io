@@ -932,13 +932,15 @@
             /*공통영역*/
             .inner{
                 .sc-title-label-wrap{
-                    @include tablet-mini{
-                        @include flex-between;
-                        .title-wrap{ width: 20%;}
-                        .explain-wrap{ width: 75%;}
+                    @include tablet-mini{ @include flex-between; align-items: flex-end;}
+                    .title-wrap{
+                        margin-bottom: 1.2rem;
+                        @include tablet-mini{width: 20%; margin-bottom: 0;}
+                        .icon-wrap{ width: 32px;}
                     }
-                    .title-wrap{}
-                    .explain-wrap{}
+                    .explain-wrap{
+                        @include tablet-mini{width: 65%;}
+                    }
                 }
             }
 
@@ -982,6 +984,18 @@
                         }
                     }
                 } 
+            }
+            /*map*/
+            &.section-map-wrap{
+                .inner{
+                    .conts-wrap{
+                        .img-wrap{
+                            position: relative;
+                            .img-sub{ position: absolute; width: 80%; max-width: 336px;}
+                            .img-center{ position: absolute;}
+                        }
+                    }
+                }
             }
         }
     }
