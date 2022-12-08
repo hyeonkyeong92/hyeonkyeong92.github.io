@@ -2191,14 +2191,13 @@ button {
     display: none;
   }
 }
-.nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap {
-  position: relative;
+@media (min-width: 768px) {
+  .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap {
+    display: flex;
+    align-items: center;
+  }
 }
 .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .img-sub {
-  position: absolute;
   width: 80%;
   max-width: 336px;
-}
-.nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .img-center {
-  position: absolute;
 }/*# sourceMappingURL=sub.css.map */

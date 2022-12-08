@@ -990,9 +990,8 @@
                 .inner{
                     .conts-wrap{
                         .img-wrap{
-                            position: relative;
-                            .img-sub{ position: absolute; width: 80%; max-width: 336px;}
-                            .img-center{ position: absolute;}
+                            @include tablet-mini{ @include flex;}
+                            .img-sub{ width: 80%; max-width: 336px;}   
                         }
                     }
                 }
