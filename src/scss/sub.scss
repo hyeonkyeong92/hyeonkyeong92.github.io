@@ -986,12 +986,20 @@
                 } 
             }
             /*map*/
-            &.section-map-wrap{
+            &.section-map-wrap, &.section-userfeed-wrap{
                 .inner{
                     .conts-wrap{
                         .img-wrap{
-                            @include tablet-mini{ @include flex;}
-                            .img-sub{ width: 80%; max-width: 336px;}   
+                            @include flex-column; justify-content: center; align-items: center;
+                            @include tablet{ flex-direction: row;}
+                            .img-sub{ width: 80%; max-width: 326px;}
+                            .img-center{ z-index: 3; width: 80%; max-width: 700px;}
+                            .left{
+                                @include tablet{margin-right: -14rem;}
+                            }
+                            .right{
+                                @include tablet{margin-left: -14rem;}
+                            }
                         }
                     }
                 }
