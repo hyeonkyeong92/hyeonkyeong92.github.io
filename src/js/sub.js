@@ -13,6 +13,7 @@ function handleScroll() {
     const elems = document.querySelectorAll('.obj-ani');
     const sectionElems = document.querySelectorAll('.section-ani');
     const elems2 = document.querySelectorAll('.obj-ani2');
+    const elems3 = document.querySelectorAll('.obj-ani3');
 
     elems.forEach(elem => {
         if (isElementUnderBottom(elem, -20)) {
@@ -47,6 +48,19 @@ function handleScroll() {
             elem.classList.add('scroll-ani');
         }
     });
+    // event3
+
+    elems3.forEach(elem => {
+        if (isElementUnderBottom(elem, -40)) {
+            elem.style.opacity = "0";
+            elem.style.transform = 'translateX(-70px)';
+            elem.style.transitionDuration = '.8s'
+  
+        } else {
+            elem.style.opacity = "1";
+            elem.style.transform = 'translateX(0px)';
+        }
+    })
     // event3
 
 }

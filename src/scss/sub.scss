@@ -935,11 +935,11 @@
                     @include tablet-mini{ @include flex-between; align-items: flex-end;}
                     .title-wrap{
                         margin-bottom: 1.2rem;
-                        @include tablet-mini{width: 20%; margin-bottom: 0;}
+                        @include tablet-mini{width: 30%; margin-bottom: 0;}
                         .icon-wrap{ width: 32px;}
                     }
                     .explain-wrap{
-                        @include tablet-mini{width: 65%;}
+                        @include tablet-mini{width: 65%; transition-delay: .1s;}
                     }
                 }
             }
@@ -973,7 +973,7 @@
                             .img{
                                 width: 90%; max-width: 720px;
                                 .pc{display: none;}
-                                .m{}
+                                
                                 @include tablet-mini{
                                     &:nth-child(1){margin-right: -3rem;}
                                     &:nth-child(2){margin-left: -3rem; transition-delay: 0.2s;}
@@ -986,23 +986,50 @@
                 } 
             }
             /*map*/
-            &.section-map-wrap, &.section-userfeed-wrap{
+            &.section-map-wrap, &.section-userfeed-wrap, &.section-mypage-wrap, &.section-login-wrap, &.section-icon-wrap{
                 .inner{
                     .conts-wrap{
                         .img-wrap{
                             @include flex-column; justify-content: center; align-items: center;
                             @include tablet{ flex-direction: row;}
                             .img-sub{ width: 80%; max-width: 326px;}
-                            .img-center{ z-index: 3; width: 96%; max-width: 700px;}
+                            .img-center{ z-index: 3; width: 96%; max-width: 640px;}
+                            .img-main-left{
+                                z-index: 3; width: 96%; max-width: 1640px;
+                                @include tablet{ margin-left: -6rem; width: 1640px;}
+                            }
                             .left{
                                 @include tablet{margin-right: -14rem;}
                             }
                             .right{
                                 @include tablet{margin-left: -14rem;}
                             }
+                            &.img-wrap-m{
+                                @include tablet{display: none;}
+                            }
+                            &.img-wrap-pc{
+                                display: none;
+                                @include tablet{ display: block;}
+                            }
                         }
                     }
                 }
+            }
+            &.section-login-wrap{
+                .inner{
+                    .conts-wrap{
+                        @include tablet-mini{
+                            .img-wrap{
+                                & > div:nth-child(2){ margin-left: -8rem; transition-delay: .2s;}
+                                & > div:nth-child(3){ margin-left: -2rem; transition-delay: .2s;}
+                                & > div:nth-child(4){ margin-left: -2rem; transition-delay: .2s;}
+                            }
+                        }
+                    }
+                }
+            }
+            &.section-icon-wrap{
+                background-color: #F6F8F9;
             }
         }
     }

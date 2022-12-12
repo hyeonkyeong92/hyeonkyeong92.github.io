@@ -2097,7 +2097,7 @@ button {
 }
 @media (min-width: 768px) {
   .nowweather .sub-section .inner .sc-title-label-wrap .title-wrap {
-    width: 20%;
+    width: 30%;
     margin-bottom: 0;
   }
 }
@@ -2107,6 +2107,7 @@ button {
 @media (min-width: 768px) {
   .nowweather .sub-section .inner .sc-title-label-wrap .explain-wrap {
     width: 65%;
+    transition-delay: 0.1s;
   }
 }
 .nowweather .sub-section.section-main {
@@ -2191,7 +2192,7 @@ button {
     display: none;
   }
 }
-.nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap {
+.nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -2199,26 +2200,67 @@ button {
   align-items: center;
 }
 @media (min-width: 980px) {
-  .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap {
+  .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap {
     flex-direction: row;
   }
 }
-.nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .img-sub, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap .img-sub {
+.nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .img-sub, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap .img-sub, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap .img-sub, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap .img-sub, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap .img-sub {
   width: 80%;
   max-width: 326px;
 }
-.nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .img-center, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap .img-center {
+.nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .img-center, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap .img-center, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap .img-center, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap .img-center, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap .img-center {
   z-index: 3;
-  width: 80%;
-  max-width: 700px;
+  width: 96%;
+  max-width: 640px;
+}
+.nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .img-main-left, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap .img-main-left, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap .img-main-left, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap .img-main-left, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap .img-main-left {
+  z-index: 3;
+  width: 96%;
+  max-width: 1640px;
 }
 @media (min-width: 980px) {
-  .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .left, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap .left {
+  .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .img-main-left, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap .img-main-left, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap .img-main-left, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap .img-main-left, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap .img-main-left {
+    margin-left: -6rem;
+    width: 1640px;
+  }
+}
+@media (min-width: 980px) {
+  .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .left, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap .left, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap .left, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap .left, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap .left {
     margin-right: -14rem;
   }
 }
 @media (min-width: 980px) {
-  .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .right, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap .right {
+  .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap .right, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap .right, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap .right, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap .right, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap .right {
     margin-left: -14rem;
   }
+}
+@media (min-width: 980px) {
+  .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap.img-wrap-m, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap.img-wrap-m, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap.img-wrap-m, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap.img-wrap-m, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap.img-wrap-m {
+    display: none;
+  }
+}
+.nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap.img-wrap-pc, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap.img-wrap-pc, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap.img-wrap-pc, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap.img-wrap-pc, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap.img-wrap-pc {
+  display: none;
+}
+@media (min-width: 980px) {
+  .nowweather .sub-section.section-map-wrap .inner .conts-wrap .img-wrap.img-wrap-pc, .nowweather .sub-section.section-userfeed-wrap .inner .conts-wrap .img-wrap.img-wrap-pc, .nowweather .sub-section.section-mypage-wrap .inner .conts-wrap .img-wrap.img-wrap-pc, .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap.img-wrap-pc, .nowweather .sub-section.section-icon-wrap .inner .conts-wrap .img-wrap.img-wrap-pc {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap > div:nth-child(2) {
+    margin-left: -8rem;
+    transition-delay: 0.2s;
+  }
+  .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap > div:nth-child(3) {
+    margin-left: -2rem;
+    transition-delay: 0.2s;
+  }
+  .nowweather .sub-section.section-login-wrap .inner .conts-wrap .img-wrap > div:nth-child(4) {
+    margin-left: -2rem;
+    transition-delay: 0.2s;
+  }
+}
+.nowweather .sub-section.section-icon-wrap {
+  background-color: #F6F8F9;
 }/*# sourceMappingURL=sub.css.map */
