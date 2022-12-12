@@ -993,7 +993,7 @@
                             @include flex-column; justify-content: center; align-items: center;
                             @include tablet{ flex-direction: row;}
                             .img-sub{ width: 80%; max-width: 326px;}
-                            .img-center{ z-index: 3; width: 80%; max-width: 700px;}
+                            .img-center{ z-index: 3; width: 96%; max-width: 700px;}
                             .left{
                                 @include tablet{margin-right: -14rem;}
                             }
