@@ -629,6 +629,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
 }
 .container .sub-visual.nowweather-visual .bg .img-wrap .svg-wrap {
   position: absolute;
@@ -2261,6 +2262,6 @@ button {
     transition-delay: 0.2s;
   }
 }
-.nowweather .sub-section.section-icon-wrap {
-  background-color: #F6F8F9;
+.nowweather .sub-section.section-icon1-wrap {
+  background-color: #F0F0F0;
 }/*# sourceMappingURL=sub.css.map */

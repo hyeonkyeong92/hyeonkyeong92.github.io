@@ -99,7 +99,7 @@
                 padding: 0; height: 100vh; min-height: 100vh;
                 .img-wrap{
                     position: relative;
-                    .img-bg{position: absolute; top: 0; left: 0;}
+                    .img-bg{position: absolute; top: 0; left: 0; width: 100%;}
                     .svg-wrap{position: absolute; top: 0; left: 0; z-index:3;}
                     &.pc{display: none;}
                     @include tablet-mini{
@@ -1028,8 +1028,9 @@
                     }
                 }
             }
-            &.section-icon-wrap{
-                background-color: #F6F8F9;
+            &.section-icon1-wrap{
+                background-color: #F0F0F0;
             }
+            
         }
     }
