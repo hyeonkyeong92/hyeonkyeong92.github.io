@@ -1,0 +1,107 @@
+/********FONT STYLE********/
+.font-big-title{font-size: 34px;}
+.font-title{font-size: 26px;}
+.font-sub-title{font-size: 22px;}
+.font-desk{font-size: 18px;}
+.font-basic{font-size: 14px;}
+.font-small{font-size: 12px;}
+
+@media screen and (min-width:768px){
+  .font-big-title{font-size: 4.427vw;}
+  .font-title{font-size: 3.385vw;}
+  .font-sub-title{font-size: 2.864vw;}
+  .font-desk{font-size: 2vw;}
+  .font-basic{font-size: 1.5vw;}
+  .font-small{font-size: 1.3vw;}
+}
+@media screen and (min-width:1200px){
+  .font-big-title{font-size: 72px;}
+  .font-title{ font-size: 42px;}
+  .font-sub-title{ font-size: 30px;}
+  .font-desk{ font-size: 22px;}
+  .font-basic{font-size: 16px;}
+  .font-small{font-size: 14px;}
+}
+
+/*********CSS**********/
+
+body{
+  background-color: #004064;
+}
+
+
+/*========HEADER========*/
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+  padding: 0 24px; height: 4rem;
+  /*to do! 크기 변환될 때 자연스러운 translate 효과 넣어주기 */
+}
+
+.header .h-menu {
+  position: relative; z-index: 200;
+  width: 64px; height: 50px;
+}
+.header .h-menu .button-page-back {
+  position: absolute; top: 0; left: 0;
+  padding: 0.6rem; width: 64px; height: 50px;
+  background: url(../image/icon-arrow-back-w.svg) no-repeat; background-position: center; background-size: 28px auto;
+  cursor: pointer;
+}
+.header .logo {
+  width: 52px; height: 52px;
+}
+.header .logo a {
+    display: block; width: 100%; height: 100%;
+}
+/****NAV****/
+.nav-wrap{
+  padding-top: 6rem;   padding: 4rem 0;
+}
+.nav-wrap .inner {
+  padding: 0 24px;
+}
+.nav-wrap .inner li a{
+  color: #fff; font-weight: 200;
+}
+.nav-wrap .inner li .font-title{
+  font-weight: 500;
+}
+
+
+
+@media (max-width: 320px) {
+  .nav-wrap .inner {
+    padding: 2rem 40px;
+  }
+}
+@media (min-width: 768px) {
+
+  .header {
+    margin-bottom: 3.2rem; padding: 0 40px;
+  }
+  .nav-wrap {
+    padding-top: 8rem;
+  }
+  .nav-wrap .inner {
+    padding: 4rem 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    margin-bottom: 4rem; height: 5.4rem;
+  }
+  .nav-wrap .inner {
+    margin: 0 auto;
+    padding: 4rem 60px;
+    width: 1200px;
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .nav-wrap .inner {
+    width: 1400px;
+    max-width: 1400px;
+  }
+}

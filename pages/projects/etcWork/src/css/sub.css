@@ -1,0 +1,6 @@
+.header .h-menu .button-page-back {
+    position: absolute; top: 0; left: 0;
+    padding: 0.6rem; width: 64px; height: 50px;
+    background: url(../../src/image/icon-arrow-back-w.svg) no-repeat; background-position: center; background-size: 28px auto;
+    cursor: pointer;
+  }
