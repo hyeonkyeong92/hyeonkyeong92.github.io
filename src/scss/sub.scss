@@ -1031,6 +1031,15 @@
             &.section-icon1-wrap{
                 background-color: #F0F0F0;
             }
-            
+            &.section-icon2-wrap{
+                .inner{
+                    .conts-wrap{
+                        .img-main-left{
+                            max-width: 620px !important;
+                            @include tablet{ margin-left: -6rem; width: 620px !important;}
+                        }
+                    }
+                }
+            }
         }
     }

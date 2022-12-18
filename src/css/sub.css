@@ -2264,4 +2264,13 @@ button {
 }
 .nowweather .sub-section.section-icon1-wrap {
   background-color: #F0F0F0;
+}
+.nowweather .sub-section.section-icon2-wrap .inner .conts-wrap .img-main-left {
+  max-width: 620px !important;
+}
+@media (min-width: 980px) {
+  .nowweather .sub-section.section-icon2-wrap .inner .conts-wrap .img-main-left {
+    margin-left: -6rem;
+    width: 620px !important;
+  }
 }/*# sourceMappingURL=sub.css.map */
