@@ -34,9 +34,7 @@ body{
 
 .header {
   display: flex; align-items: center; justify-content: space-between;
-  position: fixed; top: 0; left: 0; right: 0; z-index: 300;
-  padding: 0 24px; height: 4rem;
-  /*to do! 크기 변환될 때 자연스러운 translate 효과 넣어주기 */
+  position: fixed; top: 0; left: 0; right: 0; z-index: 300; padding: 0 24px; height: 4rem;
 }
 
 .header .h-menu {
@@ -57,7 +55,7 @@ body{
 }
 /****NAV****/
 .nav-wrap{
-  padding-top: 6rem;   padding: 4rem 0;
+  padding-top: 6rem;
 }
 .nav-wrap .inner {
   padding: 0 24px;
@@ -69,8 +67,7 @@ body{
   font-weight: 500;
 }
 
-
-
+/*MEDIA QUERY*/
 @media (max-width: 320px) {
   .nav-wrap .inner {
     padding: 2rem 40px;
@@ -82,10 +79,10 @@ body{
     margin-bottom: 3.2rem; padding: 0 40px;
   }
   .nav-wrap {
-    padding-top: 8rem;
+    padding-top: 7rem;
   }
   .nav-wrap .inner {
-    padding: 4rem 40px;
+    padding: 2rem 40px;
   }
 }
 @media (min-width: 1200px) {
@@ -93,15 +90,65 @@ body{
     margin-bottom: 4rem; height: 5.4rem;
   }
   .nav-wrap .inner {
-    margin: 0 auto;
-    padding: 4rem 60px;
-    width: 1200px;
-    max-width: 1200px;
+    margin: 0 auto; padding: 2rem 60px; width: 1200px; max-width: 1200px;
   }
 }
 @media screen and (min-width: 1400px) {
   .nav-wrap .inner {
-    width: 1400px;
-    max-width: 1400px;
+    width: 1400px; max-width: 1400px;
   }
 }
+/*================Container================*/
+
+/********section 공통스타일********/
+.container .section{
+  padding: 4rem 0;
+}
+.container .section .inner {
+  padding: 0 24px;
+}
+@media screen and (min-width: 768px) {
+  .container .section .inner { padding: 2rem 40px;}
+}
+@media screen and (min-width: 980px) {
+
+}
+@media screen and (min-width: 1200px) {
+  .container .section .inner { margin: 0 auto; padding: 4rem 60px; width: 1200px;  max-width: 1200px; }
+}
+@media screen and (min-width: 1400px) {
+  .container .section .inner { width: 1400px; max-width: 1400px;}
+}
+
+.container .section-images-wrap .list-wrap{
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+}
+.container .section-images-wrap .list-wrap .item{
+  width: 100%; margin-bottom: 0.4rem;
+}
+@media screen and (min-width: 768px) {
+  .container .section-images-wrap .list-wrap .item{
+    width: 49.4%; 
+  }
+}
+@media screen and (min-width: 1200px){
+  .container .section-images-wrap .list-wrap .item{
+    width: 24.4%; margin-bottom: 0.3rem;
+  }
+}
+
+/*================MODAL================*/
+.modal-wrap{
+  width: 100vw; height: 100vh; overflow: hidden;
+}
+.modal-wrap .bg{
+  position: fixed; top: 0; bottom: 0; left: 0; right: 0; 
+  background-color: aqua; opacity: .6;
+}
+.modal-wrap .img-wrap{
+  position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.modal-wrap .img-wrap img{ object-fit: contain;}
+
+
