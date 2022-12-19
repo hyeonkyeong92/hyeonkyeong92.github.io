@@ -139,6 +139,7 @@ body{
 
 /*================MODAL================*/
 .modal-wrap{
+  display: none;
   width: 100vw; height: 100vh; overflow: hidden;
 }
 .modal-wrap .bg{
