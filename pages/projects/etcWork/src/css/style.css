@@ -63,7 +63,7 @@ body{
 .nav-wrap .inner li a{
   color: #fff; font-weight: 200;
 }
-.nav-wrap .inner li .font-title{
+.nav-wrap .inner li.on a{
   font-weight: 500;
 }
 
