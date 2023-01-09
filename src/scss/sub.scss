@@ -426,15 +426,15 @@
                                                 &.card-side-front{ z-index: 4;  background-repeat:no-repeat; background-size: 80%; background-position: center; background-color: $color-white;}
                                                 &.card-side-back{ transform: rotateY(180deg); background-color: $color-white;}
                                             }
-                                            &:nth-child(1){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-01변호사.png);}}
-                                            &:nth-child(2){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-02법무사.png);}}
-                                            &:nth-child(3){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-03세무사.png);}}
-                                            &:nth-child(4){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-04행정사.png);}}
-                                            &:nth-child(5){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-05노무사.png);}}
-                                            &:nth-child(6){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-06변리사.png);}}
-                                            &:nth-child(7){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-07속기사.png);}}
-                                            &:nth-child(8){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-08감정평가사.png);}}
-                                            &:nth-child(9){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-09회계사.png);}}
+                                            &:nth-child(1){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-01.png);}}
+                                            &:nth-child(2){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-02.png);}}
+                                            &:nth-child(3){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-03.png);}}
+                                            &:nth-child(4){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-04.png);}}
+                                            &:nth-child(5){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-05.png);}}
+                                            &:nth-child(6){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-06.png);}}
+                                            &:nth-child(7){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-07.png);}}
+                                            &:nth-child(8){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-08.png);}}
+                                            &:nth-child(9){ .card-side-front{background-image:url(../img/sub/lawshow/lawshow-icon-job-09.png);}}
                                             &:hover{transform: rotateY(180deg);}
                                         }
                                         
