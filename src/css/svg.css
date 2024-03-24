@@ -1,22 +1,5 @@
 @charset "UTF-8";
 /*SVG애니메이션*/
-@-webkit-keyframes ani-bird {
-  0% {
-    transform: translate(0, 0);
-  }
-  20% {
-    transform: translate(-0.3rem, 0.3rem);
-  }
-  60% {
-    transform: translate(0, 0);
-  }
-  70% {
-    transform: traslate(0, 0.3rem);
-  }
-  100% {
-    transform: traslate(0, 0);
-  }
-}
 @keyframes ani-bird {
   0% {
     transform: translate(0, 0);
@@ -34,28 +17,12 @@
     transform: traslate(0, 0);
   }
 }
-@-webkit-keyframes ani-leaf1 {
-  from {
-    transform: rotate(0) translate(0, 0);
-  }
-  to {
-    transform: rotate(30deg) translate(1rem, 2rem);
-  }
-}
 @keyframes ani-leaf1 {
   from {
     transform: rotate(0) translate(0, 0);
   }
   to {
     transform: rotate(30deg) translate(1rem, 2rem);
-  }
-}
-@-webkit-keyframes ani-leaf2 {
-  from {
-    transform: rotate(0) translate(0, 0);
-  }
-  to {
-    transform: rotate(-30deg) translate(1rem, 4rem);
   }
 }
 @keyframes ani-leaf2 {
@@ -66,25 +33,9 @@
     transform: rotate(-30deg) translate(1rem, 4rem);
   }
 }
-@-webkit-keyframes ani-dash-line1 {
-  from {
-    stroke-dashoffset: 1222;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes ani-dash-line1 {
   from {
     stroke-dashoffset: 1222;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes ani-dash-line2 {
-  from {
-    stroke-dashoffset: 359;
   }
   to {
     stroke-dashoffset: 0;
@@ -98,25 +49,9 @@
     stroke-dashoffset: 0;
   }
 }
-@-webkit-keyframes ani-dash-line3 {
-  from {
-    stroke-dashoffset: 1652;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes ani-dash-line3 {
   from {
     stroke-dashoffset: 1652;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes ani-dash-line4 {
-  from {
-    stroke-dashoffset: 602;
   }
   to {
     stroke-dashoffset: 0;
@@ -130,25 +65,9 @@
     stroke-dashoffset: 0;
   }
 }
-@-webkit-keyframes ani-dash-line5 {
-  from {
-    stroke-dashoffset: 91;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes ani-dash-line5 {
   from {
     stroke-dashoffset: 91;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes ani-dash-line6 {
-  from {
-    stroke-dashoffset: 733;
   }
   to {
     stroke-dashoffset: 0;
@@ -162,25 +81,9 @@
     stroke-dashoffset: 0;
   }
 }
-@-webkit-keyframes ani-dash-line7 {
-  from {
-    stroke-dashoffset: 483;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes ani-dash-line7 {
   from {
     stroke-dashoffset: 483;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes ani-dash-line8 {
-  from {
-    stroke-dashoffset: 1055;
   }
   to {
     stroke-dashoffset: 0;
@@ -194,25 +97,9 @@
     stroke-dashoffset: 0;
   }
 }
-@-webkit-keyframes ani-dash-line9 {
-  from {
-    stroke-dashoffset: 695;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes ani-dash-line9 {
   from {
     stroke-dashoffset: 695;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes ani-dash-what {
-  from {
-    stroke-dashoffset: 634;
   }
   to {
     stroke-dashoffset: 0;
@@ -224,16 +111,6 @@
   }
   to {
     stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes ani-appear {
-  0% {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 @keyframes ani-appear {
@@ -248,8 +125,7 @@
 }
 .person {
   opacity: 0;
-  -webkit-animation: ani-appear 1.4s 0.6s cubic-bezier(0.2, 0.38, 0.26, 1.39) forwards;
-          animation: ani-appear 1.4s 0.6s cubic-bezier(0.2, 0.38, 0.26, 1.39) forwards;
+  animation: ani-appear 1.4s 0.6s cubic-bezier(0.2, 0.38, 0.26, 1.39) forwards;
 }
 
 .dash-line {
@@ -262,90 +138,69 @@
 
 .dash-line1 {
   stroke-dasharray: 1222;
-  -webkit-animation: ani-dash-line1 4s ease-in-out;
-          animation: ani-dash-line1 4s ease-in-out;
+  animation: ani-dash-line1 4s ease-in-out;
 }
 
 .dash-line2 {
   stroke-dasharray: 359;
-  -webkit-animation: ani-dash-line2 4s ease-in-out;
-          animation: ani-dash-line2 4s ease-in-out;
+  animation: ani-dash-line2 4s ease-in-out;
 }
 
 .dash-line3 {
   stroke-dasharray: 1652;
-  -webkit-animation: ani-dash-line3 4s ease-in-out;
-          animation: ani-dash-line3 4s ease-in-out;
+  animation: ani-dash-line3 4s ease-in-out;
 }
 
 .dash-line4 {
   stroke-dasharray: 602;
-  -webkit-animation: ani-dash-line4 4s ease-in-out;
-          animation: ani-dash-line4 4s ease-in-out;
+  animation: ani-dash-line4 4s ease-in-out;
 }
 
 .dash-line5 {
   stroke-dasharray: 91;
-  -webkit-animation: ani-dash-line5 2s ease-in-out;
-          animation: ani-dash-line5 2s ease-in-out;
+  animation: ani-dash-line5 2s ease-in-out;
 }
 
 .dash-line6 {
   stroke-dasharray: 733;
-  -webkit-animation: ani-dash-line6 4s ease-in-out;
-          animation: ani-dash-line6 4s ease-in-out;
+  animation: ani-dash-line6 4s ease-in-out;
 }
 
 .dash-line7 {
   stroke-dasharray: 483;
-  -webkit-animation: ani-dash-line7 4s ease-in-out;
-          animation: ani-dash-line7 4s ease-in-out;
+  animation: ani-dash-line7 4s ease-in-out;
 }
 
 .dash-line8 {
   stroke-dasharray: 1055;
-  -webkit-animation: ani-dash-line8 4s ease-in-out;
-          animation: ani-dash-line8 4s ease-in-out;
+  animation: ani-dash-line8 4s ease-in-out;
 }
 
 .dash-line9 {
   stroke-dasharray: 695;
-  -webkit-animation: ani-dash-line9 4s ease-in-out;
-          animation: ani-dash-line9 4s ease-in-out;
+  animation: ani-dash-line9 4s ease-in-out;
 }
 
 .dash-line-what {
   stroke-dasharray: 634;
-  -webkit-animation: ani-dash-what 4s ease-in-out;
-          animation: ani-dash-what 4s ease-in-out;
+  animation: ani-dash-what 4s ease-in-out;
 }
 
 .bird {
-  -webkit-animation: ani-bird 1s alternate infinite ease;
-          animation: ani-bird 1s alternate infinite ease;
+  animation: ani-bird 1s alternate infinite ease;
 }
 
 .leaf1 {
-  -webkit-animation: ani-leaf1 1s alternate infinite ease-in-out;
-          animation: ani-leaf1 1s alternate infinite ease-in-out;
+  animation: ani-leaf1 1s alternate infinite ease-in-out;
   transform-origin: 969.57px 516.22px;
 }
 
 .leaf2 {
-  -webkit-animation: ani-leaf2 1s alternate infinite ease-in-out;
-          animation: ani-leaf2 1s alternate infinite ease-in-out;
+  animation: ani-leaf2 1s alternate infinite ease-in-out;
   transform-origin: 29.92px 833.9px;
 }
 
 /*Lawshow*/
-@-webkit-keyframes lawshow-main-dash-ani {
-  from {
-    stroke-dashoffset: 1361;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes lawshow-main-dash-ani {
   from {
     stroke-dashoffset: 1361;
@@ -356,19 +211,10 @@
 }
 .main-illust {
   stroke-dasharray: 1361;
-  -webkit-animation: lawshow-main-dash-ani 5s linear;
-          animation: lawshow-main-dash-ani 5s linear;
+  animation: lawshow-main-dash-ani 5s linear;
 }
 
 /*Jadoo*/
-@-webkit-keyframes jadoo-decoLine-dash-ani {
-  from {
-    stroke-dashoffset: 240;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes jadoo-decoLine-dash-ani {
   from {
     stroke-dashoffset: 240;
@@ -377,29 +223,9 @@
     stroke-dashoffset: 0;
   }
 }
-@-webkit-keyframes jadoo-logo-guide-ani1 {
-  from {
-    stroke-dashoffset: 393;
-    opacity: 0;
-  }
-  to {
-    stroke-dashoffset: 0;
-    opacity: 0.8;
-  }
-}
 @keyframes jadoo-logo-guide-ani1 {
   from {
     stroke-dashoffset: 393;
-    opacity: 0;
-  }
-  to {
-    stroke-dashoffset: 0;
-    opacity: 0.8;
-  }
-}
-@-webkit-keyframes jadoo-logo-guide-ani2 {
-  from {
-    stroke-dashoffset: 245;
     opacity: 0;
   }
   to {
@@ -417,29 +243,9 @@
     opacity: 0.8;
   }
 }
-@-webkit-keyframes jadoo-logo-guide-ani3 {
-  from {
-    stroke-dashoffset: 149;
-    opacity: 0;
-  }
-  to {
-    stroke-dashoffset: 0;
-    opacity: 0.8;
-  }
-}
 @keyframes jadoo-logo-guide-ani3 {
   from {
     stroke-dashoffset: 149;
-    opacity: 0;
-  }
-  to {
-    stroke-dashoffset: 0;
-    opacity: 0.8;
-  }
-}
-@-webkit-keyframes jadoo-logo-guide-ani4 {
-  from {
-    stroke-dashoffset: 535;
     opacity: 0;
   }
   to {
@@ -459,101 +265,74 @@
 }
 .guide-01.scroll-ani {
   stroke-dasharray: 393;
-  -webkit-animation: jadoo-logo-guide-ani1 0.8s linear forwards;
-          animation: jadoo-logo-guide-ani1 0.8s linear forwards;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation: jadoo-logo-guide-ani1 0.8s linear forwards;
+  animation-delay: 0.8s;
   opacity: 0;
 }
 
 .guide-02.scroll-ani {
   stroke-dasharray: 393;
-  -webkit-animation: jadoo-logo-guide-ani1 0.8s linear forwards;
-          animation: jadoo-logo-guide-ani1 0.8s linear forwards;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation: jadoo-logo-guide-ani1 0.8s linear forwards;
+  animation-delay: 0.8s;
   opacity: 0;
 }
 
 .guide-03.scroll-ani {
   stroke-dasharray: 245;
-  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  animation-delay: 1.2s;
   opacity: 0;
 }
 
 .guide-04.scroll-ani {
   stroke-dasharray: 245;
-  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  animation-delay: 1.2s;
   opacity: 0;
 }
 
 .guide-05.scroll-ani {
   stroke-dasharray: 245;
-  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  animation-delay: 1.2s;
   opacity: 0;
 }
 
 .guide-06.scroll-ani {
   stroke-dasharray: 245;
-  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  animation-delay: 1.2s;
   opacity: 0;
 }
 
 .guide-07.scroll-ani {
   stroke-dasharray: 245;
-  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  animation-delay: 1.2s;
   opacity: 0;
 }
 
 .guide-08.scroll-ani {
   stroke-dasharray: 245;
-  -webkit-animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-          animation: jadoo-logo-guide-ani2 0.8s linear forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation: jadoo-logo-guide-ani2 0.8s linear forwards;
+  animation-delay: 1.2s;
   opacity: 0;
 }
 
 .guide-09.scroll-ani {
   stroke-dasharray: 149;
-  -webkit-animation: jadoo-logo-guide-ani3 0.8s linear forwards;
-          animation: jadoo-logo-guide-ani3 0.8s linear forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation: jadoo-logo-guide-ani3 0.8s linear forwards;
+  animation-delay: 1.2s;
   opacity: 0;
 }
 
 .guide-10.scroll-ani {
   stroke-dasharray: 535;
-  -webkit-animation: jadoo-logo-guide-ani4 0.8s linear forwards;
-          animation: jadoo-logo-guide-ani4 0.8s linear forwards;
+  animation: jadoo-logo-guide-ani4 0.8s linear forwards;
   opacity: 0;
 }
 
 /*NowWeather*/
-@-webkit-keyframes cloud-ani {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(3rem);
-  }
-}
 @keyframes cloud-ani {
   from {
     transform: translateX(0);
@@ -562,28 +341,12 @@
     transform: translateX(3rem);
   }
 }
-@-webkit-keyframes cloud-ani2 {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(5rem);
-  }
-}
 @keyframes cloud-ani2 {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(5rem);
-  }
-}
-@-webkit-keyframes tree-ani {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(15deg);
   }
 }
 @keyframes tree-ani {
@@ -595,16 +358,13 @@
   }
 }
 .cloud {
-  -webkit-animation: cloud-ani 2s alternate infinite linear;
-          animation: cloud-ani 2s alternate infinite linear;
+  animation: cloud-ani 2s alternate infinite linear;
 }
 
 .cloud2 {
-  -webkit-animation: cloud-ani2 4s alternate infinite linear;
-          animation: cloud-ani2 4s alternate infinite linear;
+  animation: cloud-ani2 4s alternate infinite linear;
 }
 
 .cloud3 {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-duration: 3s;
 }/*# sourceMappingURL=svg.css.map */
